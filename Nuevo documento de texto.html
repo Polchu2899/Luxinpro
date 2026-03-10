@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primary Tags -->
+  <title>LUXINPRO | Project & Building Manager en Menorca y Baleares | Construcción de Lujo</title>
+  <meta name="description" content="LUXINPRO — Referente en gestión de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Project Manager, Building Manager, Smart Home, energías renovables y reformas integrales. Llámenos: 609 625 573." />
+  <meta name="keywords" content="project manager menorca, building manager menorca, construcción lujo menorca, reforma integral menorca, inmobiliaria menorca, project manager baleares, arquitectura menorca, construcción villa menorca, smart home menorca, reforma villa baleares, luxinpro" />
+  <meta name="author" content="LUXINPRO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://luxinpro.es/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://luxinpro.es/" />
+  <meta property="og:title" content="LUXINPRO | Project & Building Manager en Menorca y Baleares" />
+  <meta property="og:description" content="Especialistas en gestión y construcción de proyectos inmobiliarios de lujo en Menorca. Desde el diseño hasta la entrega de llaves." />
+  <meta property="og:image" content="https://luxinpro.es/wp-content/uploads/2021/06/home-1.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="LUXINPRO" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LUXINPRO | Project & Building Manager Menorca" />
+  <meta name="twitter:description" content="Referente en construcción y gestión de proyectos de lujo en Menorca y Baleares." />
+  <meta name="twitter:image" content="https://luxinpro.es/wp-content/uploads/2021/06/home-1.jpg" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LUXINPRO",
+    "description": "Project & Building Manager especializado en proyectos inmobiliarios de lujo en Menorca y las Islas Baleares",
+    "url": "https://luxinpro.es",
+    "telephone": "+34609625573",
+    "email": "info@luxinpro.es",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Menorca",
+      "addressCountry": "ES"
+    },
+    "areaServed": ["Menorca", "Mallorca", "Ibiza", "Islas Baleares"],
+    "serviceType": ["Project Manager", "Building Manager", "Reforma Integral", "Smart Home", "Energías Renovables"],
+    "sameAs": [
+      "https://www.facebook.com/luxuryinvestmentandprojects",
+      "https://www.instagram.com/luxuryinvestmentandprojects/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A96E;
+      --gold-light: #E8D5B0;
+      --gold-dark: #9C7B47;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --dark2: #1A1A1A;
+      --dark3: #222222;
+      --mid: #3A3A3A;
+      --light-gray: #8A8A8A;
+      --off-white: #F5F2EC;
+      --white: #FFFFFF;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* CURSOR */
+    body { cursor: none; }
+    .cursor {
+      position: fixed;
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+      transform: translate(-50%, -50%);
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 36px; height: 36px;
+      border: 1px solid rgba(201,169,110,0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: all 0.15s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      height: 90px;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.97), rgba(10,10,10,0));
+      transition: all 0.4s ease;
+    }
+    header.scrolled {
+      background: rgba(10,10,10,0.97);
+      border-bottom: 1px solid rgba(201,169,110,0.15);
+      height: 70px;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 8px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .logo span { color: var(--off-white); opacity: 0.7; font-weight: 300; }
+
+    nav { display: flex; align-items: center; gap: 40px; }
+    nav a {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--off-white);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: all 0.3s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    nav a:hover { opacity: 1; color: var(--gold); }
+    nav a:hover::after { width: 100%; }
+
+    .nav-cta {
+      padding: 10px 24px;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      opacity: 1 !important;
+      font-size: 10px !important;
+      letter-spacing: 3px;
+      transition: all 0.3s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold) !important;
+      color: var(--black) !important;
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 100px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://luxinpro.es/wp-content/uploads/2021/06/home-1.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.05);
+      animation: heroZoom 18s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to { transform: scale(1.0); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.3) 0%,
+        rgba(10,10,10,0.2) 40%,
+        rgba(10,10,10,0.8) 80%,
+        rgba(10,10,10,0.97) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 60px;
+      max-width: 900px;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 0.4s;
+      opacity: 0;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .hero-tag::before {
+      content: '';
+      display: inline-block;
+      width: 40px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 92px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      color: rgba(245,242,236,0.7);
+      max-width: 520px;
+      margin-bottom: 48px;
+      line-height: 1.9;
+    }
+
+    .hero-btns { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 16px 42px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold-light);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    .btn-primary:hover::before { transform: translateX(0); }
+    .btn-primary span { position: relative; z-index: 1; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 0;
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(245,242,236,0.3);
+      transition: all 0.3s;
+    }
+    .btn-ghost:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    .btn-ghost svg { transition: transform 0.3s; }
+    .btn-ghost:hover svg { transform: translateX(5px); }
+
+    /* SCROLL INDICATOR */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px; right: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
+    }
+    .scroll-indicator span {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      writing-mode: vertical-rl;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--dark2);
+      border-top: 1px solid rgba(201,169,110,0.15);
+      border-bottom: 1px solid rgba(201,169,110,0.15);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 40px 50px;
+      border-right: 1px solid rgba(201,169,110,0.15);
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--light-gray);
+    }
+
+    /* SECTION LAYOUT */
+    section { padding: 120px 60px; }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .section-tag::before {
+      content: '';
+      display: inline-block;
+      width: 30px; height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4.5vw, 62px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-text {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(245,242,236,0.65);
+      max-width: 560px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-image-wrap img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+    }
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      top: -20px; left: -20px;
+      right: 20px; bottom: 20px;
+      border: 1px solid rgba(201,169,110,0.25);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .about-image-wrap::after {
+      content: 'LUXINPRO';
+      position: absolute;
+      bottom: -15px; right: -15px;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      padding: 14px 22px;
+    }
+    .about-text { position: relative; }
+    .about-text .section-text { margin-bottom: 32px; }
+    .about-text p { 
+      font-size: 13px; font-weight: 300; line-height: 1.9;
+      color: rgba(245,242,236,0.65);
+      margin-bottom: 20px;
+    }
+    .about-divider {
+      width: 60px; height: 1px;
+      background: var(--gold);
+      margin: 36px 0;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .about-feature-icon {
+      width: 32px; height: 32px;
+      border: 1px solid rgba(201,169,110,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .about-feature-icon svg { width: 14px; height: 14px; }
+    .about-feature-text {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--off-white);
+    }
+    .about-feature-text small {
+      display: block;
+      font-size: 10px;
+      color: var(--light-gray);
+      font-weight: 300;
+      margin-top: 2px;
+    }
+
+    /* SERVICES */
+    .services { background: var(--black); }
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 80px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      cursor: none;
+    }
+    .service-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s ease;
+      filter: grayscale(40%) brightness(0.7);
+    }
+    .service-card:hover img {
+      transform: scale(1.06);
+      filter: grayscale(0%) brightness(0.85);
+    }
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      transition: background 0.5s ease;
+    }
+    .service-card:hover .service-card-overlay {
+      background: linear-gradient(to top, rgba(10,10,10,0.98) 20%, rgba(10,10,10,0.5) 70%, rgba(10,10,10,0.2) 100%);
+    }
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .service-desc {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(245,242,236,0.6);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+    .service-card:hover .service-desc {
+      max-height: 200px;
+      opacity: 1;
+    }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease 0.1s;
+    }
+    .service-card:hover .service-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PROJECT MANAGER DETAIL */
+    .pm-detail {
+      background: var(--dark2);
+    }
+    .pm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .pm-list { margin-top: 40px; }
+    .pm-item {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(201,169,110,0.1);
+    }
+    .pm-item:first-child { border-top: 1px solid rgba(201,169,110,0.1); }
+    .pm-item-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      color: rgba(201,169,110,0.3);
+      line-height: 1;
+      min-width: 40px;
+    }
+    .pm-item-text h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .pm-item-text p {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(245,242,236,0.55);
+    }
+    .pm-image-col {
+      position: sticky;
+      top: 120px;
+    }
+    .pm-image-col img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      display: block;
+    }
+    .pm-badge {
+      background: var(--dark);
+      border: 1px solid rgba(201,169,110,0.2);
+      padding: 30px;
+      margin-top: 2px;
+    }
+    .pm-badge h5 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pm-badge p {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(245,242,236,0.55);
+    }
+
+    /* INSTALLATIONS GRID */
+    .installations { background: var(--black); }
+    .inst-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px 100px;
+      margin-top: 80px;
+    }
+    .inst-item {}
+    .inst-icon {
+      width: 50px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 32px;
+    }
+    .inst-item h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .inst-item p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(245,242,236,0.55);
+    }
+    .inst-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .inst-tag {
+      padding: 5px 14px;
+      border: 1px solid rgba(201,169,110,0.25);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* GALLERY */
+    .gallery { padding: 0; overflow: hidden; }
+    .gallery-track {
+      display: flex;
+      gap: 2px;
+    }
+    .gallery-track img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+      filter: grayscale(30%) brightness(0.85);
+      transition: all 0.5s ease;
+    }
+    .gallery-track img:hover {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.02);
+    }
+
+    /* WHY MENORCA */
+    .why-menorca {
+      background: linear-gradient(135deg, var(--dark2) 0%, var(--dark3) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .why-menorca::before {
+      content: 'MENORCA';
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 200px;
+      font-weight: 300;
+      color: rgba(201,169,110,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .menorca-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .menorca-reasons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+    }
+    .menorca-reason {}
+    .menorca-reason h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .menorca-reason p {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(245,242,236,0.55);
+    }
+    .menorca-img {
+      position: relative;
+    }
+    .menorca-img img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      display: block;
+    }
+    .menorca-overlay-card {
+      position: absolute;
+      bottom: 30px;
+      left: -40px;
+      background: var(--dark);
+      border: 1px solid rgba(201,169,110,0.2);
+      padding: 30px 36px;
+      max-width: 300px;
+    }
+    .menorca-overlay-card .num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .menorca-overlay-card .lbl {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light-gray);
+      margin-top: 6px;
+    }
+
+    /* PROCESS */
+    .process { background: var(--dark); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 80px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,169,110,0.3), transparent);
+    }
+    .process-step { text-align: center; padding: 0 20px; }
+    .process-dot {
+      width: 48px; height: 48px;
+      border: 1px solid rgba(201,169,110,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--gold);
+      background: var(--dark);
+      position: relative;
+      z-index: 1;
+    }
+    .process-step h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(245,242,236,0.5);
+    }
+
+    /* CTA BANNER */
+    .cta-banner {
+      position: relative;
+      padding: 120px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://luxinpro.es/wp-content/uploads/2021/06/villa-4555818_1920.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(40%) brightness(0.3);
+    }
+    .cta-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .cta-banner h2 em { font-style: italic; color: var(--gold); }
+    .cta-banner p {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(245,242,236,0.7);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      line-height: 1.9;
+    }
+    .cta-banner-btns { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 16px 42px;
+      border: 1px solid rgba(245,242,236,0.4);
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--dark2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .contact-info {
+      padding: 100px 80px 100px 60px;
+      border-right: 1px solid rgba(201,169,110,0.1);
+    }
+    .contact-form-wrap {
+      padding: 100px 60px 100px 80px;
+    }
+
+    .contact-details { margin-top: 48px; }
+    .contact-detail {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 36px;
+    }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(201,169,110,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+    .contact-detail-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--light-gray);
+      margin-bottom: 6px;
+    }
+    .contact-detail-val {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--off-white);
+    }
+    .contact-detail-val a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-detail-val a:hover { color: var(--gold); }
+
+    .contact-social {
+      display: flex;
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px; height: 44px;
+      border: 1px solid rgba(201,169,110,0.2);
+      color: var(--light-gray);
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 11px;
+    }
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .form-group { margin-bottom: 24px; }
+    .form-group label {
+      display: block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--light-gray);
+      margin-bottom: 10px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.15);
+      padding: 14px 18px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--off-white);
+      outline: none;
+      transition: border-color 0.3s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(138,138,138,0.5); }
+    .form-group textarea { height: 120px; resize: none; }
+    .form-group select option { background: var(--dark2); }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(201,169,110,0.1);
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 80px;
+      padding: 80px 60px;
+    }
+    .footer-brand .logo { font-size: 24px; display: block; margin-bottom: 20px; }
+    .footer-brand p {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: rgba(245,242,236,0.4);
+      max-width: 280px;
+    }
+    .footer-col h5 {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a {
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(245,242,236,0.45);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201,169,110,0.08);
+      padding: 28px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom p {
+      font-size: 10px;
+      font-weight: 300;
+      color: rgba(245,242,236,0.25);
+      letter-spacing: 1px;
+    }
+
+    /* LANG SWITCHER */
+    .lang-switcher {
+      display: flex;
+      gap: 16px;
+    }
+    .lang-switcher a {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,242,236,0.35);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .lang-switcher a:hover,
+    .lang-switcher a.active { color: var(--gold); }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* LOADING */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: var(--black);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .loader.hidden { opacity: 0; pointer-events: none; transform: translateY(-100%); }
+    .loader-logo {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 12px;
+      color: var(--gold);
+    }
+    .loader-bar {
+      width: 200px; height: 1px;
+      background: rgba(201,169,110,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .loader-bar::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--gold);
+      animation: loadBar 1.5s ease forwards;
+    }
+    @keyframes loadBar {
+      to { left: 0; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+      .hero-content { padding: 0 24px; }
+      section { padding: 80px 24px; }
+      .about, .pm-grid, .menorca-grid, .contact { grid-template-columns: 1fr; gap: 60px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps::before { display: none; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .inst-grid { grid-template-columns: 1fr; gap: 50px; }
+      .menorca-reasons { grid-template-columns: 1fr; gap: 30px; }
+      .contact-info, .contact-form-wrap { padding: 60px 24px; }
+      .scroll-indicator { display: none; }
+      body { cursor: auto; }
+      .cursor, .cursor-ring { display: none; }
+      .about-features { grid-template-columns: 1fr; }
+      .services-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-logo">LUXINPRO</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="logo">LUXIN<span>PRO</span></a>
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#instalaciones">Instalaciones</a>
+    <a href="#menorca">Menorca</a>
+    <a href="#contacto" class="nav-cta">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Menorca & Baleares — Desde 2010</div>
+    <h1>
+      Construimos tu<br>
+      <em>visión de lujo</em><br>
+      en Menorca
+    </h1>
+    <p class="hero-desc">
+      Project & Building Manager especializado en proyectos inmobiliarios exclusivos en Menorca y las Islas Baleares. Del concepto a la entrega de llaves, con absoluta garantía de calidad.
+    </p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-primary"><span>Solicitar consulta</span></a>
+      <a href="#servicios" class="btn-ghost">
+        Nuestros servicios
+        <svg width="16" height="8" viewBox="0 0 16 8" fill="none"><path d="M0 4H14M14 4L11 1M14 4L11 7" stroke="currentColor" stroke-width="0.8"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="stat-item">
+    <div class="stat-num">+15</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">+200</div>
+    <div class="stat-label">Proyectos completados</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Idiomas de atención</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Satisfacción cliente</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="nosotros">
+  <div class="about-image-wrap reveal-left">
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/project2.jpg" alt="Proyecto de construcción de lujo en Menorca — LUXINPRO" />
+  </div>
+  <div class="about-text reveal-right">
+    <div class="section-tag">Quiénes somos</div>
+    <h2 class="section-title">El socio estratégico<br>que <em>su proyecto merece</em></h2>
+    <p>En LUXINPRO somos especialistas en la gestión integral de proyectos inmobiliarios de alta gama en Menorca y las Islas Baleares. Nos encargamos de todo el proceso, desde la planificación inicial hasta la posventa, para que usted solo tenga que disfrutar del resultado.</p>
+    <p>Ejecutamos proyectos de nueva construcción y reforma integral con fines residenciales, comerciales e industriales, garantizando los más altos estándares de calidad, eficiencia y sostenibilidad.</p>
+    <div class="about-divider"></div>
+    <div class="about-features">
+      <div class="about-feature">
+        <div class="about-feature-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" stroke="#C9A96E" stroke-width="0.8"/><path d="M4 7L6 9L10 5" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div class="about-feature-text">
+          Project Manager
+          <small>Planificación y dirección integral</small>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12V4L7 1L12 4V12" stroke="#C9A96E" stroke-width="0.8"/><rect x="5" y="8" width="4" height="4" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div class="about-feature-text">
+          Building Manager
+          <small>Supervisión y control de obra</small>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="#C9A96E" stroke-width="0.8"/><path d="M7 4V7L9 9" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div class="about-feature-text">
+          Smart Home
+          <small>Domótica e instalaciones inteligentes</small>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L9 5H13L10 8L11 12L7 10L3 12L4 8L1 5H5L7 1Z" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div class="about-feature-text">
+          Energías Renovables
+          <small>Solar, aerotermia, puntos de carga</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="services-header">
+    <div>
+      <div class="section-tag">Servicios</div>
+      <h2 class="section-title">Gestión integral<br><em>de principio a fin</em></h2>
+    </div>
+    <a href="#contacto" class="btn-ghost" style="white-space:nowrap;">
+      Ver todos los servicios
+      <svg width="16" height="8" viewBox="0 0 16 8" fill="none"><path d="M0 4H14M14 4L11 1M14 4L11 7" stroke="currentColor" stroke-width="0.8"/></svg>
+    </a>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <img src="https://luxinpro.es/wp-content/uploads/2021/06/project2.jpg" alt="Project Manager Menorca — LUXINPRO" />
+      <div class="service-card-overlay">
+        <div class="service-num">01</div>
+        <div class="service-name">Project Manager</div>
+        <div class="service-desc">Desde el emplazamiento y diseño hasta los acabados y equipamiento. Dirigimos cada fase del proyecto optimizando recursos, plazos y costes, con instalaciones inteligentes SMARTHOME y las mejores marcas.</div>
+        <a href="#contacto" class="service-link">Saber más →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://luxinpro.es/wp-content/uploads/2021/06/INSTAL.jpg" alt="Building Manager Baleares — LUXINPRO" />
+      <div class="service-card-overlay">
+        <div class="service-num">02</div>
+        <div class="service-name">Building Manager</div>
+        <div class="service-desc">Supervisamos mediciones, presupuestos y materiales. Coordinamos contratistas, controlamos calidad, seguridad y documentación final. Asistencia completa en posventa.</div>
+        <a href="#contacto" class="service-link">Saber más →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://luxinpro.es/wp-content/uploads/2021/06/real-estate-4955089_1920.jpg" alt="Reforma integral villa Menorca — LUXINPRO" />
+      <div class="service-card-overlay">
+        <div class="service-num">03</div>
+        <div class="service-name">Reforma Integral</div>
+        <div class="service-desc">Transformamos su propiedad con los acabados más exclusivos, carpintería a medida, cocinas de inducción invisible, spas, jardines y piscinas climatizadas. Diseño que refleja su personalidad.</div>
+        <a href="#contacto" class="service-link">Saber más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PM DETAIL -->
+<section class="pm-detail">
+  <div class="pm-grid">
+    <div class="reveal-left">
+      <div class="section-tag">Project Manager</div>
+      <h2 class="section-title">Su proyecto,<br><em>nuestra responsabilidad</em></h2>
+      <p class="section-text">Montamos su proyecto desde cero y nos encargamos de todo para que usted no tenga que preocuparse por nada. Establecemos, organizamos y dirigimos cada fase.</p>
+      <div class="pm-list">
+        <div class="pm-item">
+          <div class="pm-item-num">01</div>
+          <div class="pm-item-text">
+            <h4>Planificación y programación</h4>
+            <p>Emplazamiento, entorno físico, estructura constructiva, espacios, acabados y diseño de cocinas, mobiliario e iluminación personalizados.</p>
+          </div>
+        </div>
+        <div class="pm-item">
+          <div class="pm-item-num">02</div>
+          <div class="pm-item-text">
+            <h4>Obra nueva y reforma integral</h4>
+            <p>Instalaciones inteligentes SMARTHOME con las últimas tendencias. Griferías, sanitarios, ventanas, toldos y persianas de primeras marcas.</p>
+          </div>
+        </div>
+        <div class="pm-item">
+          <div class="pm-item-num">03</div>
+          <div class="pm-item-text">
+            <h4>Supervisión y garantías</h4>
+            <p>Cumplimiento de funcionalidad, eficiencia energética y seguridad. Mantenimiento de piscinas, jardines, fontanería y albañilería.</p>
+          </div>
+        </div>
+        <div class="pm-item">
+          <div class="pm-item-num">04</div>
+          <div class="pm-item-text">
+            <h4>Posventa y asistencia</h4>
+            <p>Una vez entregada la obra, ofrecemos servicio completo de posventa para cualquier incidencia, reclamación o desperfecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pm-image-col reveal-right">
+      <img src="https://luxinpro.es/wp-content/uploads/2021/06/project-building-manager.jpg" alt="Building Manager proyecto Menorca — LUXINPRO" />
+      <div class="pm-badge">
+        <h5>Building Manager</h5>
+        <p>Supervisamos mediciones, presupuestos, materiales y contratistas. Control de calidad, seguridad y gestión documental completa hasta la entrega de llaves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery">
+  <div class="gallery-track">
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/bath-3622540_1920.jpg" alt="Baño de lujo Menorca" />
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/bed-3700115_1920.jpg" alt="Dormitorio villa Menorca" />
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/kitchen-2132605_1920.jpg" alt="Cocina de diseño Menorca" />
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/villa-4555818_1920.jpg" alt="Villa de lujo Menorca" />
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/home-5526685_1920.jpg" alt="Interior villa Baleares" />
+    <img src="https://luxinpro.es/wp-content/uploads/2021/06/villa-2521423_1920.jpg" alt="Exterior villa Baleares" />
+  </div>
+</div>
+
+<!-- INSTALLATIONS -->
+<section class="installations" id="instalaciones">
+  <div class="section-tag">Instalaciones & Servicios</div>
+  <h2 class="section-title" style="max-width:600px;">Cada detalle,<br><em>cuidado al máximo</em></h2>
+  <div class="inst-grid">
+    <div class="inst-item reveal">
+      <div class="inst-icon"></div>
+      <h3>Espacios Interiores</h3>
+      <p>Creamos el refugio perfecto con texturas naturales, mobiliario rústico, moderno o clásico. Spa, jacuzzi, bañeras de diseño, duchas amplias y elegantes. Rincones únicos con tapicerías modernas y mobiliario exclusivo.</p>
+      <div class="inst-tags">
+        <span class="inst-tag">Spa & Jacuzzi</span>
+        <span class="inst-tag">Baños de lujo</span>
+        <span class="inst-tag">Mobiliario a medida</span>
+      </div>
+    </div>
+    <div class="inst-item reveal">
+      <div class="inst-icon"></div>
+      <h3>Carpintería Interior y Exterior</h3>
+      <p>Cocinas con Inducción Invisible para los amantes del diseño y la gastronomía. Vestidores y zonas de armario personalizados, aerocloset o cerrados, con elementos elegantes y sostenibles.</p>
+      <div class="inst-tags">
+        <span class="inst-tag">Cocinas de diseño</span>
+        <span class="inst-tag">Vestidores</span>
+        <span class="inst-tag">Carpintería a medida</span>
+      </div>
+    </div>
+    <div class="inst-item reveal">
+      <div class="inst-icon"></div>
+      <h3>Piscinas, Jardines y Exterior</h3>
+      <p>Piscinas de interior y exterior climatizadas e iluminadas al gusto. Jardines con plantas exclusivas que aportan colorido y belleza. Mobiliario de exterior elegante para disfrutar con familia y amigos.</p>
+      <div class="inst-tags">
+        <span class="inst-tag">Piscinas climatizadas</span>
+        <span class="inst-tag">Jardines de diseño</span>
+        <span class="inst-tag">Mobiliario exterior</span>
+      </div>
+    </div>
+    <div class="inst-item reveal">
+      <div class="inst-icon"></div>
+      <h3>Smart Home & Energías Renovables</h3>
+      <p>Domótica completa: el control de su hogar en la palma de su mano. Sistema Altherma para calefacción, aire acondicionado y ACS. Aerotermia, placas solares, puntos de carga para vehículos eléctricos.</p>
+      <div class="inst-tags">
+        <span class="inst-tag">Domótica</span>
+        <span class="inst-tag">Aerotermia</span>
+        <span class="inst-tag">Placas solares</span>
+        <span class="inst-tag">Coche eléctrico</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MENORCA -->
+<section class="why-menorca" id="menorca">
+  <div class="menorca-grid">
+    <div>
+      <div class="section-tag">Por qué Menorca</div>
+      <h2 class="section-title">El destino premium<br>del <em>Mediterráneo</em></h2>
+      <p class="section-text">Menorca, Reserva de la Biosfera de la UNESCO, combina una naturaleza privilegiada con un mercado inmobiliario de alto valor en constante crecimiento. LUXINPRO es su referente local para invertir y construir en la isla.</p>
+      <div class="menorca-reasons reveal">
+        <div class="menorca-reason">
+          <h4>Mercado en alza</h4>
+          <p>El valor de las propiedades en Menorca crece sostenidamente, con alta demanda de compradores europeos de alto perfil.</p>
+        </div>
+        <div class="menorca-reason">
+          <h4>Reserva UNESCO</h4>
+          <p>Ecosistemas únicos y patrimonio natural protegido que garantizan la exclusividad y calidad de vida de sus propietarios.</p>
+        </div>
+        <div class="menorca-reason">
+          <h4>Conocimiento local</h4>
+          <p>Más de 15 años en Baleares con red de proveedores, gestores y arquitectos de primer nivel en Menorca.</p>
+        </div>
+        <div class="menorca-reason">
+          <h4>Gestión completa</h4>
+          <p>Nos encargamos de permisos, licencias, trámites legales y gestión administrativa para clientes internacionales.</p>
+        </div>
+      </div>
+    </div>
+    <div class="menorca-img reveal-right">
+      <img src="https://luxinpro.es/wp-content/uploads/2021/06/villa-4555824_1920.jpg" alt="Villa de lujo en Menorca — LUXINPRO" />
+      <div class="menorca-overlay-card">
+        <div class="num">+15</div>
+        <div class="lbl">Años de experiencia en Baleares</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div style="text-align:center; margin-bottom:0;">
+    <div class="section-tag" style="justify-content:center;">Nuestro proceso</div>
+    <h2 class="section-title" style="text-align:center;">De la <em>idea</em> a la realidad</h2>
+    <p class="section-text" style="margin: 0 auto; text-align:center;">Un proceso claro, transparente y sin sorpresas, diseñado para proteger su inversión en cada paso.</p>
+  </div>
+  <div class="process-steps reveal">
+    <div class="process-step">
+      <div class="process-dot">1</div>
+      <h4>Consulta inicial</h4>
+      <p>Analizamos su visión, necesidades, presupuesto y plazos para establecer el plan óptimo.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">2</div>
+      <h4>Diseño y planificación</h4>
+      <p>Desarrollamos el proyecto con arquitectos y diseñadores de interiores de primer nivel.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">3</div>
+      <h4>Gestión y permisos</h4>
+      <p>Tramitamos licencias, permisos y documentación legal con total transparencia.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">4</div>
+      <h4>Construcción</h4>
+      <p>Coordinamos y supervisamos toda la obra con control de calidad, plazos y costes.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-dot">5</div>
+      <h4>Entrega y posventa</h4>
+      <p>Gestión documental final y asistencia posventa continua para su total tranquilidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-banner-content reveal">
+    <h2>¿Tiene un proyecto<br>en <em>mente?</em></h2>
+    <p>Hablemos de su visión. Le ofrecemos una consulta inicial sin compromiso para estudiar cómo hacer realidad su proyecto en Menorca o Baleares.</p>
+    <div class="cta-banner-btns">
+      <a href="tel:+34609625573" class="btn-primary"><span>Llamar: 609 625 573</span></a>
+      <a href="#contacto" class="btn-secondary">Enviar consulta</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto" style="padding:0;">
+  <div class="contact-info">
+    <div class="section-tag">Contacto</div>
+    <h2 class="section-title">Hablemos de<br><em>su proyecto</em></h2>
+    <p class="section-text">Estamos disponibles para atenderle en español, inglés, francés y alemán. Cuéntenos su idea y le asesoraremos sin compromiso.</p>
+    <div class="contact-details">
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 10.5C12 10.5 11 10.3 10.1 9.9C9.8 9.7 9.4 9.8 9.1 10.1L7.9 11.3C6 10.3 5.7 10 4.7 8.1L5.9 6.9C6.2 6.6 6.3 6.2 6.1 5.9C5.7 5 5.5 4 5.5 3C5.5 2.4 5.1 2 4.5 2H3C2.4 2 2 2.4 2 3C2 9.1 6.9 14 13 14C13.6 14 14 13.6 14 13V11.5C14 10.9 13.6 10.5 13 10.5Z" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Teléfono</div>
+          <div class="contact-detail-val"><a href="tel:+34609625573">609 625 573</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4L8 9L14 4M2 4H14V12H2V4Z" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-val"><a href="mailto:info@luxinpro.es">info@luxinpro.es</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="7" r="3" stroke="#C9A96E" stroke-width="0.8"/><path d="M8 2C5.2 2 3 4.2 3 7C3 10.5 8 14 8 14C8 14 13 10.5 13 7C13 4.2 10.8 2 8 2Z" stroke="#C9A96E" stroke-width="0.8"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Área de servicio</div>
+          <div class="contact-detail-val">Menorca · Mallorca · Ibiza · Baleares</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-social">
+      <a href="https://www.facebook.com/luxuryinvestmentandprojects" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">fb</a>
+      <a href="https://www.instagram.com/luxuryinvestmentandprojects/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+  <div class="contact-form-wrap">
+    <form onsubmit="handleForm(event)">
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Su nombre" required />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="su@email.com" required />
+      </div>
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" placeholder="+34 000 000 000" />
+      </div>
+      <div class="form-group">
+        <label>Tipo de proyecto</label>
+        <select>
+          <option value="">Seleccione una opción</option>
+          <option>Project Manager — Obra nueva</option>
+          <option>Building Manager — Supervisión</option>
+          <option>Reforma integral</option>
+          <option>Smart Home / Domótica</option>
+          <option>Energías renovables</option>
+          <option>Consulta general</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea placeholder="Cuéntenos brevemente su proyecto o consulta…"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; border:none; font-family:inherit; cursor:none;">
+        <span>Enviar consulta</span>
+      </button>
+    </form>
+    <div id="formSuccess" style="display:none; margin-top:24px; padding:20px; border:1px solid rgba(201,169,110,0.3); text-align:center;">
+      <p style="color:var(--gold); font-size:11px; letter-spacing:2px; text-transform:uppercase;">Mensaje enviado con éxito</p>
+      <p style="color:rgba(245,242,236,0.6); font-size:12px; margin-top:8px;">Nos pondremos en contacto con usted a la mayor brevedad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#" class="logo">LUXIN<span>PRO</span></a>
+      <p>Referente en gestión y construcción de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Luxury Investment & Projects Island Territory.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Project Manager</a></li>
+        <li><a href="#servicios">Building Manager</a></li>
+        <li><a href="#instalaciones">Reforma Integral</a></li>
+        <li><a href="#instalaciones">Smart Home</a></li>
+        <li><a href="#instalaciones">Energías Renovables</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Destinos</h5>
+      <ul>
+        <li><a href="#menorca">Menorca</a></li>
+        <li><a href="#">Mallorca</a></li>
+        <li><a href="#">Ibiza</a></li>
+        <li><a href="#">Islas Baleares</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="https://luxinpro.es/aviso-legal/" target="_blank">Aviso Legal</a></li>
+        <li><a href="https://luxinpro.es/politica-de-privacidad/" target="_blank">Privacidad</a></li>
+        <li><a href="https://luxinpro.es/politica-de-cookies/" target="_blank">Cookies</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 LUXINPRO — Inversiones y Proyectos en Islas Baleares</p>
+    <div class="lang-switcher">
+      <a href="#" class="active">ES</a>
+      <a href="https://luxinpro.es/en/" target="_blank">EN</a>
+      <a href="https://luxinpro.es/fr/" target="_blank">FR</a>
+      <a href="https://luxinpro.es/de/" target="_blank">DE</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // LOADER
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+    }, 1800);
+  });
+
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx) * 0.15;
+    ry += (my - ry) * 0.15;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2)'; ring.style.transform = 'translate(-50%,-50%) scale(1.5)'; ring.style.borderColor = 'rgba(201,169,110,0.8)'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.borderColor = 'rgba(201,169,110,0.5)'; });
+  });
+
+  // HEADER SCROLL
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  // REVEAL ON SCROLL
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // FORM
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'block';
+    e.target.style.display = 'none';
+  }
+
+  // SMOOTH SCROLL
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
