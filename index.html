@@ -49,7 +49,25 @@
       "https://www.instagram.com/luxuryinvestmentandprojects/"
     ]
   }
-  </script>
+  
+  // Mobile menu toggle
+  (function() {
+    var mBtn = document.getElementById('mMenuBtn');
+    var mMenu = document.getElementById('mobileMenu');
+    if (mBtn && mMenu) {
+      mBtn.addEventListener('click', function() {
+        mBtn.classList.toggle('open');
+        mMenu.classList.toggle('open');
+      });
+      mMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          mBtn.classList.remove('open');
+          mMenu.classList.remove('open');
+        });
+      });
+    }
+  })();
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1162,6 +1180,7 @@
     /* MOBILE */
     
   @media (max-width: 900px) {
+    .logo { font-size:18px !important; letter-spacing:4px !important; }
     header { padding: 0 16px !important; height: 64px !important; }
     .nav-desktop { display: none !important; }
     .nav-mobile { display: flex !important; }
