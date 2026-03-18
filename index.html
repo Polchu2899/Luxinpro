@@ -1182,7 +1182,80 @@
       .services-header { flex-direction: column; align-items: flex-start; gap: 24px; }
       .hero-btns { flex-direction: column; align-items: flex-start; }
     }
-  </style>
+  
+    /* ── MOBILE FIXES ── */
+    @media(max-width:900px){
+      body{cursor:auto;}
+      .cursor,.cursor-ring{display:none;}
+      header{padding:0 16px;height:64px;}
+      nav{display:none;}
+      .mobile-home-btn{display:flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none;color:var(--gold);width:36px;height:36px;}
+      .logo{font-size:20px;letter-spacing:5px;}
+
+      /* HERO */
+      .hero{min-height:100svh;padding-bottom:80px;}
+      .hero-content{padding:0 20px;}
+      .hero h1{font-size:clamp(36px,9vw,56px);}
+      .hero-desc{font-size:12px;}
+      .hero-btns{flex-direction:column;align-items:flex-start;gap:12px;}
+
+      /* STATS */
+      .stats-bar{grid-template-columns:1fr 1fr;}
+      .stat-item{padding:24px 16px;}
+      .stat-num{font-size:36px;}
+
+      /* SECTIONS */
+      section{padding:64px 20px;}
+      .about{grid-template-columns:1fr;gap:40px;}
+      .about-image-wrap img{height:320px;}
+      .about-features{grid-template-columns:1fr;}
+      .services-grid{grid-template-columns:1fr;}
+      .services-header{flex-direction:column;align-items:flex-start;gap:16px;}
+      .service-card img{height:300px;}
+      .pm-grid{grid-template-columns:1fr;gap:40px;}
+      .pm-image-col{position:static;}
+      .pm-image-col img{height:280px;}
+      .inst-grid{grid-template-columns:1fr;gap:44px;}
+      .menorca-grid{grid-template-columns:1fr;gap:40px;}
+      .menorca-reasons{grid-template-columns:1fr;}
+      .menorca-img img{height:280px;}
+      .menorca-overlay-card{left:10px;bottom:10px;padding:16px 20px;}
+      .process-steps{grid-template-columns:1fr 1fr;gap:32px;}
+      .process-steps::before{display:none;}
+
+      /* CONTACT */
+      .contact{grid-template-columns:1fr;}
+      .contact-info{padding:50px 20px 30px;}
+      .contact-form-wrap{padding:30px 20px 60px;}
+
+      /* FOOTER */
+      .footer-main{grid-template-columns:1fr 1fr;gap:32px;padding:44px 20px;}
+      .footer-bottom{flex-direction:column;gap:10px;padding:18px 20px;text-align:center;}
+
+      /* CTA BANNER */
+      .cta-banner{padding:70px 20px;}
+
+      /* GALLERY */
+      .gallery-track img{height:220px;width:260px;}
+
+      /* COOKIE BANNER - MOBILE FIX */
+      #cookieBanner{padding:16px 16px!important;flex-direction:column!important;gap:14px!important;align-items:stretch!important;}
+      #cookieBanner > div:first-child{gap:10px!important;}
+      #cookieBanner > div:first-child p:first-child{font-size:14px!important;}
+      #cookieBanner > div:first-child p:last-child{font-size:10px!important;line-height:1.6!important;}
+      #cookieBanner > div:last-child{flex-direction:row!important;gap:8px!important;justify-content:stretch!important;}
+      #cookieBanner > div:last-child button{flex:1!important;padding:10px 6px!important;font-size:8px!important;letter-spacing:1px!important;}
+
+      /* PAGE HERO (legal pages) */
+      .page-hero{padding:100px 20px 50px;}
+      .legal-body{padding:40px 20px 70px;}
+      .scroll-indicator{display:none;}
+    }
+    @media(min-width:901px){
+      .mobile-home-btn{display:none;}
+    }
+
+    </style>
 </head>
 <body>
 
@@ -1205,6 +1278,13 @@
     <a href="#instalaciones">Instalaciones</a>
     <a href="#menorca">Menorca</a>
     <a href="#contacto" class="nav-cta">Contacto</a>
+    <div class="header-langs">
+      <a href="index.html" class="active">ES</a>
+      <a href="en/index.html">EN</a>
+      <a href="fr/index.html">FR</a>
+      <a href="de/index.html">DE</a>
+      <a href="ca/index.html">CA</a>
+    </div>
   </nav>
 </header>
 
