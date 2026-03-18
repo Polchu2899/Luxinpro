@@ -1160,37 +1160,62 @@
     }
 
     /* MOBILE */
-    @media (max-width: 900px) {
-      header { padding: 0 24px; }
-      nav { display: none; }
-      .hero-content { padding: 0 24px; }
-      section { padding: 80px 24px; }
-      .about, .pm-grid, .menorca-grid, .contact { grid-template-columns: 1fr; gap: 60px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .stats-bar { grid-template-columns: 1fr 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
-      .process-steps::before { display: none; }
-      .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
-      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-      .inst-grid { grid-template-columns: 1fr; gap: 50px; }
-      .menorca-reasons { grid-template-columns: 1fr; gap: 30px; }
-      .contact-info, .contact-form-wrap { padding: 60px 24px; }
-      .scroll-indicator { display: none; }
-      body { cursor: auto; }
-      .cursor, .cursor-ring { display: none; }
-      .about-features { grid-template-columns: 1fr; }
-      .services-header { flex-direction: column; align-items: flex-start; gap: 24px; }
-      .hero-btns { flex-direction: column; align-items: flex-start; }
-    }
+    
+  @media (max-width: 900px) {
+    header { padding: 0 16px !important; height: 64px !important; }
+    .nav-desktop { display: none !important; }
+    .nav-mobile { display: flex !important; }
+    section { padding: 60px 18px !important; }
+    .about, .contact { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .about-image-wrap img { height: 260px !important; }
+    .about-features { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr !important; }
+    .services-header { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; }
+    .service-card img { height: 260px !important; }
+    .pm-detail { padding: 60px 18px !important; }
+    .pm-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .pm-image-col { position: static !important; }
+    .pm-image-col img { height: 220px !important; }
+    .installations { padding: 60px 18px !important; }
+    .inst-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+    .why-menorca { padding: 60px 18px !important; }
+    .menorca-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .menorca-reasons { grid-template-columns: 1fr !important; }
+    .menorca-img img { height: 240px !important; }
+    .menorca-overlay-card { left: 10px !important; bottom: 10px !important; padding: 12px 16px !important; }
+    .process { padding: 60px 18px !important; }
+    .process-steps { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+    .process-steps::before { display: none !important; }
+    .contact-info { padding: 48px 18px 24px !important; border-right: none !important; border-bottom: 1px solid rgba(201,169,110,.1) !important; }
+    .contact-form-wrap { padding: 24px 18px 52px !important; }
+    .stats-bar { grid-template-columns: 1fr 1fr !important; }
+    .stat-item { padding: 20px 12px !important; }
+    .stat-num { font-size: 32px !important; }
+    .hero { min-height: 100svh !important; padding-bottom: 60px !important; }
+    .hero-content { padding: 0 18px !important; }
+    .hero h1 { font-size: clamp(32px, 9vw, 54px) !important; }
+    .hero-desc { font-size: 12px !important; }
+    .hero-btns { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+    .scroll-indicator { display: none !important; }
+    .gallery-track img { height: 200px !important; width: 240px !important; }
+    .cta-banner { padding: 64px 18px !important; }
+    .cta-banner-btns { flex-direction: column !important; align-items: center !important; }
+    .footer-main { grid-template-columns: 1fr 1fr !important; gap: 28px !important; padding: 40px 18px !important; }
+    .footer-bottom { flex-direction: column !important; gap: 10px !important; padding: 16px 18px !important; text-align: center !important; }
+    .footer-lang-switcher { flex-wrap: wrap !important; justify-content: center !important; }
+    /* Cookie banner mobile */
+    .cookie-inner { padding: 14px 16px !important; flex-direction: column !important; gap: 12px !important; }
+    .cookie-text { max-width: 100% !important; }
+    .cookie-btns { width: 100% !important; }
+    .cookie-btns button { flex: 1 !important; padding: 10px 4px !important; font-size: 8px !important; letter-spacing: 1px !important; }
+  }
+
   
     /* ── MOBILE FIXES ── */
     @media(max-width:900px){
       body{cursor:auto;}
       .cursor,.cursor-ring{display:none;}
-      header{padding:0 16px;height:64px;}
-      nav{display:none;}
-      .mobile-home-btn{display:flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none;color:var(--gold);width:36px;height:36px;}
-      .logo{font-size:20px;letter-spacing:5px;}
+      /* old nav rules removed — handled by new mobile CSS below */
 
       /* HERO */
       .hero{min-height:100svh;padding-bottom:80px;}
@@ -1255,7 +1280,36 @@
       .mobile-home-btn{display:none;}
     }
 
-    </style>
+    
+    /* ── NAV DESKTOP / MOBILE (shared) ── */
+    .nav-desktop { display:flex; align-items:center; gap:26px; }
+    .nav-desktop a { font-size:10px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--off-white); text-decoration:none; opacity:.7; transition:all .3s; position:relative; white-space:nowrap; }
+    .nav-desktop a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+    .nav-desktop a:hover { opacity:1; color:var(--gold); }
+    .nav-desktop a:hover::after { width:100%; }
+    .nav-desktop .nav-cta { padding:9px 20px; border:1px solid var(--gold); color:var(--gold)!important; opacity:1!important; }
+    .nav-desktop .nav-cta:hover { background:var(--gold)!important; color:var(--black)!important; }
+    .nav-desktop .nav-cta::after { display:none!important; }
+    .nav-langs { display:flex; gap:10px; align-items:center; border-left:1px solid rgba(201,169,110,0.2); padding-left:18px; margin-left:4px; }
+    .nav-langs a { font-size:9px!important; font-weight:600!important; letter-spacing:2px!important; color:rgba(245,242,236,0.35)!important; opacity:1!important; padding:0!important; }
+    .nav-langs a::after { display:none!important; }
+    .nav-langs a:hover, .nav-langs a.active { color:var(--gold)!important; }
+    .nav-mobile { display:none; align-items:center; }
+    .mobile-menu-btn { background:none; border:1px solid rgba(201,169,110,0.3); width:40px; height:40px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; cursor:pointer; }
+    .mobile-menu-btn span { display:block; width:20px; height:1px; background:var(--gold); transition:all .3s; }
+    .mobile-menu-btn.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .mobile-menu-btn.open span:nth-child(2) { opacity:0; }
+    .mobile-menu-btn.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4px); }
+    .mobile-menu { display:none; position:fixed; top:64px; left:0; right:0; background:rgba(10,10,10,0.98); border-bottom:1px solid rgba(201,169,110,0.15); z-index:999; flex-direction:column; padding:16px 0; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { display:block; padding:13px 24px; font-size:11px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:rgba(245,242,236,0.7); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.06); transition:color .3s; }
+    .mobile-menu a:hover { color:var(--gold); }
+    .mobile-menu .mobile-cta { margin:12px 24px 0; padding:12px 20px; text-align:center; background:var(--gold); color:var(--black)!important; font-weight:600!important; border:none; }
+    .mobile-menu .mobile-lang-row { display:flex; gap:8px; padding:12px 24px 4px; flex-wrap:wrap; }
+    .mobile-menu .mobile-lang-row a { border:1px solid rgba(201,169,110,0.15); padding:6px 11px; font-size:9px; letter-spacing:2px; color:rgba(245,242,236,0.4); }
+    .mobile-menu .mobile-lang-row a.active, .mobile-menu .mobile-lang-row a:hover { color:var(--gold); border-color:rgba(201,169,110,0.4); }
+
+  </style>
 </head>
 <body>
 
@@ -1271,22 +1325,48 @@
 
 <!-- HEADER -->
 <header id="header">
-  <a href="#" class="logo">LUXIN<span>PRO</span></a>
-  <nav>
+  <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
+
+  <!-- Desktop nav -->
+  <div class="nav-desktop">
     <a href="#nosotros">Nosotros</a>
     <a href="#servicios">Servicios</a>
     <a href="#instalaciones">Instalaciones</a>
     <a href="#menorca">Menorca</a>
     <a href="#contacto" class="nav-cta">Contacto</a>
-    <div class="header-langs">
+    <div class="nav-langs">
       <a href="index.html" class="active">ES</a>
       <a href="en/index.html">EN</a>
       <a href="fr/index.html">FR</a>
       <a href="de/index.html">DE</a>
       <a href="ca/index.html">CA</a>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobile nav -->
+  <div class="nav-mobile">
+    <button class="mobile-menu-btn" id="mMenuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
+
+<!-- Mobile dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#instalaciones">Instalaciones</a>
+  <a href="#menorca">Menorca</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#contacto" class="mobile-cta">Contacto</a>
+  <div class="mobile-lang-row">
+    <a href="index.html" class="active">ES</a>
+    <a href="en/index.html">EN</a>
+    <a href="fr/index.html">FR</a>
+    <a href="de/index.html">DE</a>
+    <a href="ca/index.html">CA</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero" style="padding:0;">
@@ -1709,8 +1789,8 @@
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <a href="#" class="logo">LUXIN<span>PRO</span></a>
-      <p>Referente en gestión y construcción de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Luxury Investment & Projects Island Territory.</p>
+      <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>Referente en gestión y construcción de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares.</p>
     </div>
     <div class="footer-col">
       <h5>Servicios</h5>
@@ -1719,16 +1799,6 @@
         <li><a href="#servicios">Building Manager</a></li>
         <li><a href="#instalaciones">Reforma Integral</a></li>
         <li><a href="#instalaciones">Smart Home</a></li>
-        <li><a href="#instalaciones">Energías Renovables</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Destinos</h5>
-      <ul>
-        <li><a href="#menorca">Menorca</a></li>
-        <li><a href="#">Mallorca</a></li>
-        <li><a href="#">Ibiza</a></li>
-        <li><a href="#">Islas Baleares</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1740,10 +1810,20 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
+    <div class="footer-col">
+      <h5>Idiomas</h5>
+      <ul>
+        <li><a href="index.html">Español</a></li>
+        <li><a href="en/index.html">English</a></li>
+        <li><a href="fr/index.html">Français</a></li>
+        <li><a href="de/index.html">Deutsch</a></li>
+        <li><a href="ca/index.html">Català</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 LUXINPRO — Inversiones y Proyectos en Islas Baleares</p>
-    <div class="lang-switcher">
+    <div class="footer-lang-switcher">
       <a href="index.html" class="active">ES</a>
       <a href="en/index.html">EN</a>
       <a href="fr/index.html">FR</a>
