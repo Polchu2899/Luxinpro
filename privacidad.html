@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Política de Privacidad | LUXINPRO</title>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A96E; --gold-light: #E8D5B0; --black: #0A0A0A; --dark: #111111;
+      --dark2: #1A1A1A; --mid: #3A3A3A; --light-gray: #8A8A8A; --off-white: #F5F2EC; --white: #FFFFFF;
+      --font-display: 'Cormorant Garamond', serif; --font-body: 'Montserrat', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--off-white); font-family: var(--font-body); font-weight: 300; line-height: 1.7; overflow-x: hidden; cursor: none; }
+    ::-webkit-scrollbar { width: 3px; } ::-webkit-scrollbar-track { background: var(--black); } ::-webkit-scrollbar-thumb { background: var(--gold); }
+    .cursor { position:fixed; width:6px; height:6px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .2s,height .2s,background .2s; }
+    .cursor.hover { width:10px; height:10px; background:var(--gold-light); }
+    .cursor-ring { position:fixed; width:30px; height:30px; border:1.5px solid rgba(201,169,110,0.7); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width .25s,height .25s,border-color .25s; }
+    .cursor-ring.hover { width:44px; height:44px; border-color:rgba(201,169,110,1); }
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:0 60px; height:80px; background:rgba(10,10,10,0.97); border-bottom:1px solid rgba(201,169,110,0.12); transition:all .4s; }
+    .logo { font-family:var(--font-display); font-size:24px; font-weight:400; letter-spacing:8px; color:var(--gold); text-decoration:none; }
+    .logo span { color:var(--off-white); opacity:.7; font-weight:300; }
+    nav { display:flex; align-items:center; gap:36px; }
+    nav a { font-size:10px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--off-white); text-decoration:none; opacity:.7; transition:all .3s; position:relative; }
+    nav a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+    nav a:hover { opacity:1; color:var(--gold); } nav a:hover::after { width:100%; }
+    .nav-cta { padding:9px 22px; border:1px solid var(--gold); color:var(--gold)!important; opacity:1!important; } .nav-cta:hover { background:var(--gold)!important; color:var(--black)!important; } .nav-cta::after{display:none!important;}
+    .page-hero { padding: 160px 60px 80px; border-bottom: 1px solid rgba(201,169,110,0.1); }
+    .page-tag { display:inline-flex; align-items:center; gap:12px; font-size:9px; font-weight:500; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .page-tag::before { content:''; display:inline-block; width:30px; height:1px; background:var(--gold); }
+    .page-title { font-family:var(--font-display); font-size:clamp(42px,5vw,72px); font-weight:300; color:var(--white); line-height:1.1; margin-bottom:20px; }
+    .page-title em { font-style:italic; color:var(--gold); }
+    .page-sub { font-size:12px; font-weight:300; color:rgba(245,242,236,0.5); max-width:560px; line-height:1.9; }
+    .legal-body { max-width:860px; margin:0 auto; padding:80px 60px 120px; }
+    .legal-section { margin-bottom:60px; padding-bottom:60px; border-bottom:1px solid rgba(201,169,110,0.08); }
+    .legal-section:last-child { border-bottom:none; }
+    .legal-section h2 { font-family:var(--font-display); font-size:28px; font-weight:400; color:var(--white); margin-bottom:20px; }
+    .legal-section h3 { font-family:var(--font-display); font-size:20px; font-weight:400; color:var(--gold-light); margin:28px 0 12px; }
+    .legal-section p { font-size:13px; font-weight:300; line-height:1.9; color:rgba(245,242,236,0.6); margin-bottom:16px; }
+    .legal-section ul { margin:12px 0 16px 20px; } .legal-section ul li { font-size:13px; font-weight:300; line-height:1.9; color:rgba(245,242,236,0.6); margin-bottom:8px; }
+    .legal-section a { color:var(--gold); text-decoration:none; } .legal-section a:hover { text-decoration:underline; }
+    .legal-highlight { background:rgba(201,169,110,0.06); border-left:2px solid var(--gold); padding:20px 24px; margin:20px 0; }
+    .legal-highlight p { margin:0; }
+    .legal-date { display:inline-block; font-size:10px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--light-gray); margin-bottom:48px; padding-bottom:16px; border-bottom:1px solid rgba(201,169,110,0.15); }
+    footer { background:var(--black); border-top:1px solid rgba(201,169,110,0.1); }
+    .footer-main { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:80px; padding:70px 60px; }
+    .footer-brand .logo { display:block; margin-bottom:18px; }
+    .footer-brand p { font-size:11px; font-weight:300; line-height:1.9; color:rgba(245,242,236,0.35); max-width:260px; }
+    .footer-col h5 { font-size:9px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:22px; }
+    .footer-col ul { list-style:none; } .footer-col ul li { margin-bottom:11px; }
+    .footer-col ul li a { font-size:11px; font-weight:300; color:rgba(245,242,236,0.4); text-decoration:none; transition:color .3s; }
+    .footer-col ul li a:hover { color:var(--gold); }
+    .footer-bottom { border-top:1px solid rgba(201,169,110,0.08); padding:24px 60px; display:flex; justify-content:space-between; align-items:center; }
+    .footer-bottom p { font-size:10px; font-weight:300; color:rgba(245,242,236,0.22); letter-spacing:1px; }
+    .lang-switcher { display:flex; gap:16px; }
+    .lang-switcher a { font-size:9px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:rgba(245,242,236,0.3); text-decoration:none; transition:color .3s; }
+    .lang-switcher a:hover, .lang-switcher a.active { color:var(--gold); }
+    @media(max-width:900px){ header{padding:0 20px;} nav{display:none;} .page-hero{padding:130px 24px 60px;} .legal-body{padding:60px 24px 80px;} .footer-main{grid-template-columns:1fr 1fr;gap:40px;padding:50px 24px;} .footer-bottom{flex-direction:column;gap:14px;padding:20px 24px;text-align:center;} body{cursor:auto;} .cursor,.cursor-ring{display:none;} }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<header>
+  <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+  <nav>
+    <a href="../index.html#nosotros">Nosotros</a>
+    <a href="../index.html#servicios">Servicios</a>
+    <a href="../index.html#instalaciones">Instalaciones</a>
+    <a href="../index.html#menorca">Menorca</a>
+    <a href="../index.html#contacto" class="nav-cta">Contacto</a>
+  </nav>
+</header>
+<div class="page-hero">
+  <div class="page-tag">Protección de datos</div>
+  <h1 class="page-title">Política de <em>Privacidad</em></h1>
+  <p class="page-sub">Cómo tratamos y protegemos sus datos personales conforme al RGPD.</p>
+</div>
+<div class="legal-body">
+
+<div class="legal-date">Última actualización: 1 de enero de 2026</div>
+<div class="legal-section">
+  <h2>1. Responsable del tratamiento</h2>
+  <div class="legal-highlight">
+    <p><strong>Responsable:</strong> LUXINPRO — Luxury Investment and Projects Island Territory<br>
+    <strong>Email:</strong> <a href="mailto:info@luxinpro.es">info@luxinpro.es</a><br>
+    <strong>Teléfono:</strong> <a href="tel:+34609625573">609 625 573</a></p>
+  </div>
+</div>
+<div class="legal-section">
+  <h2>2. Datos que recopilamos</h2>
+  <p>LUXINPRO recopila los siguientes datos personales a través de los formularios de contacto y la navegación en el sitio web:</p>
+  <ul>
+    <li>Nombre y apellidos</li>
+    <li>Dirección de correo electrónico</li>
+    <li>Número de teléfono (opcional)</li>
+    <li>Tipo de proyecto y mensaje libre</li>
+    <li>Datos de navegación (dirección IP, tipo de navegador, páginas visitadas) mediante cookies</li>
+  </ul>
+</div>
+<div class="legal-section">
+  <h2>3. Finalidades del tratamiento</h2>
+  <p>Los datos personales recabados se utilizan para las siguientes finalidades:</p>
+  <ul>
+    <li><strong>Gestión de consultas:</strong> atender y responder a las solicitudes enviadas a través del formulario de contacto.</li>
+    <li><strong>Información comercial:</strong> envío de información sobre nuestros servicios, siempre que el usuario haya prestado su consentimiento.</li>
+    <li><strong>Mejora del servicio:</strong> análisis estadístico del uso del sitio web para mejorar la experiencia del usuario.</li>
+    <li><strong>Obligaciones legales:</strong> cumplimiento de las obligaciones legales aplicables.</li>
+  </ul>
+</div>
+<div class="legal-section">
+  <h2>4. Base jurídica</h2>
+  <p>El tratamiento de sus datos se basa en las siguientes bases jurídicas conforme al Reglamento (UE) 2016/679 (RGPD):</p>
+  <ul>
+    <li><strong>Consentimiento del interesado</strong> para el tratamiento de datos de contacto y cookies no esenciales.</li>
+    <li><strong>Interés legítimo</strong> para el análisis estadístico anónimo y la seguridad del sitio.</li>
+    <li><strong>Cumplimiento de una obligación legal</strong> cuando así lo exija la normativa aplicable.</li>
+  </ul>
+</div>
+<div class="legal-section">
+  <h2>5. Conservación de datos</h2>
+  <p>Los datos se conservarán durante el tiempo necesario para cumplir la finalidad para la que fueron recabados:</p>
+  <ul>
+    <li>Datos de contacto: hasta 3 años desde el último contacto o hasta que solicite su supresión.</li>
+    <li>Datos de navegación (cookies analíticas): según lo indicado en nuestra Política de Cookies.</li>
+    <li>Datos contables/fiscales: 6 años conforme a la legislación mercantil.</li>
+  </ul>
+</div>
+<div class="legal-section">
+  <h2>6. Sus derechos</h2>
+  <p>En virtud del RGPD y la LOPDGDD, puede ejercer los siguientes derechos:</p>
+  <ul>
+    <li><strong>Acceso:</strong> conocer qué datos tratamos sobre usted.</li>
+    <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+    <li><strong>Supresión:</strong> solicitar la eliminación de sus datos cuando no sean necesarios.</li>
+    <li><strong>Oposición:</strong> oponerse al tratamiento basado en interés legítimo.</li>
+    <li><strong>Limitación:</strong> solicitar la restricción del tratamiento en determinadas circunstancias.</li>
+    <li><strong>Portabilidad:</strong> recibir sus datos en formato estructurado y legible.</li>
+  </ul>
+  <p>Para ejercer estos derechos, diríjase a: <a href="mailto:info@luxinpro.es">info@luxinpro.es</a>. Tiene derecho a presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+</div>
+<div class="legal-section">
+  <h2>7. Seguridad</h2>
+  <p>LUXINPRO aplica medidas técnicas y organizativas adecuadas para proteger sus datos personales frente a accesos no autorizados, pérdida, alteración o divulgación, de conformidad con lo exigido por el RGPD.</p>
+</div>
+
+</div>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>Referente en gestión y construcción de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="../index.html#servicios">Project Manager</a></li>
+        <li><a href="../index.html#servicios">Building Manager</a></li>
+        <li><a href="../index.html#instalaciones">Reforma Integral</a></li>
+        <li><a href="../index.html#instalaciones">Smart Home</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="../aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="../privacidad.html">Privacidad</a></li>
+        <li><a href="../cookies.html">Cookies</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Idiomas</h5>
+      <ul>
+        <li><a href="../index.html">Español</a></li>
+        <li><a href="../en/index.html">English</a></li>
+        <li><a href="../fr/index.html">Français</a></li>
+        <li><a href="../de/index.html">Deutsch</a></li>
+        <li><a href="../ca/index.html">Català</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LUXINPRO — Inversiones y Proyectos en Islas Baleares</p>
+    <div class="lang-switcher">
+      <a href="../index.html" class="active">ES</a> <a href="../en/index.html" >EN</a> <a href="../fr/index.html" >FR</a> <a href="../de/index.html" >DE</a> <a href="../ca/index.html" >CA</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9990;background:rgba(17,17,17,0.97);border-top:1px solid rgba(201,169,110,0.2);padding:20px 50px;display:flex;align-items:center;justify-content:space-between;gap:24px;backdrop-filter:blur(10px);transform:translateY(100%);transition:transform .5s ease;flex-wrap:wrap;">
+  <div style="display:flex;align-items:flex-start;gap:16px;max-width:680px;">
+    <span style="font-size:20px;flex-shrink:0;">🍪</span>
+    <div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:#fff;margin-bottom:5px;">Cookies</p>
+      <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.7;">Usamos cookies para mejorar su experiencia. Consulte nuestra <a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Política de Cookies</a> y <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacidad</a>.</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button onclick="ckCfg()" style="padding:10px 20px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Configurar</button>
+    <button onclick="ckRej()" style="padding:10px 20px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Rechazar</button>
+    <button onclick="ckAcc()" style="padding:10px 24px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Aceptar todo</button>
+  </div>
+</div>
+<div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9995;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div style="background:#1A1A1A;border:1px solid rgba(201,169,110,0.2);max-width:540px;width:90%;padding:44px;position:relative;max-height:80vh;overflow-y:auto;">
+    <button onclick="document.getElementById('cookieModal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;color:#8A8A8A;font-size:24px;cursor:pointer;">&times;</button>
+    <p style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#C9A96E;margin-bottom:10px;">Configurar cookies</p>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#fff;margin-bottom:14px;">Sus preferencias</h3>
+    <div id="ckOpts"></div>
+    <div style="display:flex;gap:10px;margin-top:28px;flex-wrap:wrap;">
+      <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Guardar</button>
+      <button onclick="ckAcc()" style="flex:1;padding:13px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:#C9A96E;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Aceptar todo</button>
+    </div>
+  </div>
+</div>
+<script>
+const CK=[{id:'necessary',l:'Cookies necesarias',d:'Esenciales para el funcionamiento. No desactivables.',locked:true,v:true},{id:'analytics',l:'Cookies analíticas',d:'Estadísticas de visitas (Google Analytics, etc.).',locked:false,v:false},{id:'marketing',l:'Cookies de marketing',d:'Publicidad relevante y medición de campañas.',locked:false,v:false},{id:'preferences',l:'Cookies de preferencias',d:'Idioma y personalización de la experiencia.',locked:false,v:true}];
+const o=document.getElementById('ckOpts');
+CK.forEach(c=>{const d=document.createElement('div');d.style.cssText='display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(201,169,110,0.08);';d.innerHTML=`<div style="max-width:360px;"><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">${c.l}</p><p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">${c.d}</p></div><label style="position:relative;display:inline-block;width:42px;height:22px;flex-shrink:0;margin-left:16px;cursor:${c.locked?'not-allowed':'pointer'};"><input type="checkbox" id="ck_${c.id}" ${c.v?'checked':''} ${c.locked?'disabled':''} style="opacity:0;position:absolute;"><span id="tr_${c.id}" style="position:absolute;inset:0;background:${c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.08)'};border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span><span id="kn_${c.id}" style="position:absolute;top:3px;left:${c.v?'21':'3'}px;width:14px;height:14px;background:${c.v?'#C9A96E':'#8A8A8A'};border-radius:50%;transition:all .3s;pointer-events:none;"></span></label>`;o.appendChild(d);if(!c.locked){const i=d.querySelector('#ck_'+c.id),k=d.querySelector('#kn_'+c.id),t=d.querySelector('#tr_'+c.id);i.addEventListener('change',()=>{k.style.left=i.checked?'21px':'3px';k.style.background=i.checked?'#C9A96E':'#8A8A8A';t.style.background=i.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.08)';})}});
+window.addEventListener('DOMContentLoaded',()=>{if(!localStorage.getItem('lxp_consent'))setTimeout(()=>document.getElementById('cookieBanner').style.transform='translateY(0)',2400);});
+function hide(){document.getElementById('cookieBanner').style.transform='translateY(100%)';document.getElementById('cookieModal').style.display='none';}
+function ckAcc(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()}));hide();}
+function ckRej(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()}));hide();}
+function ckCfg(){document.getElementById('cookieModal').style.display='flex';}
+function ckSave(){const r={};CK.forEach(c=>r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked);r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));hide();}
+</script>
+
+<script>
+
+  const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+  let mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+  (function loop(){rx+=(mx-rx)*.22;ry+=(my-ry)*.22;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.classList.add('hover');ring.classList.add('hover');});el.addEventListener('mouseleave',()=>{cursor.classList.remove('hover');ring.classList.remove('hover');});});
+
+</script>
+</body>
+</html>
