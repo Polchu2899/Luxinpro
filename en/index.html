@@ -350,7 +350,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <a href="#instalaciones">Installations</a>
     <a href="#menorca">Menorca</a>
     <a href="#contacto">Contact</a>
-  <a href="#menorca" class="mobile-cta">Contact us</a>
+  <a href="#contacto" class="mobile-cta">Contact us</a>
   <div class="mobile-lang-row">
     <a href="../index.html" >ES</a>
         <a href="../en/index.html" class="active">EN</a>
@@ -601,6 +601,7 @@ function ckSave(){const r={};CK.forEach(c=>r[c.id]=c.locked?true:document.getEle
 
 <style>
 /* Page-specific styles */
+@font-face { font-display: swap; }
 @keyframes heroZoom { from{transform:scale(1.05)} to{transform:scale(1.0)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
 .hero-tag { display:inline-flex;align-items:center;gap:12px;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:22px; }
@@ -676,6 +677,8 @@ section { padding:100px 50px; }
 .form-group select option { background:var(--dark2); }
 
 /* ── Mobile overrides for lang index pages ── */
+  .logo { font-size:18px !important; letter-spacing:4px !important; }
+  .logo span { font-size:18px !important; }
 @media (max-width: 900px) {
   section { padding:56px 18px !important; }
   .about { grid-template-columns:1fr !important; gap:32px !important; }
