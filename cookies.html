@@ -311,6 +311,18 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   /* Gallery */
   .gallery-track img { height: 200px !important; width: 240px !important; }
 }
+
+  /* Force cursor onto GPU layer - prevents clipping by animated elements */
+  @media (hover: hover) {
+    .cursor {
+      will-change: transform, left, top;
+      transform: translateZ(0) translate(-50%, -50%) !important;
+    }
+    .cursor-ring {
+      will-change: transform, left, top;
+      transform: translateZ(0) translate(-50%, -50%) !important;
+    }
+  }
 </style>
 </head>
 <body>
