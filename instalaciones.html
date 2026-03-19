@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Instalaciones y Servicios | LUXINPRO Menorca</title>
-  <meta name="description" content="LUXINPRO ofrece en Menorca instalaciones completas: climatización, aerotermia, energías renovables, fotovoltaica, fontanería, electricidad, mantenimiento y Smart Home."/>
+  <title>Servicios e Instalaciones | LUXINPRO Menorca</title>
+  <meta name="description" content="LUXINPRO ofrece en Menorca servicios completos de Project Manager, Building Manager, climatización, aerotermia, energías renovables, fontanería, electricidad, Smart Home y mantenimiento."/>
   <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://luxinpro.es/instalaciones-y-servicios/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -316,191 +317,97 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 }
 
 
-    /* ══ PAGE HERO ══ */
+    /* PAGE HERO */
     .page-hero {
-      padding: 160px 50px 90px;
-      border-bottom: 1px solid rgba(201,169,110,0.1);
-      position: relative; overflow: hidden;
+      padding: 160px 50px 90px; position: relative; overflow: hidden;
       background: linear-gradient(160deg, #080e1a 0%, #0d1828 60%, #060d18 100%);
+      border-bottom: 1px solid rgba(201,169,110,0.1);
     }
     .page-hero::before {
-      content: 'LUXINPRO';
-      position: absolute; right: -40px; top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--font-display); font-size: 180px; font-weight: 300;
-      color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
+      content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
+      transform: translateY(-50%); font-family: var(--font-display); font-size: 180px;
+      font-weight: 300; color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
     }
     .page-tag {
-      display: inline-flex; align-items: center; gap: 12px;
-      font-size: 9px; font-weight: 500; letter-spacing: 4px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 12px; font-size: 9px;
+      font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
     }
     .page-tag::before { content:''; display:inline-block; width:30px; height:1px; background:var(--gold); }
-    .page-title {
-      font-family: var(--font-display); font-size: clamp(40px,5vw,68px);
-      font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px;
-    }
+    .page-title { font-family: var(--font-display); font-size: clamp(40px,5vw,68px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px; }
     .page-title em { font-style: italic; color: var(--gold); }
-    .page-sub {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.65);
-      max-width: 600px; line-height: 1.9; margin-bottom: 32px;
+    .page-sub { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.65); max-width: 600px; line-height: 1.9; margin-bottom: 32px; }
+    .back-btn { display:inline-flex; align-items:center; gap:10px; font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.35); padding-bottom:4px; transition:all .3s; }
+    .back-btn:hover { border-bottom-color:var(--gold); }
+
+    /* INDEX NAVIGATION */
+    .page-index {
+      position: sticky; top: 78px; z-index: 100;
+      background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,169,110,0.12);
+      padding: 0 50px; display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none; -ms-overflow-style: none;
     }
-    .back-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 9px; font-weight: 500; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--gold); text-decoration: none;
-      border-bottom: 1px solid rgba(201,169,110,0.35); padding-bottom: 4px;
+    .page-index::-webkit-scrollbar { display: none; }
+    .page-index a {
+      display: block; padding: 18px 22px; font-size: 9px; font-weight: 500;
+      letter-spacing: 2px; text-transform: uppercase; color: rgba(245,242,236,0.45);
+      text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent;
       transition: all .3s;
     }
-    .back-btn:hover { border-bottom-color: var(--gold); }
+    .page-index a:hover { color: var(--gold); border-bottom-color: rgba(201,169,110,0.4); }
+    .page-index a.active { color: var(--gold); border-bottom-color: var(--gold); }
 
-    /* ══ SECTION BASE ══ */
-    .inst-section { padding: 100px 50px; }
-    .inst-section:nth-child(odd)  { background: var(--black); }
+    /* SECTIONS */
+    .inst-section { padding: 90px 50px; }
+    .inst-section:nth-child(odd) { background: var(--black); }
     .inst-section:nth-child(even) { background: var(--dark); }
-
-    .section-num {
-      font-family: var(--font-display); font-size: 72px; font-weight: 300;
-      color: rgba(201,169,110,0.07); line-height: 1; margin-bottom: -12px;
-    }
-    .section-title {
-      font-family: var(--font-display); font-size: clamp(30px,4vw,50px);
-      font-weight: 300; color: var(--white); margin-bottom: 14px; line-height: 1.1;
-    }
+    .section-num { font-family: var(--font-display); font-size: 72px; font-weight: 300; color: rgba(201,169,110,0.07); line-height: 1; margin-bottom: -10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(30px,4vw,50px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 14px; }
     .section-title em { font-style: italic; color: var(--gold); }
-    .section-intro {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
-      max-width: 680px; line-height: 1.9; margin-bottom: 60px;
-    }
+    .section-intro { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); max-width: 700px; line-height: 1.9; margin-bottom: 56px; }
 
-    /* ══ SERVICE CARDS ══ */
-    .svc-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
-    .svc-cards-2 { grid-template-columns: repeat(2,1fr); }
-    .svc-cards-4 { grid-template-columns: repeat(4,1fr); }
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(201,169,110,0.08); }
+    .cards-2 { grid-template-columns: repeat(2,1fr); }
+    .cards-4 { grid-template-columns: repeat(4,1fr); }
+    .card {
+      padding: 40px 32px; background: var(--black);
+      border-bottom: 2px solid transparent; transition: border-color .3s, background .3s;
+    }
+    .inst-section:nth-child(even) .card { background: var(--dark); }
+    .card:hover { border-bottom-color: rgba(201,169,110,0.5); background: rgba(201,169,110,0.03); }
+    .card-num { font-family: var(--font-display); font-size: 32px; font-weight: 300; color: rgba(201,169,110,0.12); line-height: 1; margin-bottom: 16px; }
+    .card-icon { width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.22); display:flex; align-items:center; justify-content:center; margin-bottom: 18px; color: var(--gold); }
+    .card-name { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+    .card-desc { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55); line-height: 1.85; margin-bottom: 16px; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .ctag { padding: 3px 10px; border: 1px solid rgba(201,169,110,0.18); font-size: 8px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(201,169,110,0.65); }
 
-    .svc-card {
-      padding: 44px 36px;
-      border: 1px solid rgba(201,169,110,0.1);
-      transition: border-color .3s, background .3s;
-      position: relative; overflow: hidden;
-    }
-    .svc-card::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(to right, transparent, rgba(201,169,110,0), transparent);
-      transition: background .4s;
-    }
-    .svc-card:hover { border-color: rgba(201,169,110,0.3); background: rgba(201,169,110,0.03); }
-    .svc-card:hover::before {
-      background: linear-gradient(to right, transparent, rgba(201,169,110,0.5), transparent);
-    }
+    /* FEATURE BAND */
+    .fband { padding: 90px 50px; background: var(--dark2); border-top: 1px solid rgba(201,169,110,0.1); border-bottom: 1px solid rgba(201,169,110,0.1); }
+    .fband-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+    .fband h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,50px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .fband h2 em { font-style: italic; color: var(--gold); }
+    .fband p { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); line-height: 1.9; margin-bottom: 12px; }
+    .flist { list-style: none; margin-top: 24px; }
+    .flist li { display:flex; align-items:flex-start; gap:12px; font-size:12px; font-weight:300; color:rgba(245,242,236,0.7); line-height:1.7; padding:9px 0; border-bottom:1px solid rgba(201,169,110,0.07); }
+    .flist li::before { content:''; display:inline-block; width:18px; height:1px; background:var(--gold); flex-shrink:0; margin-top:9px; }
+    .fstats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .fstat { padding: 26px; border: 1px solid rgba(201,169,110,0.14); background: rgba(201,169,110,0.03); }
+    .fstat-num { font-family: var(--font-display); font-size: 42px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .fstat-lbl { font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,242,236,0.4); line-height: 1.5; }
 
-    .svc-card-num {
-      font-family: var(--font-display); font-size: 36px; font-weight: 300;
-      color: rgba(201,169,110,0.15); line-height: 1; margin-bottom: 20px;
-    }
-    .svc-card-icon {
-      width: 44px; height: 44px;
-      border: 1px solid rgba(201,169,110,0.25);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 22px; color: var(--gold);
-    }
-    .svc-card-name {
-      font-family: var(--font-display); font-size: 22px; font-weight: 400;
-      color: var(--white); margin-bottom: 12px; line-height: 1.2;
-    }
-    .svc-card-desc {
-      font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55);
-      line-height: 1.85; margin-bottom: 20px;
-    }
-    .svc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .svc-tag {
-      padding: 4px 11px; border: 1px solid rgba(201,169,110,0.2);
-      font-size: 8px; font-weight: 500; letter-spacing: 2px;
-      text-transform: uppercase; color: rgba(201,169,110,0.7);
-    }
-
-    /* ══ FEATURE BAND ══ */
-    .feature-band {
-      padding: 90px 50px;
-      background: var(--dark2);
-      border-top: 1px solid rgba(201,169,110,0.1);
-      border-bottom: 1px solid rgba(201,169,110,0.1);
-      position: relative; overflow: hidden;
-    }
-    .feature-band::after {
-      content: '';
-      position: absolute; top: 0; right: 0; bottom: 0; width: 3px;
-      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-    }
-    .feature-band-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
-    .feature-band h2 {
-      font-family: var(--font-display); font-size: clamp(30px,4vw,52px);
-      font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 20px;
-    }
-    .feature-band h2 em { font-style: italic; color: var(--gold); }
-    .feature-band p {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
-      line-height: 1.9; margin-bottom: 14px;
-    }
-    .feature-list { list-style: none; margin-top: 28px; }
-    .feature-list li {
-      display: flex; align-items: flex-start; gap: 12px;
-      font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.7);
-      line-height: 1.7; padding: 10px 0;
-      border-bottom: 1px solid rgba(201,169,110,0.07);
-    }
-    .feature-list li::before {
-      content: ''; display: inline-block; width: 18px; height: 1px;
-      background: var(--gold); flex-shrink: 0; margin-top: 9px;
-    }
-    .feature-band-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .fstat {
-      padding: 28px; border: 1px solid rgba(201,169,110,0.15);
-      background: rgba(201,169,110,0.03);
-    }
-    .fstat-num {
-      font-family: var(--font-display); font-size: 44px; font-weight: 300;
-      color: var(--gold); line-height: 1; margin-bottom: 8px;
-    }
-    .fstat-label {
-      font-size: 9px; font-weight: 500; letter-spacing: 3px;
-      text-transform: uppercase; color: rgba(245,242,236,0.45);
-    }
-
-    /* ══ CTA FINAL ══ */
-    .cta-final {
-      padding: 100px 50px; text-align: center;
-      background: var(--dark2);
-      border-top: 1px solid rgba(201,169,110,0.1);
-    }
-    .cta-final h2 {
-      font-family: var(--font-display); font-size: clamp(34px,5vw,60px);
-      font-weight: 300; color: var(--white); margin-bottom: 18px;
-    }
+    /* CTA */
+    .cta-final { padding: 100px 50px; text-align: center; background: var(--dark2); border-top: 1px solid rgba(201,169,110,0.1); }
+    .cta-final h2 { font-family: var(--font-display); font-size: clamp(34px,5vw,60px); font-weight: 300; color: var(--white); margin-bottom: 18px; }
     .cta-final h2 em { font-style: italic; color: var(--gold); }
-    .cta-final p {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
-      max-width: 480px; margin: 0 auto 40px; line-height: 1.9;
-    }
+    .cta-final p { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); max-width: 480px; margin: 0 auto 40px; line-height: 1.9; }
     .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block; padding: 15px 38px; background: var(--gold);
-      color: var(--black); font-family: var(--font-body); font-size: 9px;
-      font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-      text-decoration: none; transition: background .3s;
-    }
-    .btn-primary:hover { background: var(--gold-light); }
-    .btn-sec {
-      display: inline-block; padding: 15px 38px;
-      border: 1px solid rgba(245,242,236,0.35); color: var(--off-white);
-      font-family: var(--font-body); font-size: 9px; font-weight: 500;
-      letter-spacing: 3px; text-transform: uppercase; text-decoration: none;
-      transition: all .3s;
-    }
-    .btn-sec:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-p { display:inline-block; padding:15px 38px; background:var(--gold); color:var(--black); font-family:var(--font-body); font-size:9px; font-weight:600; letter-spacing:3px; text-transform:uppercase; text-decoration:none; transition:background .3s; }
+    .btn-p:hover { background: var(--gold-light); }
+    .btn-s { display:inline-block; padding:15px 38px; border:1px solid rgba(245,242,236,0.35); color:var(--off-white); font-family:var(--font-body); font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; text-decoration:none; transition:all .3s; }
+    .btn-s:hover { border-color:var(--gold); color:var(--gold); }
 
-    /* ══ MOBILE ══ */
+    /* MOBILE */
     @media (max-width: 900px) {
       header { padding: 0 16px!important; height: 64px!important; }
       .nav-desktop { display: none!important; }
@@ -508,20 +415,23 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       .logo { font-size: 18px!important; letter-spacing: 4px!important; }
       .page-hero { padding: 110px 18px 60px!important; }
       .page-hero::before { display: none!important; }
-      .inst-section { padding: 60px 18px!important; }
-      .svc-cards, .svc-cards-2 { grid-template-columns: 1fr!important; }
-      .svc-cards-4 { grid-template-columns: 1fr 1fr!important; }
-      .svc-card { padding: 30px 22px!important; }
-      .feature-band { padding: 60px 18px!important; }
-      .feature-band-inner { grid-template-columns: 1fr!important; gap: 40px!important; }
-      .feature-band-stats { grid-template-columns: 1fr 1fr!important; }
-      .cta-final { padding: 64px 18px!important; }
+      .page-index { padding: 0 18px!important; top: 64px!important; }
+      .page-index a { padding: 14px 14px!important; font-size: 8px!important; }
+      .inst-section { padding: 56px 18px!important; }
+      .cards, .cards-2 { grid-template-columns: 1fr!important; }
+      .cards-4 { grid-template-columns: 1fr 1fr!important; }
+      .card { padding: 28px 20px!important; }
+      .fband { padding: 56px 18px!important; }
+      .fband-inner { grid-template-columns: 1fr!important; gap: 36px!important; }
+      .fstats { grid-template-columns: 1fr 1fr!important; }
+      .cta-final { padding: 60px 18px!important; }
       .cta-btns { flex-direction: column!important; align-items: center!important; }
       footer .footer-main { grid-template-columns: 1fr 1fr!important; gap: 28px!important; padding: 40px 18px!important; }
       footer .footer-bottom { flex-direction: column!important; gap: 10px!important; padding: 16px 18px!important; text-align: center!important; }
       .footer-lang-switcher { flex-wrap: wrap!important; justify-content: center!important; }
     }
     @media (min-width: 901px) { .nav-mobile { display: none!important; } }
+
   </style>
 </head>
 <body>
@@ -570,347 +480,259 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
 <!-- HERO -->
 <div class="page-hero">
-  <div class="page-tag">Instalaciones &amp; Servicios</div>
+  <div class="page-tag">Servicios &amp; Instalaciones</div>
   <h1 class="page-title">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
-  <p class="page-sub">En LUXINPRO ofrecemos un servicio integral de instalaciones técnicas y de diseño para propiedades en Menorca y las Islas Baleares. Climatización, energías renovables, electricidad, fontanería, Smart Home y mantenimiento.</p>
+  <p class="page-sub">En LUXINPRO ofrecemos un servicio integral que abarca desde la dirección y gestión del proyecto hasta cada instalación técnica de su propiedad en Menorca. Un solo interlocutor para todo.</p>
   <a href="index.html" class="back-btn">← Volver al inicio</a>
 </div>
 
-<!-- ══════════════════════════════════
-     01 · CLIMATIZACIÓN
-══════════════════════════════════ -->
-<section class="inst-section" id="climatizacion">
+<!-- INDEX NAV -->
+<nav class="page-index" id="pageIndex">
+  <a href="#project-manager" class="active">Project Manager</a>
+  <a href="#climatizacion">Climatización</a>
+  <a href="#renovables">Renovables</a>
+  <a href="#smarthome">Smart Home</a>
+  <a href="#electricidad">Electricidad &amp; Fontanería</a>
+  <a href="#interiores">Diseño Interior</a>
+  <a href="#mantenimiento">Mantenimiento</a>
+</nav>
+
+<!-- ══ 01 PROJECT & BUILDING MANAGER ══ -->
+<section class="inst-section" id="project-manager">
   <div class="section-num">01</div>
+  <div class="page-tag" style="margin-top:8px;">Gestión integral</div>
+  <h2 class="section-title">Project &amp; Building <em>Manager</em></h2>
+  <p class="section-intro">Nos encargamos de todo lo necesario para que su proyecto se haga realidad sin que usted tenga que preocuparse por nada. Establecemos, organizamos y dirigimos cada fase optimizando recursos, plazos y costes.</p>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
+      <div class="card-name">Project Manager</div>
+      <p class="card-desc">Planificamos y dirigimos su proyecto de principio a fin: emplazamiento, diseño, espacios, acabados y equipamiento. Instalaciones inteligentes SMARTHOME con las últimas tendencias y las mejores marcas en griferías, sanitarios, ventanas y carpintería.</p>
+      <div class="card-tags"><span class="ctag">Planificación completa</span><span class="ctag">Diseño de espacios</span><span class="ctag">SMARTHOME</span><span class="ctag">Supervisión total</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
+      <div class="card-name">Building Manager</div>
+      <p class="card-desc">Supervisamos mediciones y presupuestos, coordinamos contratistas y controlamos calidad, plazos y costes. Gestionamos la documentación final, altas de servicios y ofrecemos asistencia posventa completa ante cualquier incidencia.</p>
+      <div class="card-tags"><span class="ctag">Control de obra</span><span class="ctag">Gestión documental</span><span class="ctag">Coordinación gremios</span><span class="ctag">Posventa garantizado</span></div>
+    </div>
+  </div>
+  <div class="fband" style="margin-top:1px;border-top:none;">
+    <div class="fband-inner">
+      <div>
+        <div class="page-tag">Asesoramiento y Diseño de Espacios</div>
+        <h2>Su visión hecha <em>realidad</em></h2>
+        <p>Ofrecemos un servicio completo de asesoramiento y diseño de espacios tanto interiores como exteriores. Desde la concepción del proyecto hasta el último detalle decorativo, trabajamos para que su propiedad en Menorca refleje exactamente su personalidad y estilo de vida.</p>
+        <ul class="flist">
+          <li>Proyecto ejecutivo completo con planos y memorias</li>
+          <li>Selección de materiales, acabados y mobiliario</li>
+          <li>Coordinación con arquitectos e interioristas de primer nivel</li>
+          <li>Gestión de permisos, licencias y legalizaciones</li>
+          <li>Seguimiento de obra con informes periódicos</li>
+          <li>Entrega de llaves con documentación completa</li>
+        </ul>
+      </div>
+      <div class="fstats">
+        <div class="fstat"><div class="fstat-num">+15</div><div class="fstat-lbl">Años de experiencia en Baleares</div></div>
+        <div class="fstat"><div class="fstat-num">+200</div><div class="fstat-lbl">Proyectos completados</div></div>
+        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Idiomas de atención al cliente</div></div>
+        <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfacción garantizada</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 CLIMATIZACIÓN ══ -->
+<section class="inst-section" id="climatizacion">
+  <div class="section-num">02</div>
   <div class="page-tag" style="margin-top:8px;">Instalaciones técnicas</div>
   <h2 class="section-title">Climatización <em>inteligente</em></h2>
-  <p class="section-intro">Diseñamos e instalamos sistemas de climatización de alta eficiencia adaptados a cada propiedad en Menorca. Confort térmico óptimo durante todo el año con la tecnología más avanzada y el menor consumo energético posible.</p>
-  <div class="svc-cards">
-    <div class="svc-card">
-      <div class="svc-card-num">01</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
-      </div>
-      <div class="svc-card-name">Aire Acondicionado</div>
-      <p class="svc-card-desc">Instalación de sistemas de última generación: splits, cassettes, conductos y VRV. Marcas premium con control inteligente desde su smartphone. Eficiencia energética máxima para el clima de Menorca.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Multi-split</span>
-        <span class="svc-tag">VRV / VRF</span>
-        <span class="svc-tag">Conductos</span>
-        <span class="svc-tag">Smart control</span>
-      </div>
+  <p class="section-intro">Diseñamos e instalamos sistemas de climatización de alta eficiencia adaptados a cada propiedad. Confort térmico óptimo durante todo el año con la tecnología más avanzada.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
+      <div class="card-name">Aire Acondicionado</div>
+      <p class="card-desc">Instalación de sistemas de última generación: splits, cassettes, conductos y VRV. Marcas premium con control inteligente desde su smartphone. Máxima eficiencia energética para el clima mediterráneo de Menorca.</p>
+      <div class="card-tags"><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Conductos</span><span class="ctag">Smart control</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">02</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-      </div>
-      <div class="svc-card-name">Calefacción</div>
-      <p class="svc-card-desc">Suelo radiante, radiadores de diseño y fan-coils de alta eficiencia. Soluciones que se integran perfectamente en el diseño interior de su propiedad garantizando el máximo confort en los meses de invierno.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Suelo radiante</span>
-        <span class="svc-tag">Fan-coils</span>
-        <span class="svc-tag">Radiadores</span>
-        <span class="svc-tag">Caldera</span>
-      </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+      <div class="card-name">Calefacción</div>
+      <p class="card-desc">Suelo radiante, radiadores de diseño y fan-coils de alta eficiencia. Soluciones que se integran perfectamente en el diseño interior garantizando el máximo confort durante los meses de invierno en Menorca.</p>
+      <div class="card-tags"><span class="ctag">Suelo radiante</span><span class="ctag">Fan-coils</span><span class="ctag">Radiadores</span><span class="ctag">Caldera</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">03</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-      </div>
-      <div class="svc-card-name">Aerotermia</div>
-      <p class="svc-card-desc">Sistema ALTHERMA de última generación: calefacción, aire acondicionado y agua caliente sanitaria en una sola instalación. Extrae hasta el 80% de energía del aire, reduciendo drásticamente su factura energética.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Altherma</span>
-        <span class="svc-tag">Bomba de calor</span>
-        <span class="svc-tag">ACS incluido</span>
-        <span class="svc-tag">Clasificación A+++</span>
-      </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <div class="card-name">Aerotermia</div>
+      <p class="card-desc">Sistema ALTHERMA: calefacción, aire acondicionado y agua caliente en una sola instalación. Extrae hasta el 80% de energía del aire, reduciendo drásticamente su factura energética. La solución más eficiente disponible.</p>
+      <div class="card-tags"><span class="ctag">Altherma</span><span class="ctag">Bomba de calor</span><span class="ctag">ACS incluido</span><span class="ctag">Clase A+++</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     02 · ENERGÍAS RENOVABLES
-══════════════════════════════════ -->
+<!-- ══ 03 ENERGÍAS RENOVABLES ══ -->
 <section class="inst-section" id="renovables">
-  <div class="section-num">02</div>
+  <div class="section-num">03</div>
   <div class="page-tag" style="margin-top:8px;">Sostenibilidad</div>
   <h2 class="section-title">Energías <em>renovables</em></h2>
-  <p class="section-intro">Apostamos por la independencia energética y la sostenibilidad en Menorca. Diseñamos e instalamos sistemas que reducen su impacto medioambiental y su factura energética, incluso en ubicaciones remotas de la isla.</p>
-  <div class="svc-cards">
-    <div class="svc-card">
-      <div class="svc-card-num">01</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-      </div>
-      <div class="svc-card-name">Fotovoltaica</div>
-      <p class="svc-card-desc">Instalación de placas solares fotovoltaicas para autoconsumo. Paneles de alta eficiencia con inversores inteligentes y sistemas de almacenamiento en batería. Máximo rendimiento bajo el sol de Menorca.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Autoconsumo</span>
-        <span class="svc-tag">Baterías</span>
-        <span class="svc-tag">Inversor inteligente</span>
-        <span class="svc-tag">Monitorización</span>
-      </div>
+  <p class="section-intro">Apostamos por la independencia energética en Menorca. Sistemas que reducen su impacto medioambiental y su factura energética, incluso en ubicaciones remotas de la isla.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <div class="card-name">Fotovoltaica</div>
+      <p class="card-desc">Paneles solares fotovoltaicos de alta eficiencia con inversores inteligentes y sistemas de almacenamiento en batería. Autoconsumo total para reducir a cero su factura eléctrica bajo el sol privilegiado de Menorca.</p>
+      <div class="card-tags"><span class="ctag">Autoconsumo</span><span class="ctag">Baterías</span><span class="ctag">Inversor inteligente</span><span class="ctag">Monitorización</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">02</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg>
-      </div>
-      <div class="svc-card-name">Solar Térmica</div>
-      <p class="svc-card-desc">Captadores solares térmicos para producción de agua caliente sanitaria y apoyo a la calefacción. Máxima eficiencia energética aprovechando el privilegiado clima mediterráneo de Menorca durante todo el año.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">ACS solar</span>
-        <span class="svc-tag">Termosifón</span>
-        <span class="svc-tag">Apoyo calefacción</span>
-        <span class="svc-tag">Alta eficiencia</span>
-      </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg></div>
+      <div class="card-name">Solar Térmica</div>
+      <p class="card-desc">Captadores solares térmicos para producción de agua caliente sanitaria y apoyo a la calefacción. Máxima eficiencia energética aprovechando el excepcional clima mediterráneo de Menorca durante todo el año.</p>
+      <div class="card-tags"><span class="ctag">ACS solar</span><span class="ctag">Termosifón</span><span class="ctag">Apoyo calefacción</span><span class="ctag">Alta eficiencia</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">03</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L8 8h8l-4-6z"/><path d="M12 8v14"/><path d="M8 22h8"/><path d="M4 11c1.5-2 4-3 8-3s6.5 1 8 3"/></svg>
-      </div>
-      <div class="svc-card-name">Eólica</div>
-      <p class="svc-card-desc">Instalación de micro-aerogeneradores para complementar el abastecimiento energético. Especialmente eficaz en las zonas más expuestas al viento de Tramontana característico de Menorca. Sistemas híbridos solar-eólico.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Mini-eólica</span>
-        <span class="svc-tag">Off-grid</span>
-        <span class="svc-tag">Híbrido solar</span>
-        <span class="svc-tag">Almacenamiento</span>
-      </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 12L6 4M12 12l8-2M12 12l-2 8M12 6v6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="card-name">Eólica</div>
+      <p class="card-desc">Micro-aerogeneradores para complementar el abastecimiento energético. Especialmente eficaz con el Tramontana característico de Menorca. Sistemas híbridos solar-eólico para independencia energética total.</p>
+      <div class="card-tags"><span class="ctag">Mini-eólica</span><span class="ctag">Off-grid</span><span class="ctag">Híbrido solar</span><span class="ctag">Almacenamiento</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     SMART HOME BAND
-══════════════════════════════════ -->
-<div class="feature-band" id="smarthome">
-  <div class="feature-band-inner">
+<!-- ══ SMART HOME BAND ══ -->
+<div class="fband" id="smarthome">
+  <div class="fband-inner">
     <div>
       <div class="page-tag">Smart Home &amp; Domótica</div>
       <h2>El control de su hogar<br><em>en la palma de su mano</em></h2>
-      <p>Domotizamos su propiedad integrando todos los sistemas en una única plataforma inteligente. Iluminación, climatización, seguridad, persianas, riego y audio-vídeo controlados desde su smartphone, tablet o por voz desde cualquier lugar del mundo.</p>
-      <p>Instalamos el <strong style="color:var(--gold-light);">punto de carga para vehículo eléctrico</strong>, integrado con el sistema fotovoltaico para una carga 100% sostenible y sin coste energético adicional.</p>
-      <ul class="feature-list">
+      <p>Domotizamos su propiedad integrando todos los sistemas en una única plataforma inteligente. Iluminación, climatización, seguridad, persianas, riego y audio-vídeo controlados desde su smartphone desde cualquier parte del mundo.</p>
+      <p>Instalamos el <strong style="color:var(--gold-light);">punto de carga para vehículo eléctrico</strong> integrado con el sistema fotovoltaico para carga 100% sostenible y gratuita.</p>
+      <ul class="flist">
         <li>Iluminación inteligente y escenas personalizadas</li>
         <li>Control de climatización centralizado</li>
-        <li>Seguridad: alarmas, cámaras y control de acceso</li>
+        <li>Seguridad: alarmas, cámaras y acceso</li>
         <li>Persianas y toldos automatizados</li>
         <li>Sistema audio-vídeo multizona</li>
-        <li>Punto de carga vehículo eléctrico</li>
-        <li>Control remoto desde cualquier lugar</li>
+        <li>Punto de carga vehículo eléctrico integrado</li>
         <li>Compatible con Alexa &amp; Google Home</li>
       </ul>
     </div>
-    <div class="feature-band-stats">
-      <div class="fstat">
-        <div class="fstat-num">80%</div>
-        <div class="fstat-label">Ahorro energético con aerotermia</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">A+++</div>
-        <div class="fstat-label">Clasificación energética sistemas instalados</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">100%</div>
-        <div class="fstat-label">Control remoto desde cualquier lugar</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">0€</div>
-        <div class="fstat-label">Coste de carga EV con fotovoltaica</div>
-      </div>
+    <div class="fstats">
+      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Ahorro energético con aerotermia</div></div>
+      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">Clasificación energética sistemas</div></div>
+      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Control remoto desde cualquier lugar</div></div>
+      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">Coste carga EV con fotovoltaica</div></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     03 · ELECTRICIDAD & FONTANERÍA
-══════════════════════════════════ -->
+<!-- ══ 04 ELECTRICIDAD & FONTANERÍA ══ -->
 <section class="inst-section" id="electricidad">
-  <div class="section-num">03</div>
+  <div class="section-num">04</div>
   <div class="page-tag" style="margin-top:8px;">Instalaciones esenciales</div>
   <h2 class="section-title">Electricidad <em>&amp; Fontanería</em></h2>
-  <p class="section-intro">Las instalaciones más fundamentales ejecutadas con la máxima precisión. Trabajamos con materiales robustos y duraderos garantizando instalaciones seguras, eficientes y conformes a normativa vigente en España.</p>
-  <div class="svc-cards svc-cards-2">
-    <div class="svc-card">
-      <div class="svc-card-num">01</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
-      <div class="svc-card-name">Electricidad</div>
-      <p class="svc-card-desc">Instalaciones eléctricas completas para obra nueva y rehabilitación: cuadros eléctricos, cableado, tomas de corriente, iluminación LED de diseño y sistemas de protección diferencial. Certificación y legalización ante organismos competentes incluidas.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Obra nueva</span>
-        <span class="svc-tag">Rehabilitación</span>
-        <span class="svc-tag">Cuadros eléctricos</span>
-        <span class="svc-tag">Iluminación LED</span>
-        <span class="svc-tag">Certificación oficial</span>
-      </div>
+  <p class="section-intro">Las instalaciones más fundamentales ejecutadas con precisión y materiales de primera calidad, conformes a la normativa vigente y con certificación oficial incluida.</p>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-name">Electricidad</div>
+      <p class="card-desc">Instalaciones eléctricas completas para obra nueva y rehabilitación: cuadros eléctricos, cableado, tomas de corriente, iluminación LED de diseño y sistemas de protección diferencial. Certificación y legalización ante los organismos competentes de Baleares.</p>
+      <div class="card-tags"><span class="ctag">Obra nueva</span><span class="ctag">Rehabilitación</span><span class="ctag">Cuadros eléctricos</span><span class="ctag">Iluminación LED</span><span class="ctag">Certificación oficial</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">02</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2"/><path d="M12 11v11"/></svg>
-      </div>
-      <div class="svc-card-name">Fontanería</div>
-      <p class="svc-card-desc">Instalaciones de fontanería y saneamiento completas: redes de agua fría y caliente, radiadores, griferías de diseño premium, sistemas de depuración, osmosis inversa y tratamiento de aguas. Mantenimiento preventivo incluido en el servicio.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Agua fría y caliente</span>
-        <span class="svc-tag">Saneamiento</span>
-        <span class="svc-tag">Griferías premium</span>
-        <span class="svc-tag">Depuración</span>
-        <span class="svc-tag">Osmosis inversa</span>
-      </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
+      <div class="card-name">Fontanería</div>
+      <p class="card-desc">Instalaciones de fontanería y saneamiento: redes de agua fría y caliente, saneamiento, griferías de diseño premium, sistemas de depuración, osmosis inversa y tratamiento de aguas. Mantenimiento preventivo incluido en todos nuestros proyectos.</p>
+      <div class="card-tags"><span class="ctag">Agua fría y caliente</span><span class="ctag">Saneamiento</span><span class="ctag">Griferías premium</span><span class="ctag">Depuración</span><span class="ctag">Osmosis inversa</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     04 · DISEÑO DE INTERIORES
-══════════════════════════════════ -->
+<!-- ══ 05 DISEÑO DE INTERIORES ══ -->
 <section class="inst-section" id="interiores">
-  <div class="section-num">04</div>
+  <div class="section-num">05</div>
   <div class="page-tag" style="margin-top:8px;">Diseño &amp; Confort</div>
   <h2 class="section-title">Diseño de espacios <em>&amp; Acabados</em></h2>
-  <p class="section-intro">Asesoramiento y diseño de espacios interiores y exteriores de lujo. Cada detalle pensado para ofrecer la experiencia premium que su propiedad merece en Menorca.</p>
-  <div class="svc-cards">
-    <div class="svc-card">
-      <div class="svc-card-num">01</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
-      </div>
-      <div class="svc-card-name">Espacios Interiores</div>
-      <p class="svc-card-desc">Dormitorios, baños y comedores de lujo con texturas naturales, mobiliario a medida, spa, jacuzzi, bañeras de diseño y duchas amplias. Rincones únicos con tapicerías modernas y piezas recuperadas de autor.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Spa &amp; Jacuzzi</span>
-        <span class="svc-tag">Baños de lujo</span>
-        <span class="svc-tag">Mobiliario a medida</span>
-      </div>
+  <p class="section-intro">Creamos ambientes únicos de lujo en Menorca. Cada espacio pensado para ofrecer la experiencia premium que su propiedad merece, desde el dormitorio hasta el jardín.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="card-name">Espacios Interiores</div>
+      <p class="card-desc">Dormitorios, baños y comedores de lujo con texturas naturales, mobiliario a medida, spa, jacuzzi, bañeras de diseño y duchas amplias. Rincones únicos con tapicerías modernas y piezas de autor cuidadosamente seleccionadas.</p>
+      <div class="card-tags"><span class="ctag">Spa & Jacuzzi</span><span class="ctag">Baños de lujo</span><span class="ctag">Mobiliario a medida</span><span class="ctag">Tapicerías</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">02</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg>
-      </div>
-      <div class="svc-card-name">Carpintería &amp; Cocinas</div>
-      <p class="svc-card-desc">Cocinas con inducción invisible, vestidores personalizados y carpintería de interior y exterior a medida. Maderas nobles, lacados y materiales de última tendencia integrados con armonía en el espacio.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Inducción invisible</span>
-        <span class="svc-tag">Vestidores</span>
-        <span class="svc-tag">Puertas a medida</span>
-      </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg></div>
+      <div class="card-name">Carpintería & Cocinas</div>
+      <p class="card-desc">Cocinas con inducción invisible, vestidores personalizados y carpintería de interior y exterior a medida. Maderas nobles, lacados y materiales de última tendencia que transforman su cocina en el centro de su hogar.</p>
+      <div class="card-tags"><span class="ctag">Inducción invisible</span><span class="ctag">Vestidores</span><span class="ctag">Carpintería a medida</span><span class="ctag">Puertas premium</span></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">03</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18h20M6 18V8a2 2 0 012-2h8a2 2 0 012 2v10"/><path d="M10 12a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
-      </div>
-      <div class="svc-card-name">Piscinas &amp; Jardines</div>
-      <p class="svc-card-desc">Piscinas de interior y exterior climatizadas e iluminadas a medida. Jardines con plantas autóctonas mediterráneas. Mobiliario de exterior exclusivo para disfrutar del incomparable clima de Menorca todo el año.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Piscinas climatizadas</span>
-        <span class="svc-tag">Jardín mediterráneo</span>
-        <span class="svc-tag">Exterior premium</span>
-      </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
+      <div class="card-name">Piscinas & Jardines</div>
+      <p class="card-desc">Piscinas climatizadas e iluminadas a medida. Jardines con plantas autóctonas mediterráneas. Mobiliario de exterior exclusivo para disfrutar del incomparable clima de Menorca durante todo el año.</p>
+      <div class="card-tags"><span class="ctag">Piscinas climatizadas</span><span class="ctag">Jardín mediterráneo</span><span class="ctag">Iluminación exterior</span><span class="ctag">Mobiliario premium</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     05 · MANTENIMIENTO
-══════════════════════════════════ -->
+<!-- ══ 06 MANTENIMIENTO ══ -->
 <section class="inst-section" id="mantenimiento">
-  <div class="section-num">05</div>
+  <div class="section-num">06</div>
   <div class="page-tag" style="margin-top:8px;">Servicio continuado</div>
   <h2 class="section-title">Mantenimiento <em>integral</em></h2>
-  <p class="section-intro">Una propiedad de lujo en Menorca requiere un mantenimiento a la altura. Ofrecemos planes preventivos y correctivos para todos los sistemas instalados, con respuesta rápida y personal especializado en la isla.</p>
-  <div class="svc-cards svc-cards-4">
-    <div class="svc-card">
-      <div class="svc-card-num">01</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
-      <div class="svc-card-name">Mant. Eléctrico</div>
-      <p class="svc-card-desc">Revisiones periódicas, reparaciones y actualizaciones del sistema eléctrico. Inspección de cuadros, conexiones y protecciones.</p>
+  <p class="section-intro">Una propiedad de lujo en Menorca requiere un mantenimiento a la altura. Planes preventivos y correctivos con respuesta rápida y personal especializado en la isla.</p>
+  <div class="cards cards-4">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-name">Mant. Eléctrico</div>
+      <p class="card-desc">Revisiones periódicas, reparaciones y actualizaciones del sistema eléctrico. Inspección de cuadros, conexiones y protecciones.</p>
+      <div class="card-tags"></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">02</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2"/></svg>
-      </div>
-      <div class="svc-card-name">Mant. Fontanería</div>
-      <p class="svc-card-desc">Control de tuberías, detección de fugas, limpieza de depósitos, revisión de griferías y sistemas de depuración.</p>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
+      <div class="card-name">Mant. Fontanería</div>
+      <p class="card-desc">Control de tuberías, detección de fugas, limpieza de depósitos, revisión de griferías y sistemas de depuración.</p>
+      <div class="card-tags"></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">03</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
-      </div>
-      <div class="svc-card-name">Mant. Climatización</div>
-      <p class="svc-card-desc">Limpieza de filtros, revisión de gases, mantenimiento de calderas, bombas de calor y sistemas de aerotermia.</p>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <div class="card-name">Mant. Climatización</div>
+      <p class="card-desc">Limpieza de filtros, revisión de gases, mantenimiento de calderas, bombas de calor y sistemas de aerotermia.</p>
+      <div class="card-tags"></div>
     </div>
-    <div class="svc-card">
-      <div class="svc-card-num">04</div>
-      <div class="svc-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-      </div>
-      <div class="svc-card-name">Mant. Jardín &amp; Piscina</div>
-      <p class="svc-card-desc">Cuidado del jardín, poda, tratamiento del agua, revisión de bombas e iluminación exterior de su propiedad.</p>
+    <div class="card">
+      <div class="card-num">04</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
+      <div class="card-name">Mant. Jardín & Piscina</div>
+      <p class="card-desc">Cuidado del jardín, poda, tratamiento del agua, revisión de bombas e iluminación exterior.</p>
+      <div class="card-tags"></div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════════════════════════
-     PROJECT & BUILDING MANAGER BAND
-══════════════════════════════════ -->
-<div class="feature-band" id="project-manager">
-  <div class="feature-band-inner">
-    <div>
-      <div class="page-tag">Gestión integral</div>
-      <h2>Project &amp; Building Manager<br><em>en Menorca y Baleares</em></h2>
-      <p>Coordinamos todos estos servicios bajo una única dirección: la suya. Como Project &amp; Building Manager nos encargamos de gestionar, supervisar y garantizar la ejecución perfecta de cada instalación, con los mejores proveedores especializados de Menorca y Baleares.</p>
-      <p>Desde el presupuesto inicial hasta la puesta en marcha y el servicio posventa, <strong style="color:var(--gold-light);">LUXINPRO es su único interlocutor</strong>. Atención personalizada en español, inglés, francés, alemán y catalán.</p>
-      <ul class="feature-list">
-        <li>Gestión completa del proyecto de principio a fin</li>
-        <li>Coordinación y supervisión de todos los gremios</li>
-        <li>Control de calidad, plazos y costes</li>
-        <li>Documentación oficial y legalizaciones</li>
-        <li>Atención personalizada en 5 idiomas</li>
-        <li>Servicio posventa garantizado</li>
-      </ul>
-      <a href="index.html#contacto" class="btn-primary" style="margin-top:32px;display:inline-block;">Solicitar consulta sin compromiso</a>
-    </div>
-    <div class="feature-band-stats">
-      <div class="fstat">
-        <div class="fstat-num">+15</div>
-        <div class="fstat-label">Años de experiencia en Baleares</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">+200</div>
-        <div class="fstat-label">Proyectos completados en Menorca</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">5</div>
-        <div class="fstat-label">Idiomas de atención al cliente</div>
-      </div>
-      <div class="fstat">
-        <div class="fstat-num">100%</div>
-        <div class="fstat-label">Satisfacción del cliente garantizada</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- CTA FINAL -->
 <div class="cta-final">
   <h2>¿Tiene un proyecto<br><em>en mente?</em></h2>
-  <p>Hablemos de sus necesidades. Le ofrecemos una consulta inicial sin compromiso para la solución más adecuada para su propiedad en Menorca.</p>
+  <p>Hablemos de sus necesidades. Consulta inicial sin compromiso para encontrar la solución perfecta para su propiedad en Menorca.</p>
   <div class="cta-btns">
-    <a href="tel:+34609625573" class="btn-primary">Llamar: 609 625 573</a>
-    <a href="index.html#contacto" class="btn-sec">Enviar consulta</a>
+    <a href="tel:+34609625573" class="btn-p">Llamar: 609 625 573</a>
+    <a href="index.html#contacto" class="btn-s">Enviar consulta</a>
   </div>
 </div>
 
@@ -960,74 +782,65 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     </div>
   </div>
 </footer>
+
 <!-- COOKIE BANNER -->
-<div id="cookieBanner">
-  <div class="cookie-inner">
-    <div class="cookie-text">
-      <span class="cookie-text-icon">🍪</span>
-      <div class="cookie-text-body">
-        <p>Utilizamos cookies</p>
-        <p>Usamos cookies para mejorar su experiencia. <a href="cookies.html">Política de Cookies</a> · <a href="privacidad.html">Privacidad</a>.</p>
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9990;background:rgba(17,17,17,0.98);border-top:1px solid rgba(201,169,110,0.2);transform:translateY(100%);transition:transform .5s ease;">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 50px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:flex-start;gap:12px;max-width:680px;">
+      <span style="font-size:18px;flex-shrink:0;">🍪</span>
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">Utilizamos cookies</p>
+        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;">Usamos cookies para mejorar su experiencia. <a href="cookies.html" style="color:#C9A96E;text-decoration:none;">Política de Cookies</a> · <a href="privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacidad</a>.</p>
       </div>
     </div>
-    <div class="cookie-btns">
-      <button class="btn-ck-cfg" onclick="ckCfg()">Configurar</button>
-      <button class="btn-ck-rej" onclick="ckRej()">Rechazar</button>
-      <button class="btn-ck-acc" onclick="ckAcc()">Aceptar todo</button>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="ckCfg()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Configurar</button>
+      <button onclick="ckRej()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Rechazar</button>
+      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Aceptar todo</button>
     </div>
   </div>
 </div>
-
-<!-- COOKIE MODAL -->
-<div id="cookieModal">
-  <div class="cookie-modal-inner">
-    <button class="cookie-modal-close" onclick="document.getElementById('cookieModal').style.display='none'">&times;</button>
-    <p class="cookie-modal-tag">Cookies</p>
-    <h3>Utilizamos cookies</h3>
-    <p>Las cookies necesarias no pueden desactivarse.</p>
+<div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9995;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div style="background:#1A1A1A;border:1px solid rgba(201,169,110,0.2);max-width:520px;width:90%;padding:40px;position:relative;max-height:80vh;overflow-y:auto;">
+    <button onclick="ckHide()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8A8A8A;font-size:24px;cursor:pointer;">&times;</button>
+    <p style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#C9A96E;margin-bottom:8px;">Configurar cookies</p>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;margin-bottom:12px;">Sus preferencias</h3>
+    <p style="font-size:11px;color:rgba(245,242,236,0.5);line-height:1.7;margin-bottom:20px;">Las cookies necesarias no pueden desactivarse.</p>
     <div id="ckOpts"></div>
-    <div class="cookie-modal-btns">
-      <button class="btn-save" onclick="ckSave()">Guardar</button>
-      <button class="btn-acc-all" onclick="ckAcc()">Aceptar todo</button>
+    <div style="display:flex;gap:10px;margin-top:24px;">
+      <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Guardar</button>
+      <button onclick="ckAcc()" style="flex:1;padding:13px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:#C9A96E;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Aceptar todo</button>
     </div>
   </div>
 </div>
 
+
 <script>
-const CK=[{'id': 'necessary', 'l': 'Cookies necesarias', 'd': 'Esenciales para el funcionamiento.', 'locked': true, 'v': true}, {'id': 'analytics', 'l': 'Cookies analíticas', 'd': 'Estadísticas de visitas.', 'locked': false, 'v': false}, {'id': 'marketing', 'l': 'Cookies de marketing', 'd': 'Publicidad relevante.', 'locked': false, 'v': false}, {'id': 'preferences', 'l': 'Cookies de preferencias', 'd': 'Idioma y personalización.', 'locked': false, 'v': true}];
-const o=document.getElementById('ckOpts');
-CK.forEach(c=>{
-  const d=document.createElement('div');
-  d.style.cssText='display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:12px;';
-  d.innerHTML=`<div><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">${c.l}</p><p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">${c.d}</p></div>
-  <label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:${c.locked?'not-allowed':'pointer'};">
-    <input type="checkbox" id="ck_${c.id}" ${c.v?'checked':''} ${c.locked?'disabled':''} style="opacity:0;position:absolute;">
-    <span id="tr_${c.id}" style="position:absolute;inset:0;background:${c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)'};border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span>
-    <span id="kn_${c.id}" style="position:absolute;top:3px;left:${c.v?'19':'3'}px;width:14px;height:14px;background:${c.v?'#C9A96E':'#8A8A8A'};border-radius:50%;transition:all .3s;pointer-events:none;"></span>
-  </label>`;
-  o.appendChild(d);
-  if(!c.locked){
-    const i=d.querySelector('#ck_'+c.id),k=d.querySelector('#kn_'+c.id),t=d.querySelector('#tr_'+c.id);
-    i.addEventListener('change',()=>{k.style.left=i.checked?'19px':'3px';k.style.background=i.checked?'#C9A96E':'#8A8A8A';t.style.background=i.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)';});
+// Mobile menu
+(function() {
+  var btn = document.getElementById('mMenuBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
   }
-});
-window.addEventListener('DOMContentLoaded',()=>{if(!localStorage.getItem('lxp_consent'))setTimeout(()=>document.getElementById('cookieBanner').style.transform='translateY(0)',2200);});
-function ckHide(){document.getElementById('cookieBanner').style.transform='translateY(100%)';document.getElementById('cookieModal').style.display='none';}
-function ckAcc(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()}));ckHide();}
-function ckRej(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()}));ckHide();}
-function ckCfg(){document.getElementById('cookieModal').style.display='flex';}
-function ckSave(){const r={};CK.forEach(c=>r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked);r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
-</script>
+})();
 
-
-<script>
 // Cursor (desktop only)
 if (window.matchMedia('(hover: hover)').matches) {
-  const cur = document.getElementById('cursor');
-  const rng = document.getElementById('cursorRing');
+  var cur = document.getElementById('cursor');
+  var rng = document.getElementById('cursorRing');
   if (cur && rng) {
-    let mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
-    document.addEventListener('mousemove', e => {
+    var mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
+    document.addEventListener('mousemove', function(e) {
       mx = e.clientX; my = e.clientY;
       cur.style.left = mx + 'px'; cur.style.top = my + 'px';
     });
@@ -1036,51 +849,76 @@ if (window.matchMedia('(hover: hover)').matches) {
       rng.style.left = rx + 'px'; rng.style.top = ry + 'px';
       requestAnimationFrame(loop);
     })();
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => { cur.classList.add('hover'); rng.classList.add('hover'); });
-      el.addEventListener('mouseleave', () => { cur.classList.remove('hover'); rng.classList.remove('hover'); });
+    document.querySelectorAll('a,button').forEach(function(el) {
+      el.addEventListener('mouseenter', function() { cur.classList.add('hover'); rng.classList.add('hover'); });
+      el.addEventListener('mouseleave', function() { cur.classList.remove('hover'); rng.classList.remove('hover'); });
     });
   }
 }
-// Mobile menu toggle
-const mBtn = document.getElementById('mMenuBtn');
-const mMenu = document.getElementById('mobileMenu');
-if (mBtn && mMenu) {
-  mBtn.addEventListener('click', () => {
-    mBtn.classList.toggle('open');
-    mMenu.classList.toggle('open');
-  });
-  mMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => { mBtn.classList.remove('open'); mMenu.classList.remove('open'); });
-  });
-}
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+
+// Smooth scroll for anchor links on this page
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+// Cookie banner
+var CK = [
+  {id:'necessary', l:'Cookies necesarias', d:'Esenciales para el funcionamiento.', locked:true, v:true},
+  {id:'analytics',  l:'Cookies analíticas',   d:'Estadísticas de visitas.',          locked:false, v:false},
+  {id:'marketing',  l:'Cookies de marketing', d:'Publicidad relevante.',             locked:false, v:false},
+  {id:'preferences',l:'Cookies de preferencias', d:'Idioma y personalización.',      locked:false, v:true}
+];
+var oo = document.getElementById('ckOpts');
+if (oo) {
+  CK.forEach(function(c) {
+    var d = document.createElement('div');
+    d.style.cssText = 'display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:12px;';
+    d.innerHTML = '<div><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">' + c.l + '</p>'
+      + '<p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">' + c.d + '</p></div>'
+      + '<label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:' + (c.locked ? 'not-allowed' : 'pointer') + ';">'
+      + '<input type="checkbox" id="ck_' + c.id + '" ' + (c.v ? 'checked' : '') + ' ' + (c.locked ? 'disabled' : '') + ' style="opacity:0;position:absolute;">'
+      + '<span id="tr_' + c.id + '" style="position:absolute;inset:0;background:' + (c.v ? 'rgba(201,169,110,.2)' : 'rgba(255,255,255,.07)') + ';border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span>'
+      + '<span id="kn_' + c.id + '" style="position:absolute;top:3px;left:' + (c.v ? '19' : '3') + 'px;width:14px;height:14px;background:' + (c.v ? '#C9A96E' : '#8A8A8A') + ';border-radius:50%;transition:all .3s;pointer-events:none;"></span>'
+      + '</label>';
+    oo.appendChild(d);
+    if (!c.locked) {
+      var inp = d.querySelector('#ck_' + c.id);
+      var knob = d.querySelector('#kn_' + c.id);
+      var track = d.querySelector('#tr_' + c.id);
+      inp.addEventListener('change', function() {
+        knob.style.left = inp.checked ? '19px' : '3px';
+        knob.style.background = inp.checked ? '#C9A96E' : '#8A8A8A';
+        track.style.background = inp.checked ? 'rgba(201,169,110,.2)' : 'rgba(255,255,255,.07)';
+      });
+    }
+  });
+}
+window.addEventListener('DOMContentLoaded', function() {
+  if (!localStorage.getItem('lxp_consent')) {
+    setTimeout(function() {
+      var b = document.getElementById('cookieBanner');
+      if (b) b.style.transform = 'translateY(0)';
+    }, 2200);
+  }
+});
+function ckHide() {
+  var b = document.getElementById('cookieBanner'); if (b) b.style.transform = 'translateY(100%)';
+  var m = document.getElementById('cookieModal'); if (m) m.style.display = 'none';
+}
+function ckAcc() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
+function ckRej() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
+function ckCfg() { var m = document.getElementById('cookieModal'); if (m) m.style.display = 'flex'; }
+function ckSave() {
+  var r = {};
+  CK.forEach(function(c) { r[c.id] = c.locked ? true : document.getElementById('ck_' + c.id).checked; });
+  r.date = new Date().toISOString();
+  localStorage.setItem('lxp_consent', JSON.stringify(r));
+  ckHide();
+}
 </script>
 
-<script>
-if (window.matchMedia('(hover: hover)').matches) {
-  var cur=document.getElementById('cursor'),rng=document.getElementById('cursorRing');
-  if(cur&&rng){
-    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
-    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-    (function loop(){rx+=(mx-rx)*.22;ry+=(my-ry)*.22;rng.style.left=rx+'px';rng.style.top=ry+'px';requestAnimationFrame(loop);})();
-    document.querySelectorAll('a,button').forEach(function(el){
-      el.addEventListener('mouseenter',function(){cur.classList.add('hover');rng.classList.add('hover');});
-      el.addEventListener('mouseleave',function(){cur.classList.remove('hover');rng.classList.remove('hover');});
-    });
-  }
-}
-var mBtn=document.getElementById('mMenuBtn'),mMenu=document.getElementById('mobileMenu');
-if(mBtn&&mMenu){
-  mBtn.addEventListener('click',function(){mBtn.classList.toggle('open');mMenu.classList.toggle('open');});
-  mMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mBtn.classList.remove('open');mMenu.classList.remove('open');});});
-}
-</script>
 </body>
 </html>
