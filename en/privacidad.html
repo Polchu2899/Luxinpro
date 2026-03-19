@@ -468,29 +468,43 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 </div>
 
 <script>
-const CK=[{'id': 'necessary', 'l': 'Necessary cookies', 'd': 'Essential for site functionality.', 'locked': true, 'v': true}, {'id': 'analytics', 'l': 'Analytical cookies', 'd': 'Visit statistics.', 'locked': false, 'v': false}, {'id': 'marketing', 'l': 'Marketing cookies', 'd': 'Relevant advertising.', 'locked': false, 'v': false}, {'id': 'preferences', 'l': 'Preference cookies', 'd': 'Language and personalisation.', 'locked': false, 'v': true}];
-const o=document.getElementById('ckOpts');
-CK.forEach(c=>{
-  const d=document.createElement('div');
-  d.style.cssText='display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:12px;';
-  d.innerHTML=`<div><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">${c.l}</p><p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">${c.d}</p></div>
-  <label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:${c.locked?'not-allowed':'pointer'};">
-    <input type="checkbox" id="ck_${c.id}" ${c.v?'checked':''} ${c.locked?'disabled':''} style="opacity:0;position:absolute;">
-    <span id="tr_${c.id}" style="position:absolute;inset:0;background:${c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)'};border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span>
-    <span id="kn_${c.id}" style="position:absolute;top:3px;left:${c.v?'19':'3'}px;width:14px;height:14px;background:${c.v?'#C9A96E':'#8A8A8A'};border-radius:50%;transition:all .3s;pointer-events:none;"></span>
-  </label>`;
-  o.appendChild(d);
-  if(!c.locked){
-    const i=d.querySelector('#ck_'+c.id),k=d.querySelector('#kn_'+c.id),t=d.querySelector('#tr_'+c.id);
-    i.addEventListener('change',()=>{k.style.left=i.checked?'19px':'3px';k.style.background=i.checked?'#C9A96E':'#8A8A8A';t.style.background=i.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)';});
-  }
-});
-window.addEventListener('DOMContentLoaded',()=>{if(!localStorage.getItem('lxp_consent'))setTimeout(()=>document.getElementById('cookieBanner').style.transform='translateY(0)',2200);});
-function ckHide(){document.getElementById('cookieBanner').style.transform='translateY(100%)';document.getElementById('cookieModal').style.display='none';}
+const CK=[{id:'necessary',l:'Necessary cookies',d:'Essential for site functionality.',locked:true,v:true},{id:'analytics',l:'Analytical cookies',d:'Visit statistics.',locked:false,v:false},{id:'marketing',l:'Marketing cookies',d:'Relevant advertising.',locked:false,v:false},{id:'preferences',l:'Preference cookies',d:'Language and personalisation.',locked:false,v:true}];
+// Cookie functions (defined globally so onclick handlers work)
+function ckHide(){var b=document.getElementById('cookieBanner');if(b)b.style.transform='translateY(100%)';var m=document.getElementById('cookieModal');if(m)m.style.display='none';}
 function ckAcc(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()}));ckHide();}
 function ckRej(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()}));ckHide();}
-function ckCfg(){document.getElementById('cookieModal').style.display='flex';}
-function ckSave(){const r={};CK.forEach(c=>r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked);r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
+function ckCfg(){var m=document.getElementById('cookieModal');if(m)m.style.display='flex';}
+function ckSave(){var r={};CK.forEach(function(c){r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked;});r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
+// Run after DOM is ready
+document.addEventListener('DOMContentLoaded',function(){
+  // Populate cookie modal options
+  var oo=document.getElementById('ckOpts');
+  if(oo){
+    CK.forEach(function(c){
+      var d=document.createElement('div');
+      d.style.cssText='display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:12px;';
+      d.innerHTML='<div><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">'+c.l+'</p>'
+        +'<p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">'+c.d+'</p></div>'
+        +'<label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:'+(c.locked?'not-allowed':'pointer')+';">'
+        +'<input type="checkbox" id="ck_'+c.id+'" '+(c.v?'checked':'')+' '+(c.locked?'disabled':'')+' style="opacity:0;position:absolute;">'
+        +'<span id="tr_'+c.id+'" style="position:absolute;inset:0;background:'+(c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)')+';border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span>'
+        +'<span id="kn_'+c.id+'" style="position:absolute;top:3px;left:'+(c.v?'19':'3')+'px;width:14px;height:14px;background:'+(c.v?'#C9A96E':'#8A8A8A')+';border-radius:50%;transition:all .3s;pointer-events:none;"></span>'
+        +'</label>';
+      oo.appendChild(d);
+      if(!c.locked){
+        var inp=d.querySelector('#ck_'+c.id),knob=d.querySelector('#kn_'+c.id),track=d.querySelector('#tr_'+c.id);
+        inp.addEventListener('change',function(){knob.style.left=inp.checked?'19px':'3px';knob.style.background=inp.checked?'#C9A96E':'#8A8A8A';track.style.background=inp.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)';});
+      }
+    });
+  }
+  // Show banner if no consent yet
+  if(!localStorage.getItem('lxp_consent')){
+    setTimeout(function(){
+      var b=document.getElementById('cookieBanner');
+      if(b)b.style.transform='translateY(0)';
+    },2200);
+  }
+});;CK.forEach(c=>r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked);r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
 </script>
 
 
