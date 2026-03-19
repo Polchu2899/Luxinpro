@@ -434,19 +434,31 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     @media (min-width: 901px) { .nav-mobile { display: none!important; } }
 
   
-  </style>
+  
+  /* Force cursor onto GPU layer - prevents clipping by animated elements */
+  @media (hover: hover) {
+    .cursor {
+      will-change: transform, left, top;
+      transform: translateZ(0) translate(-50%, -50%) !important;
+    }
+    .cursor-ring {
+      will-change: transform, left, top;
+      transform: translateZ(0) translate(-50%, -50%) !important;
+    }
+  }
+</style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <header>
-  <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+  <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
   <div class="nav-desktop">
-    <a href="../index.html#nosotros">À propos</a>
-    <a href="../index.html#servicios">Services</a>
+    <a href="index.html#nosotros">À propos</a>
+    <a href="index.html#servicios">Services</a>
     <a href="../fr/instalaciones.html">Installations</a>
-    <a href="../index.html#contacto" class="nav-cta">Nous contacter</a>
+    <a href="index.html#contacto" class="nav-cta">Nous contacter</a>
     <div class="nav-langs">
       <a href="../index.html" >ES</a>
       <a href="../en/index.html" >EN</a>
@@ -462,11 +474,11 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="../index.html#nosotros">À propos</a>
-  <a href="../index.html#servicios">Services</a>
+  <a href="index.html#nosotros">À propos</a>
+  <a href="index.html#servicios">Services</a>
   <a href="../fr/instalaciones.html">Installations</a>
-  <a href="../index.html#contacto">Contact</a>
-  <a href="../index.html#contacto" class="mobile-cta">Nous contacter</a>
+  <a href="index.html#contacto">Contact</a>
+  <a href="index.html#contacto" class="mobile-cta">Nous contacter</a>
   <div class="mobile-lang-row">
     <a href="../index.html" >ES</a>
         <a href="../en/index.html" >EN</a>
@@ -481,7 +493,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <div class="page-tag">Services &amp; Installations</div>
   <h1 class="page-title">Tout ce dont votre propriété<br><em>a besoin, en une seule équipe</em></h1>
   <p class="page-sub">LUXINPRO offre un service intégral allant de la direction du projet à chaque installation technique de votre propriété à Minorque. Un seul interlocuteur pour tout.</p>
-  <a href="../index.html" class="back-btn">← Retour à l'accueil</a>
+  <a href="index.html" class="back-btn">← Retour à l'accueil</a>
 </div>
 
 <!-- INDEX NAV -->
@@ -741,7 +753,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
           <li>Accompagnement en 5 langues</li>
           <li>Service après-vente garanti</li>
       </ul>
-      <a href="../index.html#contacto" class="btn-p" style="margin-top:28px;display:inline-block;">Demander une consultation gratuite</a>
+      <a href="index.html#contacto" class="btn-p" style="margin-top:28px;display:inline-block;">Demander une consultation gratuite</a>
     </div>
     <div class="fstats">
       <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Années aux Baléares</div></div>
@@ -758,23 +770,23 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p>Parlez-nous de vos besoins. Consultation gratuite pour la solution parfaite à Minorque.</p>
   <div class="cta-btns">
     <a href="tel:+34609625573" class="btn-p">Appeler : +34 609 625 573</a>
-    <a href="../index.html#contacto" class="btn-s">Envoyer une demande</a>
+    <a href="index.html#contacto" class="btn-s">Envoyer une demande</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+      <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
       <p>{'EN':'Leading luxury real estate project management in Menorca and the Balearic Islands.','FR':"Référence en gestion de projets immobiliers de luxe à Minorque et aux Îles Baléares.",'DE':'Referenz für Luxusimmobilienprojekte auf Menorca und den Balearen.','CA':"Referent en gestió de projectes immobiliaris de luxe a Menorca i les Illes Balears."}.get('FR','')</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="../index.html#servicios">Project Manager</a></li>
-        <li><a href="../index.html#servicios">Building Manager</a></li>
+        <li><a href="index.html#servicios">Project Manager</a></li>
+        <li><a href="index.html#servicios">Building Manager</a></li>
         <li><a href="../instalaciones.html">Rénovation Intégrale</a></li>
-        <li><a href="../index.html#instalaciones">Smart Home</a></li>
+        <li><a href="index.html#instalaciones">Smart Home</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -783,7 +795,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
         <li><a href="../aviso-legal.html">Mentions Légales</a></li>
         <li><a href="../privacidad.html">Confidentialité</a></li>
         <li><a href="../cookies.html">Cookies</a></li>
-        <li><a href="../index.html#contacto">Contact</a></li>
+        <li><a href="index.html#contacto">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
