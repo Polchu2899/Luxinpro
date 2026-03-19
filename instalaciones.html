@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Instalaciones y Servicios | LUXINPRO Menorca — Climatización, Renovables, Fontanería</title>
-  <meta name="description" content="LUXINPRO ofrece en Menorca instalaciones completas: climatización, aerotermia, energías renovables, fotovoltaica, fontanería, electricidad, mantenimiento, Smart Home y diseño de interiores."/>
-  <meta name="keywords" content="instalaciones menorca, climatización menorca, aerotermia menorca, placas solares menorca, fontanería menorca, electricidad menorca, smart home menorca, renovables menorca, luxinpro"/>
+  <title>Instalaciones y Servicios | LUXINPRO Menorca</title>
+  <meta name="description" content="LUXINPRO ofrece en Menorca instalaciones completas: climatización, aerotermia, energías renovables, fotovoltaica, fontanería, electricidad, mantenimiento y Smart Home."/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="https://luxinpro.es/instalaciones-y-servicios/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -320,154 +318,170 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
     /* ══ PAGE HERO ══ */
     .page-hero {
-      position: relative; padding: 160px 50px 90px; overflow: hidden;
+      padding: 160px 50px 90px;
       border-bottom: 1px solid rgba(201,169,110,0.1);
+      position: relative; overflow: hidden;
+      background: linear-gradient(160deg, #080e1a 0%, #0d1828 60%, #060d18 100%);
     }
-    .page-hero-bg {
-      position: absolute; inset: 0;
-      background-image: none;
-      background-size: cover; background-position: center;
-      filter: brightness(0.18);
+    .page-hero::before {
+      content: 'LUXINPRO';
+      position: absolute; right: -40px; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display); font-size: 180px; font-weight: 300;
+      color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
     }
-    .page-hero-content { position: relative; z-index: 1; max-width: 760px; }
     .page-tag {
       display: inline-flex; align-items: center; gap: 12px;
-      font-size: 9px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 16px;
+      font-size: 9px; font-weight: 500; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
     }
-    .page-tag::before { content: ''; display: inline-block; width: 30px; height: 1px; background: var(--gold); }
+    .page-tag::before { content:''; display:inline-block; width:30px; height:1px; background:var(--gold); }
     .page-title {
       font-family: var(--font-display); font-size: clamp(40px,5vw,68px);
       font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px;
     }
     .page-title em { font-style: italic; color: var(--gold); }
     .page-sub {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
-      max-width: 580px; line-height: 1.9; margin-bottom: 32px;
+      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.65);
+      max-width: 600px; line-height: 1.9; margin-bottom: 32px;
     }
     .back-btn {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-      border-bottom: 1px solid rgba(201,169,110,0.35); padding-bottom: 4px; transition: all .3s;
+      font-size: 9px; font-weight: 500; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold); text-decoration: none;
+      border-bottom: 1px solid rgba(201,169,110,0.35); padding-bottom: 4px;
+      transition: all .3s;
     }
     .back-btn:hover { border-bottom-color: var(--gold); }
 
-    /* ══ SERVICE CATEGORIES ══ */
-    .cat-section { padding: 100px 50px; }
-    .cat-section:nth-child(even) { background: var(--dark); }
-    .cat-section:nth-child(odd) { background: var(--black); }
+    /* ══ SECTION BASE ══ */
+    .inst-section { padding: 100px 50px; }
+    .inst-section:nth-child(odd)  { background: var(--black); }
+    .inst-section:nth-child(even) { background: var(--dark); }
 
-    .cat-header { margin-bottom: 70px; }
-    .cat-num {
-      font-family: var(--font-display); font-size: 80px; font-weight: 300;
-      color: rgba(201,169,110,0.08); line-height: 1; margin-bottom: -20px;
+    .section-num {
+      font-family: var(--font-display); font-size: 72px; font-weight: 300;
+      color: rgba(201,169,110,0.07); line-height: 1; margin-bottom: -12px;
     }
-    .cat-title {
-      font-family: var(--font-display); font-size: clamp(32px,4vw,52px);
-      font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px;
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(30px,4vw,50px);
+      font-weight: 300; color: var(--white); margin-bottom: 14px; line-height: 1.1;
     }
-    .cat-title em { font-style: italic; color: var(--gold); }
-    .cat-intro {
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-intro {
       font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
-      max-width: 660px; line-height: 1.9;
+      max-width: 680px; line-height: 1.9; margin-bottom: 60px;
     }
 
-    .cat-grid {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 60px;
+    /* ══ SERVICE CARDS ══ */
+    .svc-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .svc-cards-2 { grid-template-columns: repeat(2,1fr); }
+    .svc-cards-4 { grid-template-columns: repeat(4,1fr); }
+
+    .svc-card {
+      padding: 44px 36px;
+      border: 1px solid rgba(201,169,110,0.1);
+      transition: border-color .3s, background .3s;
+      position: relative; overflow: hidden;
     }
-    .cat-item {
-      position: relative; overflow: hidden; min-height: 380px;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      background: var(--dark2);
+    .svc-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, transparent, rgba(201,169,110,0), transparent);
+      transition: background .4s;
     }
-    .cat-item-bg {
-      position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-      transition: transform .7s ease;
-      filter: grayscale(30%) brightness(0.65);
+    .svc-card:hover { border-color: rgba(201,169,110,0.3); background: rgba(201,169,110,0.03); }
+    .svc-card:hover::before {
+      background: linear-gradient(to right, transparent, rgba(201,169,110,0.5), transparent);
     }
-    .cat-item:hover .cat-item-bg { transform: scale(1.06); filter: grayscale(0%) brightness(0.8); }
-    .cat-item-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.3) 100%);
+
+    .svc-card-num {
+      font-family: var(--font-display); font-size: 36px; font-weight: 300;
+      color: rgba(201,169,110,0.15); line-height: 1; margin-bottom: 20px;
     }
-    .cat-item-content {
-      position: relative; z-index: 1; padding: 32px;
+    .svc-card-icon {
+      width: 44px; height: 44px;
+      border: 1px solid rgba(201,169,110,0.25);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px; color: var(--gold);
     }
-    .cat-item-icon {
-      width: 36px; height: 1px; background: var(--gold); margin-bottom: 16px;
-    }
-    .cat-item-name {
+    .svc-card-name {
       font-family: var(--font-display); font-size: 22px; font-weight: 400;
-      color: var(--white); margin-bottom: 10px; line-height: 1.2;
+      color: var(--white); margin-bottom: 12px; line-height: 1.2;
     }
-    .cat-item-desc {
-      font-size: 11px; font-weight: 300; line-height: 1.8;
-      color: rgba(245,242,236,0.6);
+    .svc-card-desc {
+      font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55);
+      line-height: 1.85; margin-bottom: 20px;
     }
-    .cat-item-tags {
-      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;
-    }
-    .cat-tag {
-      padding: 4px 12px; border: 1px solid rgba(201,169,110,0.25);
+    .svc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .svc-tag {
+      padding: 4px 11px; border: 1px solid rgba(201,169,110,0.2);
       font-size: 8px; font-weight: 500; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--gold-light);
+      text-transform: uppercase; color: rgba(201,169,110,0.7);
     }
 
-    /* 2-col layout for some sections */
-    .cat-grid-2 { grid-template-columns: repeat(2,1fr); }
-    .cat-grid-4 { grid-template-columns: repeat(4,1fr); }
-
-    /* ══ FULL-WIDTH FEATURE ══ */
-    .feature-banner {
-      position: relative; padding: 90px 50px; overflow: hidden;
+    /* ══ FEATURE BAND ══ */
+    .feature-band {
+      padding: 90px 50px;
+      background: var(--dark2);
+      border-top: 1px solid rgba(201,169,110,0.1);
+      border-bottom: 1px solid rgba(201,169,110,0.1);
+      position: relative; overflow: hidden;
     }
-    .feature-banner-bg {
-      position: absolute; inset: 0; background-size: cover; background-position: center;
-      filter: brightness(0.2);
+    .feature-band::after {
+      content: '';
+      position: absolute; top: 0; right: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     }
-    .feature-banner-content { position: relative; z-index: 1; max-width: 700px; }
-    .feature-banner h2 {
-      font-family: var(--font-display); font-size: clamp(34px,4vw,56px);
-      font-weight: 300; color: var(--white); margin-bottom: 20px;
+    .feature-band-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
+    .feature-band h2 {
+      font-family: var(--font-display); font-size: clamp(30px,4vw,52px);
+      font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 20px;
     }
-    .feature-banner h2 em { font-style: italic; color: var(--gold); }
-    .feature-banner p {
-      font-size: 13px; font-weight: 300; line-height: 1.9;
-      color: rgba(245,242,236,0.65); margin-bottom: 16px;
+    .feature-band h2 em { font-style: italic; color: var(--gold); }
+    .feature-band p {
+      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
+      line-height: 1.9; margin-bottom: 14px;
     }
-    .feature-list {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; margin-top: 28px;
+    .feature-list { list-style: none; margin-top: 28px; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.7);
+      line-height: 1.7; padding: 10px 0;
+      border-bottom: 1px solid rgba(201,169,110,0.07);
     }
-    .feature-list-item {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.7); line-height: 1.6;
-    }
-    .feature-list-item::before {
-      content: ''; display: inline-block; width: 16px; height: 1px;
+    .feature-list li::before {
+      content: ''; display: inline-block; width: 18px; height: 1px;
       background: var(--gold); flex-shrink: 0; margin-top: 9px;
     }
+    .feature-band-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .fstat {
+      padding: 28px; border: 1px solid rgba(201,169,110,0.15);
+      background: rgba(201,169,110,0.03);
+    }
+    .fstat-num {
+      font-family: var(--font-display); font-size: 44px; font-weight: 300;
+      color: var(--gold); line-height: 1; margin-bottom: 8px;
+    }
+    .fstat-label {
+      font-size: 9px; font-weight: 500; letter-spacing: 3px;
+      text-transform: uppercase; color: rgba(245,242,236,0.45);
+    }
 
-    /* ══ CTA SECTION ══ */
-    .cta-section {
-      position: relative; padding: 100px 50px; text-align: center; overflow: hidden;
+    /* ══ CTA FINAL ══ */
+    .cta-final {
+      padding: 100px 50px; text-align: center;
+      background: var(--dark2);
+      border-top: 1px solid rgba(201,169,110,0.1);
     }
-    .cta-bg {
-      position: absolute; inset: 0;
-      background-image: none;
-      background-size: cover; background-position: center;
-      filter: grayscale(40%) brightness(0.25);
-    }
-    .cta-content { position: relative; z-index: 1; }
-    .cta-content h2 {
-      font-family: var(--font-display); font-size: clamp(36px,5vw,64px);
+    .cta-final h2 {
+      font-family: var(--font-display); font-size: clamp(34px,5vw,60px);
       font-weight: 300; color: var(--white); margin-bottom: 18px;
     }
-    .cta-content h2 em { font-style: italic; color: var(--gold); }
-    .cta-content p {
-      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.7);
-      max-width: 500px; margin: 0 auto 40px; line-height: 1.9;
+    .cta-final h2 em { font-style: italic; color: var(--gold); }
+    .cta-final p {
+      font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6);
+      max-width: 480px; margin: 0 auto 40px; line-height: 1.9;
     }
     .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .btn-primary {
@@ -477,39 +491,14 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       text-decoration: none; transition: background .3s;
     }
     .btn-primary:hover { background: var(--gold-light); }
-    .btn-secondary {
+    .btn-sec {
       display: inline-block; padding: 15px 38px;
-      border: 1px solid rgba(245,242,236,0.4); color: var(--off-white);
+      border: 1px solid rgba(245,242,236,0.35); color: var(--off-white);
       font-family: var(--font-body); font-size: 9px; font-weight: 500;
-      letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all .3s;
+      letter-spacing: 3px; text-transform: uppercase; text-decoration: none;
+      transition: all .3s;
     }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-
-
-
-    /* Gold accent on cat-items for visual interest */
-    .cat-item::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(to right, transparent, rgba(201,169,110,0.4), transparent);
-      z-index: 2;
-    }
-    .cat-item:hover::after {
-      background: linear-gradient(to right, transparent, rgba(201,169,110,0.8), transparent);
-    }
-    /* Add subtle pattern to gradients */
-    .cat-item-bg {
-      position: absolute; inset: 0;
-      transition: transform .7s ease;
-    }
-    .cat-item:hover .cat-item-bg { transform: scale(1.02); }
-
-    /* Fallback gradients if images fail to load */
-    .cat-item-bg { background-color: var(--dark3); }
-    .page-hero-bg { background-color: var(--dark2); }
-    .feature-banner-bg { background-color: var(--dark3); }
+    .btn-sec:hover { border-color: var(--gold); color: var(--gold); }
 
     /* ══ MOBILE ══ */
     @media (max-width: 900px) {
@@ -518,16 +507,15 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       .nav-mobile { display: flex!important; }
       .logo { font-size: 18px!important; letter-spacing: 4px!important; }
       .page-hero { padding: 110px 18px 60px!important; }
-      .page-hero-bg { filter: brightness(0.22)!important; }
-      .cat-section { padding: 64px 18px!important; }
-      .cat-num { font-size: 52px!important; }
-      .cat-grid { grid-template-columns: 1fr!important; gap: 2px!important; }
-      .cat-grid-2 { grid-template-columns: 1fr!important; }
-      .cat-grid-4 { grid-template-columns: 1fr 1fr!important; }
-      .cat-item { min-height: 280px!important; }
-      .feature-banner { padding: 60px 18px!important; }
-      .feature-list { grid-template-columns: 1fr!important; }
-      .cta-section { padding: 70px 18px!important; }
+      .page-hero::before { display: none!important; }
+      .inst-section { padding: 60px 18px!important; }
+      .svc-cards, .svc-cards-2 { grid-template-columns: 1fr!important; }
+      .svc-cards-4 { grid-template-columns: 1fr 1fr!important; }
+      .svc-card { padding: 30px 22px!important; }
+      .feature-band { padding: 60px 18px!important; }
+      .feature-band-inner { grid-template-columns: 1fr!important; gap: 40px!important; }
+      .feature-band-stats { grid-template-columns: 1fr 1fr!important; }
+      .cta-final { padding: 64px 18px!important; }
       .cta-btns { flex-direction: column!important; align-items: center!important; }
       footer .footer-main { grid-template-columns: 1fr 1fr!important; gap: 28px!important; padding: 40px 18px!important; }
       footer .footer-bottom { flex-direction: column!important; gap: 10px!important; padding: 16px 18px!important; text-align: center!important; }
@@ -547,7 +535,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <div class="nav-desktop">
     <a href="index.html#nosotros">Nosotros</a>
     <a href="index.html#servicios">Servicios</a>
-    <a href="index.html#instalaciones">Instalaciones</a>
+    <a href="instalaciones.html">Instalaciones</a>
     <a href="index.html#contacto">Contacto</a>
     <div class="nav-langs">
       <a href="index.html" class="active">ES</a>
@@ -568,7 +556,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#nosotros">Nosotros</a>
     <a href="index.html#servicios">Servicios</a>
-    <a href="index.html#instalaciones">Instalaciones</a>
+    <a href="instalaciones.html">Instalaciones</a>
     <a href="index.html#menorca">Menorca</a>
     <a href="index.html#contacto">Contacto</a>
   <a href="index.html#contacto" class="mobile-cta">Contacto</a>
@@ -580,340 +568,349 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
         <a href="ca/index.html" >CA</a>
   </div>
 
-<!-- PAGE HERO -->
+<!-- HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg" style="background:linear-gradient(135deg,#050a14 0%,#0a1628 40%,#0d1f3c 70%,#061020 100%);"></div>
-  <div class="page-hero-content">
-    <div class="page-tag">Instalaciones &amp; Servicios</div>
-    <h1 class="page-title">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
-    <p class="page-sub">En LUXINPRO ofrecemos un servicio integral de instalaciones técnicas y diseño para propiedades residenciales y comerciales en Menorca y las Islas Baleares. Desde la climatización hasta las energías renovables, pasando por electricidad, fontanería y Smart Home.</p>
-    <a href="index.html" class="back-btn">← Volver al inicio</a>
+  <div class="page-tag">Instalaciones &amp; Servicios</div>
+  <h1 class="page-title">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
+  <p class="page-sub">En LUXINPRO ofrecemos un servicio integral de instalaciones técnicas y de diseño para propiedades en Menorca y las Islas Baleares. Climatización, energías renovables, electricidad, fontanería, Smart Home y mantenimiento.</p>
+  <a href="index.html" class="back-btn">← Volver al inicio</a>
+</div>
+
+<!-- ══════════════════════════════════
+     01 · CLIMATIZACIÓN
+══════════════════════════════════ -->
+<section class="inst-section" id="climatizacion">
+  <div class="section-num">01</div>
+  <div class="page-tag" style="margin-top:8px;">Instalaciones técnicas</div>
+  <h2 class="section-title">Climatización <em>inteligente</em></h2>
+  <p class="section-intro">Diseñamos e instalamos sistemas de climatización de alta eficiencia adaptados a cada propiedad en Menorca. Confort térmico óptimo durante todo el año con la tecnología más avanzada y el menor consumo energético posible.</p>
+  <div class="svc-cards">
+    <div class="svc-card">
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+      </div>
+      <div class="svc-card-name">Aire Acondicionado</div>
+      <p class="svc-card-desc">Instalación de sistemas de última generación: splits, cassettes, conductos y VRV. Marcas premium con control inteligente desde su smartphone. Eficiencia energética máxima para el clima de Menorca.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Multi-split</span>
+        <span class="svc-tag">VRV / VRF</span>
+        <span class="svc-tag">Conductos</span>
+        <span class="svc-tag">Smart control</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </div>
+      <div class="svc-card-name">Calefacción</div>
+      <p class="svc-card-desc">Suelo radiante, radiadores de diseño y fan-coils de alta eficiencia. Soluciones que se integran perfectamente en el diseño interior de su propiedad garantizando el máximo confort en los meses de invierno.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Suelo radiante</span>
+        <span class="svc-tag">Fan-coils</span>
+        <span class="svc-tag">Radiadores</span>
+        <span class="svc-tag">Caldera</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">03</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      </div>
+      <div class="svc-card-name">Aerotermia</div>
+      <p class="svc-card-desc">Sistema ALTHERMA de última generación: calefacción, aire acondicionado y agua caliente sanitaria en una sola instalación. Extrae hasta el 80% de energía del aire, reduciendo drásticamente su factura energética.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Altherma</span>
+        <span class="svc-tag">Bomba de calor</span>
+        <span class="svc-tag">ACS incluido</span>
+        <span class="svc-tag">Clasificación A+++</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     02 · ENERGÍAS RENOVABLES
+══════════════════════════════════ -->
+<section class="inst-section" id="renovables">
+  <div class="section-num">02</div>
+  <div class="page-tag" style="margin-top:8px;">Sostenibilidad</div>
+  <h2 class="section-title">Energías <em>renovables</em></h2>
+  <p class="section-intro">Apostamos por la independencia energética y la sostenibilidad en Menorca. Diseñamos e instalamos sistemas que reducen su impacto medioambiental y su factura energética, incluso en ubicaciones remotas de la isla.</p>
+  <div class="svc-cards">
+    <div class="svc-card">
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <div class="svc-card-name">Fotovoltaica</div>
+      <p class="svc-card-desc">Instalación de placas solares fotovoltaicas para autoconsumo. Paneles de alta eficiencia con inversores inteligentes y sistemas de almacenamiento en batería. Máximo rendimiento bajo el sol de Menorca.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Autoconsumo</span>
+        <span class="svc-tag">Baterías</span>
+        <span class="svc-tag">Inversor inteligente</span>
+        <span class="svc-tag">Monitorización</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg>
+      </div>
+      <div class="svc-card-name">Solar Térmica</div>
+      <p class="svc-card-desc">Captadores solares térmicos para producción de agua caliente sanitaria y apoyo a la calefacción. Máxima eficiencia energética aprovechando el privilegiado clima mediterráneo de Menorca durante todo el año.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">ACS solar</span>
+        <span class="svc-tag">Termosifón</span>
+        <span class="svc-tag">Apoyo calefacción</span>
+        <span class="svc-tag">Alta eficiencia</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">03</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L8 8h8l-4-6z"/><path d="M12 8v14"/><path d="M8 22h8"/><path d="M4 11c1.5-2 4-3 8-3s6.5 1 8 3"/></svg>
+      </div>
+      <div class="svc-card-name">Eólica</div>
+      <p class="svc-card-desc">Instalación de micro-aerogeneradores para complementar el abastecimiento energético. Especialmente eficaz en las zonas más expuestas al viento de Tramontana característico de Menorca. Sistemas híbridos solar-eólico.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Mini-eólica</span>
+        <span class="svc-tag">Off-grid</span>
+        <span class="svc-tag">Híbrido solar</span>
+        <span class="svc-tag">Almacenamiento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SMART HOME BAND
+══════════════════════════════════ -->
+<div class="feature-band" id="smarthome">
+  <div class="feature-band-inner">
+    <div>
+      <div class="page-tag">Smart Home &amp; Domótica</div>
+      <h2>El control de su hogar<br><em>en la palma de su mano</em></h2>
+      <p>Domotizamos su propiedad integrando todos los sistemas en una única plataforma inteligente. Iluminación, climatización, seguridad, persianas, riego y audio-vídeo controlados desde su smartphone, tablet o por voz desde cualquier lugar del mundo.</p>
+      <p>Instalamos el <strong style="color:var(--gold-light);">punto de carga para vehículo eléctrico</strong>, integrado con el sistema fotovoltaico para una carga 100% sostenible y sin coste energético adicional.</p>
+      <ul class="feature-list">
+        <li>Iluminación inteligente y escenas personalizadas</li>
+        <li>Control de climatización centralizado</li>
+        <li>Seguridad: alarmas, cámaras y control de acceso</li>
+        <li>Persianas y toldos automatizados</li>
+        <li>Sistema audio-vídeo multizona</li>
+        <li>Punto de carga vehículo eléctrico</li>
+        <li>Control remoto desde cualquier lugar</li>
+        <li>Compatible con Alexa &amp; Google Home</li>
+      </ul>
+    </div>
+    <div class="feature-band-stats">
+      <div class="fstat">
+        <div class="fstat-num">80%</div>
+        <div class="fstat-label">Ahorro energético con aerotermia</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">A+++</div>
+        <div class="fstat-label">Clasificación energética sistemas instalados</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">100%</div>
+        <div class="fstat-label">Control remoto desde cualquier lugar</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">0€</div>
+        <div class="fstat-label">Coste de carga EV con fotovoltaica</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     1. CLIMATIZACIÓN
-════════════════════════════════════════ -->
-<section class="cat-section" id="climatizacion">
-  <div class="cat-header">
-    <div class="cat-num">01</div>
-    <div class="page-tag">Instalaciones técnicas</div>
-    <h2 class="cat-title">Climatización <em>inteligente</em></h2>
-    <p class="cat-intro">Diseñamos e instalamos sistemas de climatización de alta eficiencia adaptados a cada propiedad. Confort térmico óptimo durante todo el año, con la tecnología más avanzada y el menor consumo energético posible.</p>
-  </div>
-  <div class="cat-grid">
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1117 0%, #1a2535 50%, #0d1117 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Aire Acondicionado</div>
-        <p class="cat-item-desc">Instalación de sistemas de aire acondicionado de última generación: splits, cassettes, conductos y VRV. Marcas premium con control inteligente desde su smartphone.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Multi-split</span>
-          <span class="cat-tag">VRV / VRF</span>
-          <span class="cat-tag">Conductos</span>
-          <span class="cat-tag">Smart control</span>
-        </div>
+<!-- ══════════════════════════════════
+     03 · ELECTRICIDAD & FONTANERÍA
+══════════════════════════════════ -->
+<section class="inst-section" id="electricidad">
+  <div class="section-num">03</div>
+  <div class="page-tag" style="margin-top:8px;">Instalaciones esenciales</div>
+  <h2 class="section-title">Electricidad <em>&amp; Fontanería</em></h2>
+  <p class="section-intro">Las instalaciones más fundamentales ejecutadas con la máxima precisión. Trabajamos con materiales robustos y duraderos garantizando instalaciones seguras, eficientes y conformes a normativa vigente en España.</p>
+  <div class="svc-cards svc-cards-2">
+    <div class="svc-card">
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="svc-card-name">Electricidad</div>
+      <p class="svc-card-desc">Instalaciones eléctricas completas para obra nueva y rehabilitación: cuadros eléctricos, cableado, tomas de corriente, iluminación LED de diseño y sistemas de protección diferencial. Certificación y legalización ante organismos competentes incluidas.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Obra nueva</span>
+        <span class="svc-tag">Rehabilitación</span>
+        <span class="svc-tag">Cuadros eléctricos</span>
+        <span class="svc-tag">Iluminación LED</span>
+        <span class="svc-tag">Certificación oficial</span>
       </div>
     </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #110d0d 0%, #2a1515 50%, #110d0d 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Calefacción</div>
-        <p class="cat-item-desc">Sistemas de calefacción por suelo radiante, radiadores de diseño y fan-coils. Soluciones eficientes que se integran perfectamente en el diseño interior de su propiedad.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Suelo radiante</span>
-          <span class="cat-tag">Fan-coils</span>
-          <span class="cat-tag">Radiadores</span>
-          <span class="cat-tag">Caldera</span>
-        </div>
+    <div class="svc-card">
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2"/><path d="M12 11v11"/></svg>
       </div>
-    </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1117 0%, #0d2535 50%, #0a1520 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Aerotermia</div>
-        <p class="cat-item-desc">Sistema ALTHERMA de última generación: calefacción, aire acondicionado y agua caliente sanitaria en una sola instalación. Extrae hasta el 80% de energía del aire, reduciendo drásticamente su factura energética.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Altherma</span>
-          <span class="cat-tag">Bomba de calor</span>
-          <span class="cat-tag">ACS incluido</span>
-          <span class="cat-tag">A+++</span>
-        </div>
+      <div class="svc-card-name">Fontanería</div>
+      <p class="svc-card-desc">Instalaciones de fontanería y saneamiento completas: redes de agua fría y caliente, radiadores, griferías de diseño premium, sistemas de depuración, osmosis inversa y tratamiento de aguas. Mantenimiento preventivo incluido en el servicio.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Agua fría y caliente</span>
+        <span class="svc-tag">Saneamiento</span>
+        <span class="svc-tag">Griferías premium</span>
+        <span class="svc-tag">Depuración</span>
+        <span class="svc-tag">Osmosis inversa</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     2. ENERGÍAS RENOVABLES
-════════════════════════════════════════ -->
-<section class="cat-section" id="renovables">
-  <div class="cat-header">
-    <div class="cat-num">02</div>
-    <div class="page-tag">Sostenibilidad</div>
-    <h2 class="cat-title">Energías <em>renovables</em></h2>
-    <p class="cat-intro">Apostamos por la independencia energética y la sostenibilidad. Diseñamos e instalamos sistemas de energías renovables que reducen su impacto medioambiental y su factura energética, incluso en ubicaciones remotas de la isla.</p>
-  </div>
-  <div class="cat-grid">
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1a0d 0%, #152a10 50%, #0d1a0d 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Fotovoltaica</div>
-        <p class="cat-item-desc">Instalación de placas solares fotovoltaicas para autoconsumo. Paneles de alta eficiencia con inversores inteligentes y sistemas de almacenamiento. Máximo rendimiento bajo el sol de Menorca.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Autoconsumo</span>
-          <span class="cat-tag">Baterías</span>
-          <span class="cat-tag">Inversor</span>
-          <span class="cat-tag">Monitorización</span>
-        </div>
+<!-- ══════════════════════════════════
+     04 · DISEÑO DE INTERIORES
+══════════════════════════════════ -->
+<section class="inst-section" id="interiores">
+  <div class="section-num">04</div>
+  <div class="page-tag" style="margin-top:8px;">Diseño &amp; Confort</div>
+  <h2 class="section-title">Diseño de espacios <em>&amp; Acabados</em></h2>
+  <p class="section-intro">Asesoramiento y diseño de espacios interiores y exteriores de lujo. Cada detalle pensado para ofrecer la experiencia premium que su propiedad merece en Menorca.</p>
+  <div class="svc-cards">
+    <div class="svc-card">
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="svc-card-name">Espacios Interiores</div>
+      <p class="svc-card-desc">Dormitorios, baños y comedores de lujo con texturas naturales, mobiliario a medida, spa, jacuzzi, bañeras de diseño y duchas amplias. Rincones únicos con tapicerías modernas y piezas recuperadas de autor.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Spa &amp; Jacuzzi</span>
+        <span class="svc-tag">Baños de lujo</span>
+        <span class="svc-tag">Mobiliario a medida</span>
       </div>
     </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #1a1500 0%, #2a2010 50%, #1a1500 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Solar Térmica</div>
-        <p class="cat-item-desc">Captadores solares térmicos para producción de agua caliente sanitaria y apoyo a la calefacción. Máxima eficiencia energética aprovechando el privilegiado clima mediterráneo de Menorca.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">ACS solar</span>
-          <span class="cat-tag">Termosifón</span>
-          <span class="cat-tag">Apoyo calefacción</span>
-        </div>
+    <div class="svc-card">
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg>
+      </div>
+      <div class="svc-card-name">Carpintería &amp; Cocinas</div>
+      <p class="svc-card-desc">Cocinas con inducción invisible, vestidores personalizados y carpintería de interior y exterior a medida. Maderas nobles, lacados y materiales de última tendencia integrados con armonía en el espacio.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Inducción invisible</span>
+        <span class="svc-tag">Vestidores</span>
+        <span class="svc-tag">Puertas a medida</span>
       </div>
     </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0a0d1a 0%, #101525 60%, #0a0d1a 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Eólica</div>
-        <p class="cat-item-desc">Instalación de micro-aerogeneradores para complementar el abastecimiento energético, especialmente eficaz en las zonas más expuestas al viento de Tramontana característico de Menorca.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Mini-eólica</span>
-          <span class="cat-tag">Off-grid</span>
-          <span class="cat-tag">Híbrido solar</span>
-        </div>
+    <div class="svc-card">
+      <div class="svc-card-num">03</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18h20M6 18V8a2 2 0 012-2h8a2 2 0 012 2v10"/><path d="M10 12a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
+      </div>
+      <div class="svc-card-name">Piscinas &amp; Jardines</div>
+      <p class="svc-card-desc">Piscinas de interior y exterior climatizadas e iluminadas a medida. Jardines con plantas autóctonas mediterráneas. Mobiliario de exterior exclusivo para disfrutar del incomparable clima de Menorca todo el año.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Piscinas climatizadas</span>
+        <span class="svc-tag">Jardín mediterráneo</span>
+        <span class="svc-tag">Exterior premium</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     FEATURE: SMART HOME + COCHE ELÉCTRICO
-════════════════════════════════════════ -->
-<div class="feature-banner" style="background:var(--dark2);">
-  <div class="feature-banner-bg" style="background:linear-gradient(135deg,#080d18 0%,#0d1a30 50%,#06101e 100%);"></div>
-  <div class="feature-banner-content">
-    <div class="page-tag">Smart Home &amp; Domótica</div>
-    <h2>El control de su hogar<br><em>en la palma de su mano</em></h2>
-    <p>Domotizamos su propiedad integrando todos los sistemas en una única plataforma inteligente. Iluminación, climatización, seguridad, persianas, riego y audio-vídeo controlados desde su smartphone, tablet o por voz.</p>
-    <p>Instalamos también el <strong style="color:var(--gold-light);">punto de carga para vehículo eléctrico</strong>, integrándolo con el sistema fotovoltaico para una carga 100% sostenible.</p>
-    <div class="feature-list">
-      <div class="feature-list-item">Iluminación inteligente y escenas</div>
-      <div class="feature-list-item">Control de climatización centralizado</div>
-      <div class="feature-list-item">Seguridad: alarmas, cámaras y acceso</div>
-      <div class="feature-list-item">Persianas y toldos automatizados</div>
-      <div class="feature-list-item">Sistema de audio-vídeo multizona</div>
-      <div class="feature-list-item">Punto de carga vehículo eléctrico</div>
-      <div class="feature-list-item">Control remoto desde cualquier lugar</div>
-      <div class="feature-list-item">Compatible con Alexa &amp; Google Home</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     3. ELECTRICIDAD Y FONTANERÍA
-════════════════════════════════════════ -->
-<section class="cat-section" id="instalaciones-tecnicas">
-  <div class="cat-header">
-    <div class="cat-num">03</div>
-    <div class="page-tag">Instalaciones básicas</div>
-    <h2 class="cat-title">Electricidad <em>&amp; Fontanería</em></h2>
-    <p class="cat-intro">Las instalaciones más fundamentales, ejecutadas con la máxima precisión y calidad. Trabajamos con los materiales más robustos y duraderos, garantizando instalaciones seguras, eficientes y conformes a normativa.</p>
-  </div>
-  <div class="cat-grid cat-grid-2">
-    <div class="cat-item" style="min-height:420px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #100d1a 0%, #1a1030 50%, #100d1a 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Electricidad</div>
-        <p class="cat-item-desc">Instalaciones eléctricas completas para obra nueva y rehabilitación: cuadros eléctricos, cableado, tomas de corriente, iluminación y sistemas de protección. Certificación y legalización incluidas.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Obra nueva</span>
-          <span class="cat-tag">Rehabilitación</span>
-          <span class="cat-tag">Cuadros eléctricos</span>
-          <span class="cat-tag">Iluminación LED</span>
-          <span class="cat-tag">Certificación</span>
-        </div>
+<!-- ══════════════════════════════════
+     05 · MANTENIMIENTO
+══════════════════════════════════ -->
+<section class="inst-section" id="mantenimiento">
+  <div class="section-num">05</div>
+  <div class="page-tag" style="margin-top:8px;">Servicio continuado</div>
+  <h2 class="section-title">Mantenimiento <em>integral</em></h2>
+  <p class="section-intro">Una propiedad de lujo en Menorca requiere un mantenimiento a la altura. Ofrecemos planes preventivos y correctivos para todos los sistemas instalados, con respuesta rápida y personal especializado en la isla.</p>
+  <div class="svc-cards svc-cards-4">
+    <div class="svc-card">
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
       </div>
+      <div class="svc-card-name">Mant. Eléctrico</div>
+      <p class="svc-card-desc">Revisiones periódicas, reparaciones y actualizaciones del sistema eléctrico. Inspección de cuadros, conexiones y protecciones.</p>
     </div>
-    <div class="cat-item" style="min-height:420px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1520 0%, #102030 50%, #0d1520 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Fontanería</div>
-        <p class="cat-item-desc">Instalaciones de fontanería y saneamiento: redes de agua fría y caliente, radiadores, suelo radiante, griferías de diseño premium, sistemas de depuración y osmosis. Mantenimiento preventivo incluido.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Agua fría y caliente</span>
-          <span class="cat-tag">Saneamiento</span>
-          <span class="cat-tag">Griferías premium</span>
-          <span class="cat-tag">Depuración</span>
-          <span class="cat-tag">Osmosis</span>
-        </div>
+    <div class="svc-card">
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2"/></svg>
       </div>
+      <div class="svc-card-name">Mant. Fontanería</div>
+      <p class="svc-card-desc">Control de tuberías, detección de fugas, limpieza de depósitos, revisión de griferías y sistemas de depuración.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">03</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+      </div>
+      <div class="svc-card-name">Mant. Climatización</div>
+      <p class="svc-card-desc">Limpieza de filtros, revisión de gases, mantenimiento de calderas, bombas de calor y sistemas de aerotermia.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-num">04</div>
+      <div class="svc-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <div class="svc-card-name">Mant. Jardín &amp; Piscina</div>
+      <p class="svc-card-desc">Cuidado del jardín, poda, tratamiento del agua, revisión de bombas e iluminación exterior de su propiedad.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     4. INTERIORES: ESPACIOS, CARPINTERÍA, PISCINAS
-════════════════════════════════════════ -->
-<section class="cat-section" id="diseno-interiores">
-  <div class="cat-header">
-    <div class="cat-num">04</div>
-    <div class="page-tag">Diseño &amp; Confort</div>
-    <h2 class="cat-title">Diseño de espacios <em>&amp; Acabados</em></h2>
-    <p class="cat-intro">Creamos ambientes únicos con materiales de primera calidad. Desde el espacio de descanso hasta la cocina, el jardín o la piscina, cada detalle es pensado para ofrecer la experiencia de lujo que su propiedad merece.</p>
-  </div>
-  <div class="cat-grid">
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #1a1510 0%, #2a2018 50%, #1a1510 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Espacios Interiores</div>
-        <p class="cat-item-desc">Dormitorios, baños y comedores de lujo: texturas naturales, mobiliario a medida, spa, jacuzzi, bañeras de diseño y duchas amplias. Rincones únicos con tapicerías modernas.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Spa &amp; Jacuzzi</span>
-          <span class="cat-tag">Baños de lujo</span>
-          <span class="cat-tag">Mobiliario a medida</span>
-        </div>
+<!-- ══════════════════════════════════
+     PROJECT & BUILDING MANAGER BAND
+══════════════════════════════════ -->
+<div class="feature-band" id="project-manager">
+  <div class="feature-band-inner">
+    <div>
+      <div class="page-tag">Gestión integral</div>
+      <h2>Project &amp; Building Manager<br><em>en Menorca y Baleares</em></h2>
+      <p>Coordinamos todos estos servicios bajo una única dirección: la suya. Como Project &amp; Building Manager nos encargamos de gestionar, supervisar y garantizar la ejecución perfecta de cada instalación, con los mejores proveedores especializados de Menorca y Baleares.</p>
+      <p>Desde el presupuesto inicial hasta la puesta en marcha y el servicio posventa, <strong style="color:var(--gold-light);">LUXINPRO es su único interlocutor</strong>. Atención personalizada en español, inglés, francés, alemán y catalán.</p>
+      <ul class="feature-list">
+        <li>Gestión completa del proyecto de principio a fin</li>
+        <li>Coordinación y supervisión de todos los gremios</li>
+        <li>Control de calidad, plazos y costes</li>
+        <li>Documentación oficial y legalizaciones</li>
+        <li>Atención personalizada en 5 idiomas</li>
+        <li>Servicio posventa garantizado</li>
+      </ul>
+      <a href="index.html#contacto" class="btn-primary" style="margin-top:32px;display:inline-block;">Solicitar consulta sin compromiso</a>
+    </div>
+    <div class="feature-band-stats">
+      <div class="fstat">
+        <div class="fstat-num">+15</div>
+        <div class="fstat-label">Años de experiencia en Baleares</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">+200</div>
+        <div class="fstat-label">Proyectos completados en Menorca</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">5</div>
+        <div class="fstat-label">Idiomas de atención al cliente</div>
+      </div>
+      <div class="fstat">
+        <div class="fstat-num">100%</div>
+        <div class="fstat-label">Satisfacción del cliente garantizada</div>
       </div>
     </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1510 0%, #152015 50%, #0d1510 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Carpintería &amp; Cocinas</div>
-        <p class="cat-item-desc">Cocinas con inducción invisible, vestidores personalizados y carpintería de interior y exterior a medida. Maderas nobles, lacados y materiales de última tendencia.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Inducción invisible</span>
-          <span class="cat-tag">Vestidores</span>
-          <span class="cat-tag">Puertas a medida</span>
-        </div>
-      </div>
-    </div>
-    <div class="cat-item">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1520 0%, #0d2035 50%, #0d1520 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Piscinas &amp; Jardines</div>
-        <p class="cat-item-desc">Piscinas de interior y exterior climatizadas e iluminadas. Jardines diseñados con plantas autóctonas mediterráneas. Mobiliario de exterior exclusivo para disfrutar el clima de Menorca.</p>
-        <div class="cat-item-tags">
-          <span class="cat-tag">Piscinas climatizadas</span>
-          <span class="cat-tag">Jardín mediterráneo</span>
-          <span class="cat-tag">Exterior premium</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     5. MANTENIMIENTO
-════════════════════════════════════════ -->
-<section class="cat-section" id="mantenimiento">
-  <div class="cat-header">
-    <div class="cat-num">05</div>
-    <div class="page-tag">Servicio continuado</div>
-    <h2 class="cat-title">Mantenimiento <em>integral</em></h2>
-    <p class="cat-intro">Una propiedad de lujo requiere un mantenimiento a la altura. Ofrecemos planes de mantenimiento preventivo y correctivo para todos los sistemas instalados, con respuesta rápida y personal especializado en Menorca.</p>
-  </div>
-  <div class="cat-grid cat-grid-4">
-    <div class="cat-item" style="min-height:320px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #100d1a 0%, #1a1025 50%, #100d1a 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Mantenimiento Eléctrico</div>
-        <p class="cat-item-desc">Revisiones periódicas, reparaciones y actualizaciones del sistema eléctrico.</p>
-      </div>
-    </div>
-    <div class="cat-item" style="min-height:320px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1520 0%, #10202a 50%, #0d1520 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Mantenimiento Fontanería</div>
-        <p class="cat-item-desc">Control de tuberías, detección de fugas, limpieza de depósitos y revisión de griferías.</p>
-      </div>
-    </div>
-    <div class="cat-item" style="min-height:320px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1117 0%, #112030 50%, #0d1117 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Mantenimiento Climatización</div>
-        <p class="cat-item-desc">Limpieza de filtros, revisión de gases, mantenimiento de calderas y bombas de calor.</p>
-      </div>
-    </div>
-    <div class="cat-item" style="min-height:320px;">
-      <div class="cat-item-bg" style="background:linear-gradient(135deg, #0d1a0d 0%, #152512 50%, #0d1a0d 100%)"></div>
-      <div class="cat-item-overlay"></div>
-      <div class="cat-item-content">
-        <div class="cat-item-icon"></div>
-        <div class="cat-item-name">Mantenimiento Jardín &amp; Piscina</div>
-        <p class="cat-item-desc">Cuidado del jardín, poda, tratamiento del agua, revisión de bombas e iluminación exterior.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     PROJECT & BUILDING MANAGER BANNER
-════════════════════════════════════════ -->
-<div class="feature-banner">
-  <div class="feature-banner-bg" style="background:linear-gradient(135deg,#0d0a08 0%,#1a1408 50%,#0d0a08 100%);"></div>
-  <div class="feature-banner-content">
-    <div class="page-tag">Gestión integral</div>
-    <h2>Project &amp; Building Manager<br><em>en Menorca</em></h2>
-    <p>Coordinamos todos estos servicios bajo una única dirección: la suya. Como Project &amp; Building Manager, nos encargamos de gestionar, supervisar y garantizar la ejecución perfecta de cada instalación, con los mejores proveedores especializados de Menorca y Baleares.</p>
-    <p>Desde el presupuesto inicial hasta la puesta en marcha y el servicio posventa, LUXINPRO es su único interlocutor.</p>
-    <div class="feature-list">
-      <div class="feature-list-item">Gestión completa del proyecto</div>
-      <div class="feature-list-item">Coordinación de todos los gremios</div>
-      <div class="feature-list-item">Control de calidad y plazos</div>
-      <div class="feature-list-item">Documentación y legalizaciones</div>
-      <div class="feature-list-item">Atención en 5 idiomas</div>
-      <div class="feature-list-item">Servicio posventa garantizado</div>
-    </div>
-    <a href="index.html#contacto" class="btn-primary" style="margin-top:32px;display:inline-block;">Solicitar consulta</a>
   </div>
 </div>
 
 <!-- CTA FINAL -->
-<div class="cta-section">
-  <div class="cta-bg" style="background:linear-gradient(135deg,#060a10 0%,#0a1520 50%,#060a10 100%);"></div>
-  <div class="cta-content">
-    <h2>¿Tiene un proyecto<br><em>en mente?</em></h2>
-    <p>Hablemos de sus necesidades. Le ofrecemos una consulta inicial sin compromiso para estudiar la solución más adecuada para su propiedad en Menorca.</p>
-    <div class="cta-btns">
-      <a href="tel:+34609625573" class="btn-primary">Llamar: 609 625 573</a>
-      <a href="index.html#contacto" class="btn-secondary">Enviar consulta</a>
-    </div>
+<div class="cta-final">
+  <h2>¿Tiene un proyecto<br><em>en mente?</em></h2>
+  <p>Hablemos de sus necesidades. Le ofrecemos una consulta inicial sin compromiso para la solución más adecuada para su propiedad en Menorca.</p>
+  <div class="cta-btns">
+    <a href="tel:+34609625573" class="btn-primary">Llamar: 609 625 573</a>
+    <a href="index.html#contacto" class="btn-sec">Enviar consulta</a>
   </div>
 </div>
 
