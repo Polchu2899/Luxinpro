@@ -801,5 +801,87 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     </div>
   </div>
 </div>
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>Referente en gestión y construcción de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="index.html#servicios">Project Manager</a></li>
+        <li><a href="index.html#servicios">Building Manager</a></li>
+        <li><a href="index.html#instalaciones">Reforma Integral</a></li>
+        <li><a href="index.html#instalaciones">Smart Home</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Idiomas</h5>
+      <ul>
+        <li><a href="index.html">Español</a></li>
+        <li><a href="en/index.html">English</a></li>
+        <li><a href="fr/index.html">Français</a></li>
+        <li><a href="de/index.html">Deutsch</a></li>
+        <li><a href="ca/index.html">Català</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LUXINPRO — Inversiones y Proyectos en Islas Baleares</p>
+    <div class="footer-lang-switcher">
+      <a href="index.html" class="active">ES</a>
+      <a href="en/index.html" >EN</a>
+      <a href="fr/index.html" >FR</a>
+      <a href="de/index.html" >DE</a>
+      <a href="ca/index.html" >CA</a>
+    </div>
+  </div>
+</footer>
 
-e
+<!-- COOKIE BANNER -->
+<div id="cookieBanner">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <span class="cookie-text-icon">🍪</span>
+      <div class="cookie-text-body">
+        <p>Utilizamos cookies</p>
+        <p>Usamos cookies para mejorar su experiencia. <a href="cookies.html">Política de Cookies</a> · <a href="privacidad.html">Privacidad</a>.</p>
+      </div>
+    </div>
+    <div class="cookie-btns">
+      <button class="btn-ck-cfg" onclick="ckCfg()">Configurar</button>
+      <button class="btn-ck-rej" onclick="ckRej()">Rechazar</button>
+      <button class="btn-ck-acc" onclick="ckAcc()">Aceptar todo</button>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE MODAL -->
+<div id="cookieModal">
+  <div class="cookie-modal-inner">
+    <button class="cookie-modal-close" onclick="document.getElementById('cookieModal').style.display='none'">&times;</button>
+    <p class="cookie-modal-tag">Cookies</p>
+    <h3>Utilizamos cookies</h3>
+    <p>Las cookies necesarias no pueden desactivarse.</p>
+    <div id="ckOpts"></div>
+    <div class="cookie-modal-btns">
+      <button class="btn-save" onclick="ckSave()">Guardar</button>
+      <button class="btn-acc-all" onclick="ckAcc()">Aceptar todo</button>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
