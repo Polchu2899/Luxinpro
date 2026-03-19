@@ -919,12 +919,12 @@ function ckHide() {
   var b = document.getElementById('cookieBanner'); if(b) b.style.transform = 'translateY(100%)';
   var m = document.getElementById('cookieModal'); if(m) m.style.display = 'none';
 }
-function ckAcc() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
-function ckRej() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
+function ckAcc() { localStorage.setItem('lxp_consent_v2', JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
+function ckRej() { localStorage.setItem('lxp_consent_v2', JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
 function ckCfg() { var m = document.getElementById('cookieModal'); if(m) m.style.display = 'flex'; }
 function ckSave() {
   var r = {}; CK.forEach(function(c) { r[c.id] = c.locked ? true : document.getElementById('ck_' + c.id).checked; });
-  r.date = new Date().toISOString(); localStorage.setItem('lxp_consent', JSON.stringify(r)); ckHide();
+  r.date = new Date().toISOString(); localStorage.setItem('lxp_consent_v2', JSON.stringify(r)); ckHide();
 }
 // Init after DOM ready
 document.addEventListener('DOMContentLoaded', function() {
@@ -952,7 +952,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   // Show banner if no consent
-  if (!localStorage.getItem('lxp_consent')) {
+  if (!localStorage.getItem('lxp_consent_v2')) {
     setTimeout(function() {
       var b = document.getElementById('cookieBanner'); if(b) b.style.transform = 'translateY(0)';
     }, 2200);
