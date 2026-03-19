@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8"/>
@@ -173,13 +173,13 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 }
 .page-tag {
   display: inline-flex; align-items: center; gap: 12px;
-  font-size: 9px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 14px;
+  font-size: 9px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 14px;
 }
 .page-tag::before { content: ''; display: inline-block; width: 30px; height: 1px; background: var(--gold); }
-.page-title { font-family: var(--font-display); font-size: clamp(38px,5vw,66px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+.page-title { font-family: var(--font-display); font-size: clamp(38px,5vw,66px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px; text-shadow:0 2px 20px rgba(0,0,0,0.8),0 1px 8px rgba(0,0,0,0.6); }
 .page-title em { font-style: italic; color: var(--gold); }
-.page-sub { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.5); max-width: 520px; line-height: 1.9; }
+.page-sub { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.92); max-width: 520px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
 .back-btn {
   display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
   font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
@@ -321,7 +321,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     /* PAGE HERO */
     .page-hero {
       padding: 160px 50px 90px; position: relative; overflow: hidden;
-      background: linear-gradient(160deg, rgba(6,10,20,0.88) 0%, rgba(10,18,35,0.85) 60%, rgba(4,8,16,0.9) 100%);
+      background: linear-gradient(160deg, rgba(4,6,14,0.92) 0%, rgba(6,12,24,0.90) 60%, rgba(2,5,12,0.95) 100%);
       border-bottom: 1px solid rgba(201,169,110,0.1);
     }
     .page-hero::before {
@@ -331,12 +331,12 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     }
     .page-tag {
       display: inline-flex; align-items: center; gap: 12px; font-size: 9px;
-      font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+      font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
     }
     .page-tag::before { content:''; display:inline-block; width:30px; height:1px; background:var(--gold); }
-    .page-title { font-family: var(--font-display); font-size: clamp(40px,5vw,68px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px; }
+    .page-title { font-family: var(--font-display); font-size: clamp(40px,5vw,68px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px; text-shadow:0 2px 20px rgba(0,0,0,0.8),0 1px 8px rgba(0,0,0,0.6); }
     .page-title em { font-style: italic; color: var(--gold); }
-    .page-sub { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.65); max-width: 600px; line-height: 1.9; margin-bottom: 32px; }
+    .page-sub { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.92); max-width: 600px; line-height: 1.9; margin-bottom: 32px; }
     .back-btn { display:inline-flex; align-items:center; gap:10px; font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.35); padding-bottom:4px; transition:all .3s; }
     .back-btn:hover { border-bottom-color:var(--gold); }
 
@@ -487,6 +487,26 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       .cards-4 .card-img { height: 130px!important; }
       .fband-img { height: 200px!important; margin-bottom: 24px!important; }
     }
+
+    /* ── HERO TEXT LEGIBILITY ── */
+    .page-hero .page-tag {
+      color: #E8D5B0 !important;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.9) !important;
+      font-weight: 600 !important;
+    }
+    .page-hero .page-title {
+      text-shadow: 0 2px 24px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.7) !important;
+    }
+    .page-hero .page-title em {
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8) !important;
+    }
+    .page-hero .page-sub {
+      color: rgba(245,242,236,0.92) !important;
+      text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important;
+    }
+    .page-hero .back-btn {
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8) !important;
+    }
 </style>
 </head>
 <body>
@@ -532,7 +552,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 <!-- HERO -->
 <div class="page-hero" style="background-image:url('../img/hero.jpg');background-size:cover;background-position:center 40%;background-blend-mode:multiply;">
   <div class="page-tag">Services &amp; Installationen</div>
-  <h1 class="page-title">Alles was Ihre Immobilie<br><em>braucht, in einem Team</em></h1>
+  <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Alles was Ihre Immobilie<br><em>braucht, in einem Team</em></h1>
   <p class="page-sub">LUXINPRO bietet einen umfassenden Service von der Projektleitung bis zu jeder technischen Installation auf Menorca. Ein einziger Ansprechpartner für alles.</p>
   <a href="index.html" class="back-btn">← Zurück zur Startseite</a>
 </div>
@@ -909,70 +929,56 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 </div>
 
 <script>
-(function() {
-  // Mobile menu
-  var btn = document.getElementById('mMenuBtn');
-  var menu = document.getElementById('mobileMenu');
-  if (btn && menu) {
-    btn.addEventListener('click', function() { btn.classList.toggle('open'); menu.classList.toggle('open'); });
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { btn.classList.remove('open'); menu.classList.remove('open'); });
-    });
-  }
-  // Cursor
-  if (window.matchMedia('(hover: hover)').matches) {
-    var cur = document.getElementById('cursor'), rng = document.getElementById('cursorRing');
-    if (cur && rng) {
-      var mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
-      document.addEventListener('mousemove', function(e) { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-      (function loop() { rx+=(mx-rx)*.22; ry+=(my-ry)*.22; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
-      document.querySelectorAll('a,button').forEach(function(el) {
-        el.addEventListener('mouseenter', function() { cur.classList.add('hover'); rng.classList.add('hover'); });
-        el.addEventListener('mouseleave', function() { cur.classList.remove('hover'); rng.classList.remove('hover'); });
-      });
-    }
-  }
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-      var t = document.querySelector(a.getAttribute('href'));
-      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-  // Cookies
-  var CK = [
-    {id:'necessary',l:'Necessary',d:'Essential.',locked:true,v:true},
-    {id:'analytics',l:'Analytics',d:'Statistics.',locked:false,v:false},
-    {id:'marketing',l:'Marketing',d:'Advertising.',locked:false,v:false},
-    {id:'preferences',l:'Preferences',d:'Language.',locked:false,v:true}
-  ];
+var CK = [
+  {id:'necessary', l:'Notwendige Cookies', d:'Für die Funktionalität erforderlich.', locked:true, v:true},
+  {id:'analytics', l:'Analytische Cookies', d:'Besuchsstatistiken.', locked:false, v:false},
+  {id:'marketing', l:'Marketing-Cookies', d:'Relevante Werbung.', locked:false, v:false},
+  {id:'preferences', l:'Präferenz-Cookies', d:'Sprache und Personalisierung.', locked:false, v:true}
+];
+// Cookie functions (global so onclick works)
+function ckHide() {
+  var b = document.getElementById('cookieBanner'); if(b) b.style.transform = 'translateY(100%)';
+  var m = document.getElementById('cookieModal'); if(m) m.style.display = 'none';
+}
+function ckAcc() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
+function ckRej() { localStorage.setItem('lxp_consent', JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
+function ckCfg() { var m = document.getElementById('cookieModal'); if(m) m.style.display = 'flex'; }
+function ckSave() {
+  var r = {}; CK.forEach(function(c) { r[c.id] = c.locked ? true : document.getElementById('ck_' + c.id).checked; });
+  r.date = new Date().toISOString(); localStorage.setItem('lxp_consent', JSON.stringify(r)); ckHide();
+}
+// Init after DOM ready
+document.addEventListener('DOMContentLoaded', function() {
   var oo = document.getElementById('ckOpts');
   if (oo) {
     CK.forEach(function(c) {
       var d = document.createElement('div');
-      d.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:10px;';
-      d.innerHTML = '<div><p style="font-size:12px;color:#fff;margin-bottom:2px;">'+c.l+'</p><p style="font-size:10px;color:rgba(245,242,236,0.45);">'+c.d+'</p></div>'
-        +'<label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:'+(c.locked?'not-allowed':'pointer')+';">'
-        +'<input type="checkbox" id="ck_'+c.id+'" '+(c.v?'checked':'')+' '+(c.locked?'disabled':'')+' style="opacity:0;position:absolute;">'
-        +'<span id="tr_'+c.id+'" style="position:absolute;inset:0;background:'+(c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)')+';border-radius:22px;border:1px solid rgba(201,169,110,.3);"></span>'
-        +'<span id="kn_'+c.id+'" style="position:absolute;top:3px;left:'+(c.v?'19':'3')+'px;width:14px;height:14px;background:'+(c.v?'#C9A96E':'#8A8A8A')+';border-radius:50%;transition:all .3s;pointer-events:none;"></span>'
-        +'</label>';
+      d.style.cssText = 'display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:12px;';
+      d.innerHTML = '<div><p style="font-size:12px;font-weight:400;color:#fff;margin-bottom:3px;">' + c.l + '</p>'
+        + '<p style="font-size:10px;font-weight:300;color:rgba(245,242,236,0.45);line-height:1.6;">' + c.d + '</p></div>'
+        + '<label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:' + (c.locked ? 'not-allowed' : 'pointer') + ';">'
+        + '<input type="checkbox" id="ck_' + c.id + '" ' + (c.v ? 'checked' : '') + ' ' + (c.locked ? 'disabled' : '') + ' style="opacity:0;position:absolute;">'
+        + '<span id="tr_' + c.id + '" style="position:absolute;inset:0;background:' + (c.v ? 'rgba(201,169,110,.2)' : 'rgba(255,255,255,.07)') + ';border-radius:22px;border:1px solid rgba(201,169,110,.3);transition:background .3s;"></span>'
+        + '<span id="kn_' + c.id + '" style="position:absolute;top:3px;left:' + (c.v ? '19' : '3') + 'px;width:14px;height:14px;background:' + (c.v ? '#C9A96E' : '#8A8A8A') + ';border-radius:50%;transition:all .3s;pointer-events:none;"></span>'
+        + '</label>';
       oo.appendChild(d);
       if (!c.locked) {
-        var i=d.querySelector('#ck_'+c.id), k=d.querySelector('#kn_'+c.id), tr=d.querySelector('#tr_'+c.id);
-        i.addEventListener('change',function(){k.style.left=i.checked?'19px':'3px';k.style.background=i.checked?'#C9A96E':'#8A8A8A';tr.style.background=i.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)';});
+        var inp = d.querySelector('#ck_' + c.id), knob = d.querySelector('#kn_' + c.id), track = d.querySelector('#tr_' + c.id);
+        inp.addEventListener('change', function() {
+          knob.style.left = inp.checked ? '19px' : '3px';
+          knob.style.background = inp.checked ? '#C9A96E' : '#8A8A8A';
+          track.style.background = inp.checked ? 'rgba(201,169,110,.2)' : 'rgba(255,255,255,.07)';
+        });
       }
     });
   }
-  window.addEventListener('DOMContentLoaded', function() {
-    if (!localStorage.getItem('lxp_consent')) setTimeout(function() { var b=document.getElementById('cookieBanner'); if(b) b.style.transform='translateY(0)'; }, 2200);
-  });
-  function ckHide() { var b=document.getElementById('cookieBanner'); if(b) b.style.transform='translateY(100%)'; var m=document.getElementById('cookieModal'); if(m) m.style.display='none'; }
-  function ckAcc() { localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
-  function ckRej() { localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
-  function ckCfg() { var m=document.getElementById('cookieModal'); if(m) m.style.display='flex'; }
-  function ckSave() { var r={}; CK.forEach(function(c){r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked;}); r.date=new Date().toISOString(); localStorage.setItem('lxp_consent',JSON.stringify(r)); ckHide(); }
-})();
+  // Show banner if no consent
+  if (!localStorage.getItem('lxp_consent')) {
+    setTimeout(function() {
+      var b = document.getElementById('cookieBanner'); if(b) b.style.transform = 'translateY(0)';
+    }, 2200);
+  }
+});
 </script>
 </body>
 </html>
