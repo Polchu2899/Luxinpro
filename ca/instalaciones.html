@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Serveis i Instal·lacions | LUXINPRO Menorca</title>
+  <meta name="description" content="LUXINPRO ofereix a Menorca: Project Manager, Building Manager, climatització, aerotèrmia, energies renovables, lampisteria, electricitat, Smart Home i manteniment."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://luxinpro.es/ca/instalaciones-y-servicios/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #C9A96E; --gold-light: #E8D5B0; --gold-dark: #9C7B47;
+  --black: #0A0A0A; --dark: #111111; --dark2: #1A1A1A; --dark3: #222222;
+  --mid: #3A3A3A; --light-gray: #8A8A8A; --off-white: #F5F2EC; --white: #FFFFFF;
+  --font-display: 'Cormorant Garamond', serif; --font-body: 'Montserrat', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--off-white); font-family: var(--font-body); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* CURSOR - desktop only */
+@media (hover: hover) {
+  body { cursor: none; }
+  .cursor { position:fixed; width:6px; height:6px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .2s,height .2s,background .2s; }
+  .cursor.hover { width:10px; height:10px; background:var(--gold-light); }
+  .cursor-ring { position:fixed; width:30px; height:30px; border:1.5px solid rgba(201,169,110,0.7); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width .25s,height .25s,border-color .25s; }
+  .cursor-ring.hover { width:44px; height:44px; border-color:rgba(201,169,110,1); }
+}
+
+/* ═══════════════════════════════════
+   HEADER
+═══════════════════════════════════ */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 50px; height: 80px;
+  background: rgba(10,10,10,0.97);
+  border-bottom: 1px solid rgba(201,169,110,0.12);
+  transition: all .4s;
+}
+.logo {
+  font-family: var(--font-display); font-size: 24px; font-weight: 400;
+  letter-spacing: 8px; color: var(--gold); text-decoration: none; flex-shrink: 0;
+}
+.logo span { color: var(--off-white); opacity: .7; font-weight: 300; }
+
+.nav-desktop {
+  display: flex; align-items: center; gap: 28px;
+}
+.nav-desktop a {
+  font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--off-white); text-decoration: none; opacity: .7; transition: all .3s;
+  position: relative; white-space: nowrap;
+}
+.nav-desktop a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: var(--gold); transition: width .3s;
+}
+.nav-desktop a:hover { opacity: 1; color: var(--gold); }
+.nav-desktop a:hover::after { width: 100%; }
+.nav-desktop .nav-cta {
+  padding: 9px 20px; border: 1px solid var(--gold);
+  color: var(--gold) !important; opacity: 1 !important;
+}
+.nav-desktop .nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
+.nav-desktop .nav-cta::after { display: none !important; }
+
+/* Lang switcher in header */
+.nav-langs {
+  display: flex; gap: 10px; align-items: center;
+  border-left: 1px solid rgba(201,169,110,0.2); padding-left: 20px; margin-left: 4px;
+}
+.nav-langs a {
+  font-size: 9px !important; font-weight: 600 !important; letter-spacing: 2px !important;
+  color: rgba(245,242,236,0.35) !important; opacity: 1 !important; padding: 0 !important;
+}
+.nav-langs a::after { display: none !important; }
+.nav-langs a:hover, .nav-langs a.active { color: var(--gold) !important; }
+
+/* Mobile hamburger / home icon */
+.nav-mobile {
+  display: none;
+  align-items: center; gap: 14px;
+}
+.mobile-menu-btn {
+  background: none; border: 1px solid rgba(201,169,110,0.3);
+  width: 40px; height: 40px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 5px; cursor: pointer;
+}
+.mobile-menu-btn span {
+  display: block; width: 20px; height: 1px; background: var(--gold); transition: all .3s;
+}
+.mobile-menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.mobile-menu-btn.open span:nth-child(2) { opacity: 0; }
+.mobile-menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none; position: fixed; top: 64px; left: 0; right: 0;
+  background: rgba(10,10,10,0.98); border-bottom: 1px solid rgba(201,169,110,0.15);
+  z-index: 999; flex-direction: column; padding: 20px 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  display: block; padding: 14px 24px;
+  font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(245,242,236,0.7); text-decoration: none;
+  border-bottom: 1px solid rgba(201,169,110,0.06);
+  transition: color .3s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .mobile-cta {
+  margin: 14px 24px 0; padding: 13px 20px; text-align: center;
+  background: var(--gold); color: var(--black) !important;
+  font-weight: 600 !important;
+}
+.mobile-menu .mobile-lang-row {
+  display: flex; gap: 10px; padding: 14px 24px 4px;
+}
+.mobile-menu .mobile-lang-row a {
+  border: none; padding: 6px 12px;
+  font-size: 9px; letter-spacing: 2px; color: rgba(245,242,236,0.4);
+  border: 1px solid rgba(201,169,110,0.15);
+}
+.mobile-menu .mobile-lang-row a.active,
+.mobile-menu .mobile-lang-row a:hover { color: var(--gold); border-color: rgba(201,169,110,0.4); }
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); }
+.footer-main {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px; padding: 64px 50px;
+}
+.footer-brand .logo { display: block; margin-bottom: 16px; }
+.footer-brand p { font-size: 11px; font-weight: 300; line-height: 1.9; color: rgba(245,242,236,0.33); max-width: 255px; }
+.footer-col h5 { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 11px; font-weight: 300; color: rgba(245,242,236,0.38); text-decoration: none; transition: color .3s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(201,169,110,0.08);
+  padding: 22px 50px; display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 10px; font-weight: 300; color: rgba(245,242,236,0.2); letter-spacing: 1px; }
+.footer-lang-switcher { display: flex; gap: 14px; }
+.footer-lang-switcher a { font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,242,236,0.28); text-decoration: none; transition: color .3s; }
+.footer-lang-switcher a:hover, .footer-lang-switcher a.active { color: var(--gold); }
+
+/* ═══════════════════════════════════
+   LEGAL PAGES
+═══════════════════════════════════ */
+.page-hero {
+  padding: 140px 50px 70px; border-bottom: 1px solid rgba(201,169,110,0.1);
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
+  transform: translateY(-50%); font-family: var(--font-display); font-size: 150px;
+  font-weight: 300; color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
+}
+.page-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 9px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px;
+}
+.page-tag::before { content: ''; display: inline-block; width: 30px; height: 1px; background: var(--gold); }
+.page-title { font-family: var(--font-display); font-size: clamp(38px,5vw,66px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+.page-title em { font-style: italic; color: var(--gold); }
+.page-sub { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.5); max-width: 520px; line-height: 1.9; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+  font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  border-bottom: 1px solid rgba(201,169,110,0.35); padding-bottom: 4px; transition: all .3s;
+}
+.back-btn:hover { border-bottom-color: var(--gold); }
+
+.legal-body { max-width: 820px; margin: 0 auto; padding: 72px 50px 110px; }
+.legal-section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid rgba(201,169,110,0.08); }
+.legal-section:last-child { border-bottom: none; }
+.legal-section h2 { font-family: var(--font-display); font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 18px; }
+.legal-section h3 { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--gold-light); margin: 24px 0 10px; }
+.legal-section p { font-size: 13px; font-weight: 300; line-height: 1.9; color: rgba(245,242,236,0.6); margin-bottom: 14px; }
+.legal-section ul { margin: 10px 0 14px 20px; }
+.legal-section ul li { font-size: 13px; font-weight: 300; line-height: 1.9; color: rgba(245,242,236,0.6); margin-bottom: 7px; }
+.legal-section a { color: var(--gold); text-decoration: none; }
+.legal-section a:hover { text-decoration: underline; }
+.legal-highlight { background: rgba(201,169,110,0.06); border-left: 2px solid var(--gold); padding: 18px 22px; margin: 18px 0; }
+.legal-highlight p { margin: 0; }
+.legal-date { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-gray); margin-bottom: 44px; padding-bottom: 14px; border-bottom: 1px solid rgba(201,169,110,0.15); }
+
+/* ═══════════════════════════════════
+   COOKIE BANNER
+═══════════════════════════════════ */
+#cookieBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9990;
+  background: rgba(17,17,17,0.98); border-top: 1px solid rgba(201,169,110,0.2);
+  backdrop-filter: blur(10px);
+  transform: translateY(100%); transition: transform .5s ease;
+}
+.cookie-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 18px 50px; flex-wrap: wrap;
+}
+.cookie-text { display: flex; align-items: flex-start; gap: 14px; max-width: 680px; }
+.cookie-text-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.cookie-text-body p:first-child { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 400; color: #fff; margin-bottom: 4px; }
+.cookie-text-body p:last-child { font-size: 11px; font-weight: 300; color: rgba(245,242,236,0.55); line-height: 1.6; }
+.cookie-text-body a { color: #C9A96E; text-decoration: none; }
+.cookie-btns { display: flex; gap: 8px; flex-shrink: 0; }
+.cookie-btns button {
+  padding: 10px 18px; font-family: 'Montserrat', sans-serif; font-size: 9px;
+  font-weight: 500; letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+}
+.btn-ck-cfg { border: 1px solid rgba(201,169,110,0.3); background: transparent; color: rgba(245,242,236,0.6); }
+.btn-ck-rej { border: 1px solid rgba(201,169,110,0.3); background: transparent; color: rgba(245,242,236,0.6); }
+.btn-ck-acc { border: none; background: #C9A96E; color: #0A0A0A; font-weight: 600; }
+
+#cookieModal {
+  display: none; position: fixed; inset: 0; z-index: 9995;
+  background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+}
+.cookie-modal-inner {
+  background: #1A1A1A; border: 1px solid rgba(201,169,110,0.2);
+  max-width: 520px; width: 90%; padding: 40px; position: relative;
+  max-height: 80vh; overflow-y: auto;
+}
+.cookie-modal-close {
+  position: absolute; top: 14px; right: 18px; background: none; border: none;
+  color: #8A8A8A; font-size: 24px; cursor: pointer; line-height: 1;
+}
+.cookie-modal-inner h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: #fff; margin-bottom: 10px; }
+.cookie-modal-inner > p { font-size: 11px; font-weight: 300; color: rgba(245,242,236,0.5); line-height: 1.7; margin-bottom: 24px; }
+.cookie-modal-tag { font-size: 9px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: #C9A96E; margin-bottom: 8px; }
+.cookie-modal-btns { display: flex; gap: 10px; margin-top: 24px; }
+.cookie-modal-btns button { flex: 1; padding: 13px; font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; }
+.btn-save { border: none; background: #C9A96E; color: #0A0A0A; }
+.btn-acc-all { border: 1px solid rgba(201,169,110,0.3); background: transparent; color: #C9A96E; }
+
+/* ═══════════════════════════════════
+   MOBILE — max 900px
+═══════════════════════════════════ */
+@media (max-width: 900px) {
+  /* Layout */
+  header { padding: 0 16px; height: 64px; }
+  .nav-desktop { display: none !important; }
+  .nav-mobile { display: flex !important; }
+
+  /* Sections */
+  section { padding: 60px 18px !important; }
+  .about { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .about-image-wrap img { height: 280px !important; }
+  .about-features { grid-template-columns: 1fr !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .services-header { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+  .service-card img { height: 280px !important; }
+  .pm-detail .pm-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .pm-image-col { position: static !important; }
+  .pm-image-col img { height: 240px !important; }
+  .inst-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .why-menorca .menorca-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .menorca-reasons { grid-template-columns: 1fr !important; }
+  .menorca-img img { height: 260px !important; }
+  .menorca-overlay-card { left: 10px !important; bottom: 10px !important; padding: 14px 18px !important; }
+  .process-steps { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
+  .process-steps::before { display: none !important; }
+  .contact { grid-template-columns: 1fr !important; }
+  .contact-info { padding: 48px 18px 28px !important; border-right: none !important; border-bottom: 1px solid rgba(201,169,110,0.1) !important; }
+  .contact-form-wrap { padding: 28px 18px 56px !important; }
+  .stats-bar { grid-template-columns: 1fr 1fr !important; }
+  .stat-item { padding: 22px 14px !important; }
+  .stat-num { font-size: 34px !important; }
+  .cta-banner { padding: 64px 18px !important; }
+  .cta-banner-btns { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
+
+  /* Hero */
+  .hero { min-height: 100svh !important; padding-bottom: 70px !important; }
+  .hero-content { padding: 0 18px !important; }
+  .hero h1 { font-size: clamp(34px, 9vw, 54px) !important; }
+  .hero-desc { font-size: 12px !important; }
+  .hero-btns { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+  .scroll-indicator { display: none !important; }
+
+  /* Footer */
+  .footer-main { grid-template-columns: 1fr 1fr !important; gap: 28px !important; padding: 40px 18px !important; }
+  .footer-bottom { flex-direction: column !important; gap: 10px !important; padding: 16px 18px !important; text-align: center !important; }
+  .footer-lang-switcher { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; }
+
+  /* Legal pages */
+  .page-hero { padding: 96px 18px 46px !important; }
+  .page-hero::before { display: none !important; }
+  .legal-body { padding: 36px 18px 64px !important; }
+
+  /* Cookie banner — fully responsive */
+  .cookie-inner { padding: 14px 16px !important; flex-direction: column !important; gap: 12px !important; }
+  .cookie-text { gap: 10px !important; max-width: 100% !important; }
+  .cookie-text-body p:first-child { font-size: 13px !important; }
+  .cookie-text-body p:last-child { font-size: 10px !important; }
+  .cookie-btns { width: 100% !important; justify-content: stretch !important; }
+  .cookie-btns button { flex: 1 !important; padding: 10px 4px !important; font-size: 8px !important; letter-spacing: 1px !important; }
+
+  /* Gallery */
+  .gallery-track img { height: 200px !important; width: 240px !important; }
+}
+
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 160px 50px 90px; position: relative; overflow: hidden;
+      background: linear-gradient(160deg, #080e1a 0%, #0d1828 60%, #060d18 100%);
+      border-bottom: 1px solid rgba(201,169,110,0.1);
+    }
+    .page-hero::before {
+      content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
+      transform: translateY(-50%); font-family: var(--font-display); font-size: 180px;
+      font-weight: 300; color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
+    }
+    .page-tag {
+      display: inline-flex; align-items: center; gap: 12px; font-size: 9px;
+      font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .page-tag::before { content:''; display:inline-block; width:30px; height:1px; background:var(--gold); }
+    .page-title { font-family: var(--font-display); font-size: clamp(40px,5vw,68px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 18px; }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.65); max-width: 600px; line-height: 1.9; margin-bottom: 32px; }
+    .back-btn { display:inline-flex; align-items:center; gap:10px; font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.35); padding-bottom:4px; transition:all .3s; }
+    .back-btn:hover { border-bottom-color:var(--gold); }
+
+    /* INDEX NAVIGATION */
+    .page-index {
+      position: sticky; top: 78px; z-index: 100;
+      background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,169,110,0.12);
+      padding: 0 50px; display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none; -ms-overflow-style: none;
+    }
+    .page-index::-webkit-scrollbar { display: none; }
+    .page-index a {
+      display: block; padding: 18px 22px; font-size: 9px; font-weight: 500;
+      letter-spacing: 2px; text-transform: uppercase; color: rgba(245,242,236,0.45);
+      text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent;
+      transition: all .3s;
+    }
+    .page-index a:hover { color: var(--gold); border-bottom-color: rgba(201,169,110,0.4); }
+    .page-index a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* SECTIONS */
+    .inst-section { padding: 90px 50px; }
+    .inst-section:nth-child(odd) { background: var(--black); }
+    .inst-section:nth-child(even) { background: var(--dark); }
+    .section-num { font-family: var(--font-display); font-size: 72px; font-weight: 300; color: rgba(201,169,110,0.07); line-height: 1; margin-bottom: -10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(30px,4vw,50px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 14px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-intro { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); max-width: 700px; line-height: 1.9; margin-bottom: 56px; }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(201,169,110,0.08); }
+    .cards-2 { grid-template-columns: repeat(2,1fr); }
+    .cards-4 { grid-template-columns: repeat(4,1fr); }
+    .card {
+      padding: 40px 32px; background: var(--black);
+      border-bottom: 2px solid transparent; transition: border-color .3s, background .3s;
+    }
+    .inst-section:nth-child(even) .card { background: var(--dark); }
+    .card:hover { border-bottom-color: rgba(201,169,110,0.5); background: rgba(201,169,110,0.03); }
+    .card-num { font-family: var(--font-display); font-size: 32px; font-weight: 300; color: rgba(201,169,110,0.12); line-height: 1; margin-bottom: 16px; }
+    .card-icon { width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.22); display:flex; align-items:center; justify-content:center; margin-bottom: 18px; color: var(--gold); }
+    .card-name { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+    .card-desc { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55); line-height: 1.85; margin-bottom: 16px; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .ctag { padding: 3px 10px; border: 1px solid rgba(201,169,110,0.18); font-size: 8px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(201,169,110,0.65); }
+
+    /* FEATURE BAND */
+    .fband { padding: 90px 50px; background: var(--dark2); border-top: 1px solid rgba(201,169,110,0.1); border-bottom: 1px solid rgba(201,169,110,0.1); }
+    .fband-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+    .fband h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,50px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .fband h2 em { font-style: italic; color: var(--gold); }
+    .fband p { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); line-height: 1.9; margin-bottom: 12px; }
+    .flist { list-style: none; margin-top: 24px; }
+    .flist li { display:flex; align-items:flex-start; gap:12px; font-size:12px; font-weight:300; color:rgba(245,242,236,0.7); line-height:1.7; padding:9px 0; border-bottom:1px solid rgba(201,169,110,0.07); }
+    .flist li::before { content:''; display:inline-block; width:18px; height:1px; background:var(--gold); flex-shrink:0; margin-top:9px; }
+    .fstats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .fstat { padding: 26px; border: 1px solid rgba(201,169,110,0.14); background: rgba(201,169,110,0.03); }
+    .fstat-num { font-family: var(--font-display); font-size: 42px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .fstat-lbl { font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,242,236,0.4); line-height: 1.5; }
+
+    /* CTA */
+    .cta-final { padding: 100px 50px; text-align: center; background: var(--dark2); border-top: 1px solid rgba(201,169,110,0.1); }
+    .cta-final h2 { font-family: var(--font-display); font-size: clamp(34px,5vw,60px); font-weight: 300; color: var(--white); margin-bottom: 18px; }
+    .cta-final h2 em { font-style: italic; color: var(--gold); }
+    .cta-final p { font-size: 13px; font-weight: 300; color: rgba(245,242,236,0.6); max-width: 480px; margin: 0 auto 40px; line-height: 1.9; }
+    .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-p { display:inline-block; padding:15px 38px; background:var(--gold); color:var(--black); font-family:var(--font-body); font-size:9px; font-weight:600; letter-spacing:3px; text-transform:uppercase; text-decoration:none; transition:background .3s; }
+    .btn-p:hover { background: var(--gold-light); }
+    .btn-s { display:inline-block; padding:15px 38px; border:1px solid rgba(245,242,236,0.35); color:var(--off-white); font-family:var(--font-body); font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; text-decoration:none; transition:all .3s; }
+    .btn-s:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      header { padding: 0 16px!important; height: 64px!important; }
+      .nav-desktop { display: none!important; }
+      .nav-mobile { display: flex!important; }
+      .logo { font-size: 18px!important; letter-spacing: 4px!important; }
+      .page-hero { padding: 110px 18px 60px!important; }
+      .page-hero::before { display: none!important; }
+      .page-index { padding: 0 18px!important; top: 64px!important; }
+      .page-index a { padding: 14px 14px!important; font-size: 8px!important; }
+      .inst-section { padding: 56px 18px!important; }
+      .cards, .cards-2 { grid-template-columns: 1fr!important; }
+      .cards-4 { grid-template-columns: 1fr 1fr!important; }
+      .card { padding: 28px 20px!important; }
+      .fband { padding: 56px 18px!important; }
+      .fband-inner { grid-template-columns: 1fr!important; gap: 36px!important; }
+      .fstats { grid-template-columns: 1fr 1fr!important; }
+      .cta-final { padding: 60px 18px!important; }
+      .cta-btns { flex-direction: column!important; align-items: center!important; }
+      footer .footer-main { grid-template-columns: 1fr 1fr!important; gap: 28px!important; padding: 40px 18px!important; }
+      footer .footer-bottom { flex-direction: column!important; gap: 10px!important; padding: 16px 18px!important; text-align: center!important; }
+      .footer-lang-switcher { flex-wrap: wrap!important; justify-content: center!important; }
+    }
+    @media (min-width: 901px) { .nav-mobile { display: none!important; } }
+
+  
+  </style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<header>
+  <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+  <div class="nav-desktop">
+    <a href="../index.html#nosotros">Qui som</a>
+    <a href="../index.html#servicios">Serveis</a>
+    <a href="../ca/instalaciones.html">Instal·lacions</a>
+    <a href="../index.html#contacto" class="nav-cta">Contacte</a>
+    <div class="nav-langs">
+      <a href="../index.html" >ES</a>
+      <a href="../en/index.html" >EN</a>
+      <a href="../fr/index.html" >FR</a>
+      <a href="../de/index.html" >DE</a>
+      <a href="../ca/index.html" class="active">CA</a>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <button class="mobile-menu-btn" id="mMenuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#nosotros">Qui som</a>
+  <a href="../index.html#servicios">Serveis</a>
+  <a href="../ca/instalaciones.html">Instal·lacions</a>
+  <a href="../index.html#contacto">Contacte</a>
+  <a href="../index.html#contacto" class="mobile-cta">Contacte</a>
+  <div class="mobile-lang-row">
+    <a href="../index.html" >ES</a>
+        <a href="../en/index.html" >EN</a>
+        <a href="../fr/index.html" >FR</a>
+        <a href="../de/index.html" >DE</a>
+        <a href="../ca/index.html" class="active">CA</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-tag">Serveis &amp; Instal·lacions</div>
+  <h1 class="page-title">Tot el que la seva propietat<br><em>necessita, en un sol equip</em></h1>
+  <p class="page-sub">LUXINPRO ofereix un servei integral que abasta des de la direcció del projecte fins a cada instal·lació tècnica de la seva propietat a Menorca. Un sol interlocutor per a tot.</p>
+  <a href="../index.html" class="back-btn">← Tornar a l'inici</a>
+</div>
+
+<!-- INDEX NAV -->
+<nav class="page-index" id="pageIndex">
+  <a href="#project-manager">Project Manager</a>
+  <a href="#climatizacion">Climatització</a>
+  <a href="#renovables">Renovables</a>
+  <a href="#smarthome">Smart Home</a>
+  <a href="#electricidad">Electricitat &amp; Lampisteria</a>
+  <a href="#interiores">Disseny Interior</a>
+  <a href="#mantenimiento">Manteniment</a>
+</nav>
+
+<!-- 01 PROJECT MANAGER -->
+<section class="inst-section" id="project-manager">
+  <div class="section-num">01</div>
+  <div class="page-tag" style="margin-top:8px;">Gestió integral</div>
+  <h2 class="section-title">Project &amp; Building <em>Manager</em></h2>
+  <p class="section-intro">Ens encarreguem de tot el necessari perquè el seu projecte es faci realitat. Establim, organitzem i dirigim cada fase optimitzant recursos, terminis i costos.</p>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
+      <div class="card-name">Project Manager</div>
+      <p class="card-desc">Planifiquem i dirigim el seu projecte de principi a fi: emplaçament, disseny, espais, acabats i equipament. Instal·lacions SMARTHOME amb les millors marques.</p>
+      <div class='card-tags'><span class="ctag">Planificació completa</span><span class="ctag">Disseny d'espais</span><span class="ctag">SMARTHOME</span><span class="ctag">Supervisió total</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
+      <div class="card-name">Building Manager</div>
+      <p class="card-desc">Supervisem mesures i pressupostos, coordinem contractistes i controlem qualitat, terminis i costos. Documentació final i assistència postvenda completa.</p>
+      <div class='card-tags'><span class="ctag">Control d'obra</span><span class="ctag">Documentació</span><span class="ctag">Coordinació</span><span class="ctag">Postvenda garantida</span></div>
+    </div>
+  </div>
+  <div class="fband" style="margin-top:1px;border-top:none;">
+    <div class="fband-inner">
+      <div>
+        <div class="page-tag">Assessorament &amp; Disseny d'Espais</div>
+        <h2>La seva visió feta <em>realitat</em></h2>
+        <p>Oferim un servei complet d'assessorament i disseny d'espais interiors i exteriors. De la concepció a cada detall, perquè la seva propietat a Menorca reflecteixi la seva personalitat.</p>
+        <ul class="flist">
+          <li>Projecte executiu complet amb plànols</li>
+          <li>Selecció de materials i mobiliari</li>
+          <li>Coordinació amb arquitectes de primer nivell</li>
+          <li>Gestió de permisos i legalitzacions</li>
+          <li>Seguiment d'obra</li>
+          <li>Entrega de claus completa</li>
+        </ul>
+      </div>
+      <div class="fstats">
+        <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Anys d'experiència a les Balears</div></div>
+        <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Projectes completats</div></div>
+        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Idiomes d'atenció</div></div>
+        <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfacció garantida</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CLIMATIZACIÓN -->
+<section class="inst-section" id="climatizacion">
+  <div class="section-num">02</div>
+  <div class="page-tag" style="margin-top:8px;">Instal·lacions tècniques</div>
+  <h2 class="section-title">Climatització <em>intel·ligent</em></h2>
+  <p class="section-intro">Dissenyem i instal·lem sistemes d'alta eficiència adaptats a cada propietat. Confort tèrmic òptim durant tot l'any.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
+      <div class="card-name">Aire Condicionat</div>
+      <p class="card-desc">Instal·lació de sistemes d'última generació: splits, cassettes, conductes i VRV. Marques premium amb control intel·ligent des del seu smartphone.</p>
+      <div class='card-tags'><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Conductes</span><span class="ctag">Smart control</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+      <div class="card-name">Calefacció</div>
+      <p class="card-desc">Terra radiant, radiadors de disseny i fan-coils d'alta eficiència. Solucions que s'integren perfectament en el disseny interior.</p>
+      <div class='card-tags'><span class="ctag">Terra radiant</span><span class="ctag">Fan-coils</span><span class="ctag">Radiadors</span><span class="ctag">Caldera</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <div class="card-name">Aerotèrmia</div>
+      <p class="card-desc">Sistema ALTHERMA: calefacció, aire condicionat i ACS en una sola instal·lació. Extreu fins al 80% d'energia de l'aire.</p>
+      <div class='card-tags'><span class="ctag">Altherma</span><span class="ctag">Bomba de calor</span><span class="ctag">ACS inclòs</span><span class="ctag">Classe A+++</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 RENOVABLES -->
+<section class="inst-section" id="renovables">
+  <div class="section-num">03</div>
+  <div class="page-tag" style="margin-top:8px;">Sostenibilitat</div>
+  <h2 class="section-title">Energies <em>renovables</em></h2>
+  <p class="section-intro">Apostem per la independència energètica a Menorca. Sistemes que redueixen el seu impacte mediambiental i la seva factura.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <div class="card-name">Fotovoltaica</div>
+      <p class="card-desc">Plaques solars d'alta eficiència amb inversors intel·ligents i bateries. Autoconsum total sota el sol privilegiat de Menorca.</p>
+      <div class='card-tags'><span class="ctag">Autoconsum</span><span class="ctag">Bateries</span><span class="ctag">Inversor intel·ligent</span><span class="ctag">Monitoratge</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg></div>
+      <div class="card-name">Solar Tèrmica</div>
+      <p class="card-desc">Captadors solars per a ACS i suport a la calefacció. Màxima eficiència aprofitant el clima mediterrani de Menorca.</p>
+      <div class='card-tags'><span class="ctag">ACS solar</span><span class="ctag">Termosifó</span><span class="ctag">Suport calefacció</span><span class="ctag">Alta eficiència</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 12L6 4M12 12l8-2M12 12l-2 8M12 6v6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="card-name">Eòlica</div>
+      <p class="card-desc">Micro-aerogeneradors per complementar l'abastament. Especialment eficaç amb la Tramuntana de Menorca.</p>
+      <div class='card-tags'><span class="ctag">Mini-eòlica</span><span class="ctag">Off-grid</span><span class="ctag">Híbrid solar</span><span class="ctag">Emmagatzematge</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SMART HOME BAND -->
+<div class="fband" id="smarthome">
+  <div class="fband-inner">
+    <div>
+      <div class="page-tag">Smart Home &amp; Domòtica</div>
+      <h2>El control de la seva llar<br><em>al palmell de la mà</em></h2>
+      <p>Domotitzem la seva propietat integrant tots els sistemes en una plataforma intel·ligent. Il·luminació, climatització, seguretat i àudio-vídeo des del seu smartphone des de qualsevol lloc.</p>
+      <p>Instal·lem el <strong style="color:var(--gold-light);">punt de càrrega per a vehicle elèctric</strong> integrat amb el sistema fotovoltaic per a càrrega 100% sostenible i gratuïta.</p>
+      <ul class="flist">
+          <li>Il·luminació intel·ligent i escenes</li>
+          <li>Control de climatització centralitzat</li>
+          <li>Seguretat: alarmes, càmeres i accés</li>
+          <li>Persianes i tendals automatitzats</li>
+          <li>Sistema àudio-vídeo multizona</li>
+          <li>Punt de càrrega VE integrat</li>
+          <li>Control remot des de qualsevol lloc</li>
+          <li>Compatible amb Alexa &amp; Google Home</li>
+      </ul>
+    </div>
+    <div class="fstats">
+      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Estalvi energètic</div></div>
+      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">Classificació energètica</div></div>
+      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Control remot</div></div>
+      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">Cost càrrega VE</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 ELECTRICIDAD & FONTANERÍA -->
+<section class="inst-section" id="electricidad">
+  <div class="section-num">04</div>
+  <div class="page-tag" style="margin-top:8px;">Instal·lacions essencials</div>
+  <h2 class="section-title">Electricitat <em>&amp; Lampisteria</em></h2>
+  <p class="section-intro">Les instal·lacions més fonamentals executades amb precisió i materials de primera qualitat, conformes a la normativa vigent.</p>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-name">Electricitat</div>
+      <p class="card-desc">Instal·lacions elèctriques completes: quadres elèctrics, cablejat, il·luminació LED i proteccions. Certificació i legalització incloses.</p>
+      <div class='card-tags'><span class="ctag">Obra nova</span><span class="ctag">Rehabilitació</span><span class="ctag">Quadres elèctrics</span><span class="ctag">Il·luminació LED</span><span class="ctag">Certificació oficial</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
+      <div class="card-name">Lampisteria</div>
+      <p class="card-desc">Lampisteria i sanejament complets: xarxes d'aigua, aixetes premium, depuració i osmosi inversa.</p>
+      <div class='card-tags'><span class="ctag">Aigua freda i calenta</span><span class="ctag">Sanejament</span><span class="ctag">Aixetes premium</span><span class="ctag">Depuració</span><span class="ctag">Osmosi inversa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 INTERIORES -->
+<section class="inst-section" id="interiores">
+  <div class="section-num">05</div>
+  <div class="page-tag" style="margin-top:8px;">Disseny &amp; Confort</div>
+  <h2 class="section-title">Disseny d'espais <em>&amp; Acabats</em></h2>
+  <p class="section-intro">Creem ambients únics de luxe a Menorca. Cada espai pensat per oferir l'experiència premium que la seva propietat mereix.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="card-name">Espais Interiors</div>
+      <p class="card-desc">Dormitoris, banys i menjadors de luxe amb textures naturals, mobiliari a mida, spa, jacuzzi i banyeres de disseny.</p>
+      <div class='card-tags'><span class="ctag">Spa &amp; Jacuzzi</span><span class="ctag">Banys de luxe</span><span class="ctag">Mobiliari a mida</span><span class="ctag">Tapisseries</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg></div>
+      <div class="card-name">Fusteria &amp; Cuines</div>
+      <p class="card-desc">Cuines amb inducció invisible, vestidors personalitzats i fusteria a mida. Fustes nobles i materials d'última tendència.</p>
+      <div class='card-tags'><span class="ctag">Inducció invisible</span><span class="ctag">Vestidors</span><span class="ctag">Fusteria a mida</span><span class="ctag">Portes premium</span></div>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
+      <div class="card-name">Piscines &amp; Jardins</div>
+      <p class="card-desc">Piscines climatitzades i il·luminades a mida. Jardins mediterranis i mobiliari d'exterior exclusiu per a tot l'any.</p>
+      <div class='card-tags'><span class="ctag">Piscines climatitzades</span><span class="ctag">Jardí mediterrani</span><span class="ctag">Il·luminació exterior</span><span class="ctag">Mobiliari premium</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 MANTENIMIENTO -->
+<section class="inst-section" id="mantenimiento">
+  <div class="section-num">06</div>
+  <div class="page-tag" style="margin-top:8px;">Servei continuat</div>
+  <h2 class="section-title">Manteniment <em>integral</em></h2>
+  <p class="section-intro">Una propietat de luxe a Menorca requereix un manteniment a l'alçada. Plans preventius amb resposta ràpida a l'illa.</p>
+  <div class="cards cards-4">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="card-name">Manteniment Elèctric</div>
+      <p class="card-desc">Revisions periòdiques, reparacions i actualitzacions del sistema elèctric.</p>
+      
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
+      <div class="card-name">Manteniment Lampisteria</div>
+      <p class="card-desc">Control de canonades, detecció de fugues i revisió d'aixetes.</p>
+      
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <div class="card-name">Manteniment Climatització</div>
+      <p class="card-desc">Neteja de filtres, revisió de gasos i manteniment de calderes i bombes.</p>
+      
+    </div>
+    <div class="card">
+      <div class="card-num">04</div>
+      <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
+      <div class="card-name">Manteniment Jardí &amp; Piscina</div>
+      <p class="card-desc">Cura del jardí, poda, tractament de l'aigua i revisió de bombes.</p>
+      
+    </div>
+  </div>
+</section>
+
+<!-- PM BAND -->
+<div class="fband" id="project-manager-band">
+  <div class="fband-inner">
+    <div>
+      <div class="page-tag">Gestió integral</div>
+      <h2>Project &amp; Building Manager<br><em>a Menorca i les Balears</em></h2>
+      <p>Coordinem tots aquests serveis sota la seva direcció. Gestionem, supervisem i garantim l'execució perfecta de cada instal·lació.</p>
+      <p>Des del pressupost inicial fins a la postvenda, <strong style="color:var(--gold-light);">LUXINPRO és el seu únic interlocutor</strong>. Atenció en 5 idiomes.</p>
+      <ul class="flist">
+          <li>Gestió completa del projecte</li>
+          <li>Coordinació de tots els gremis</li>
+          <li>Control de qualitat i costos</li>
+          <li>Documentació oficial</li>
+          <li>Atenció en 5 idiomes</li>
+          <li>Servei postvenda garantit</li>
+      </ul>
+      <a href="../index.html#contacto" class="btn-p" style="margin-top:28px;display:inline-block;">Sol·licitar consulta gratuïta</a>
+    </div>
+    <div class="fstats">
+      <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Anys d'experiència</div></div>
+      <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Projectes completats</div></div>
+      <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Idiomes d'atenció</div></div>
+      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfacció garantida</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-final">
+  <h2>Té un projecte<br><em>en ment?</em></h2>
+  <p>Expliqui'ns les seves necessitats. Consulta inicial gratuïta per a la solució perfecta a Menorca.</p>
+  <div class="cta-btns">
+    <a href="tel:+34609625573" class="btn-p">Trucar: 609 625 573</a>
+    <a href="../index.html#contacto" class="btn-s">Enviar consulta</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>{'EN':'Leading luxury real estate project management in Menorca and the Balearic Islands.','FR':"Référence en gestion de projets immobiliers de luxe à Minorque et aux Îles Baléares.",'DE':'Referenz für Luxusimmobilienprojekte auf Menorca und den Balearen.','CA':"Referent en gestió de projectes immobiliaris de luxe a Menorca i les Illes Balears."}.get('CA','')</p>
+    </div>
+    <div class="footer-col">
+      <h5>Serveis</h5>
+      <ul>
+        <li><a href="../index.html#servicios">Project Manager</a></li>
+        <li><a href="../index.html#servicios">Building Manager</a></li>
+        <li><a href="../instalaciones.html">Reforma Integral</a></li>
+        <li><a href="../index.html#instalaciones">Smart Home</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="../aviso-legal.html">Avís Legal</a></li>
+        <li><a href="../privacidad.html">Privacitat</a></li>
+        <li><a href="../cookies.html">Cookies</a></li>
+        <li><a href="../index.html#contacto">Contacte</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Idiomes</h5>
+      <ul>
+        <li><a href="../index.html">Español</a></li>
+        <li><a href="../en/index.html">English</a></li>
+        <li><a href="../fr/index.html">Français</a></li>
+        <li><a href="../de/index.html">Deutsch</a></li>
+        <li><a href="../ca/index.html">Català</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LUXINPRO — Luxury Investment &amp; Projects, Illes Balears</p>
+    <div class="footer-lang-switcher">
+      <a href="../index.html" >ES</a>
+      <a href="../en/index.html" >EN</a>
+      <a href="../fr/index.html" >FR</a>
+      <a href="../de/index.html" >DE</a>
+      <a href="../ca/index.html" class="active">CA</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9990;background:rgba(17,17,17,0.98);border-top:1px solid rgba(201,169,110,0.2);transform:translateY(100%);transition:transform .5s ease;">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 50px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:flex-start;gap:12px;max-width:680px;">
+      <span style="font-size:18px;flex-shrink:0;">🍪</span>
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">Cookies</p>
+        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;"><a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Cookie Policy</a> · <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacy</a>.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="ckCfg()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Settings</button>
+      <button onclick="ckRej()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Reject</button>
+      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept</button>
+    </div>
+  </div>
+</div>
+<div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9995;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div style="background:#1A1A1A;border:1px solid rgba(201,169,110,0.2);max-width:520px;width:90%;padding:40px;position:relative;max-height:80vh;overflow-y:auto;">
+    <button onclick="ckHide()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8A8A8A;font-size:24px;cursor:pointer;">&times;</button>
+    <div id="ckOpts"></div>
+    <div style="display:flex;gap:10px;margin-top:24px;">
+      <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Save</button>
+      <button onclick="ckAcc()" style="flex:1;padding:13px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:#C9A96E;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Mobile menu
+  var btn = document.getElementById('mMenuBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() { btn.classList.toggle('open'); menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { btn.classList.remove('open'); menu.classList.remove('open'); });
+    });
+  }
+  // Cursor
+  if (window.matchMedia('(hover: hover)').matches) {
+    var cur = document.getElementById('cursor'), rng = document.getElementById('cursorRing');
+    if (cur && rng) {
+      var mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
+      document.addEventListener('mousemove', function(e) { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+      (function loop() { rx+=(mx-rx)*.22; ry+=(my-ry)*.22; rng.style.left=rx+'px'; rng.style.top=ry+'px'; requestAnimationFrame(loop); })();
+      document.querySelectorAll('a,button').forEach(function(el) {
+        el.addEventListener('mouseenter', function() { cur.classList.add('hover'); rng.classList.add('hover'); });
+        el.addEventListener('mouseleave', function() { cur.classList.remove('hover'); rng.classList.remove('hover'); });
+      });
+    }
+  }
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  // Cookies
+  var CK = [
+    {id:'necessary',l:'Necessary',d:'Essential.',locked:true,v:true},
+    {id:'analytics',l:'Analytics',d:'Statistics.',locked:false,v:false},
+    {id:'marketing',l:'Marketing',d:'Advertising.',locked:false,v:false},
+    {id:'preferences',l:'Preferences',d:'Language.',locked:false,v:true}
+  ];
+  var oo = document.getElementById('ckOpts');
+  if (oo) {
+    CK.forEach(function(c) {
+      var d = document.createElement('div');
+      d.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(201,169,110,0.08);gap:10px;';
+      d.innerHTML = '<div><p style="font-size:12px;color:#fff;margin-bottom:2px;">'+c.l+'</p><p style="font-size:10px;color:rgba(245,242,236,0.45);">'+c.d+'</p></div>'
+        +'<label style="position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0;cursor:'+(c.locked?'not-allowed':'pointer')+';">'
+        +'<input type="checkbox" id="ck_'+c.id+'" '+(c.v?'checked':'')+' '+(c.locked?'disabled':'')+' style="opacity:0;position:absolute;">'
+        +'<span id="tr_'+c.id+'" style="position:absolute;inset:0;background:'+(c.v?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)')+';border-radius:22px;border:1px solid rgba(201,169,110,.3);"></span>'
+        +'<span id="kn_'+c.id+'" style="position:absolute;top:3px;left:'+(c.v?'19':'3')+'px;width:14px;height:14px;background:'+(c.v?'#C9A96E':'#8A8A8A')+';border-radius:50%;transition:all .3s;pointer-events:none;"></span>'
+        +'</label>';
+      oo.appendChild(d);
+      if (!c.locked) {
+        var i=d.querySelector('#ck_'+c.id), k=d.querySelector('#kn_'+c.id), tr=d.querySelector('#tr_'+c.id);
+        i.addEventListener('change',function(){k.style.left=i.checked?'19px':'3px';k.style.background=i.checked?'#C9A96E':'#8A8A8A';tr.style.background=i.checked?'rgba(201,169,110,.2)':'rgba(255,255,255,.07)';});
+      }
+    });
+  }
+  window.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('lxp_consent')) setTimeout(function() { var b=document.getElementById('cookieBanner'); if(b) b.style.transform='translateY(0)'; }, 2200);
+  });
+  function ckHide() { var b=document.getElementById('cookieBanner'); if(b) b.style.transform='translateY(100%)'; var m=document.getElementById('cookieModal'); if(m) m.style.display='none'; }
+  function ckAcc() { localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()})); ckHide(); }
+  function ckRej() { localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()})); ckHide(); }
+  function ckCfg() { var m=document.getElementById('cookieModal'); if(m) m.style.display='flex'; }
+  function ckSave() { var r={}; CK.forEach(function(c){r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked;}); r.date=new Date().toISOString(); localStorage.setItem('lxp_consent',JSON.stringify(r)); ckHide(); }
+})();
+</script>
+</body>
+</html>
