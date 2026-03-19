@@ -312,6 +312,10 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   .gallery-track img { height: 200px !important; width: 240px !important; }
 }
 </style>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" as="style"/>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
@@ -324,7 +328,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <div class="nav-desktop">
     <a href="#nosotros">À propos</a>
     <a href="#servicios">Services</a>
-    <a href="#instalaciones">Installations</a>
+    <a href="instalaciones.html">Installations</a>
     <a href="#menorca">Minorque</a>
     <div class="nav-langs">
       <a href="../index.html" >ES</a>
@@ -347,10 +351,10 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#nosotros">À propos</a>
     <a href="#servicios">Services</a>
-    <a href="#instalaciones">Installations</a>
+    <a href="instalaciones.html">Installations</a>
     <a href="#menorca">Minorque</a>
     <a href="#contacto">Contact</a>
-  <a href="#menorca" class="mobile-cta">Nous contacter</a>
+  <a href="#contacto" class="mobile-cta">Nous contacter</a>
   <div class="mobile-lang-row">
     <a href="../index.html" >ES</a>
         <a href="../en/index.html" >EN</a>
@@ -361,7 +365,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 </div>
 
 <!-- HERO -->
-<section class="hero" style="padding:0;position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;padding-bottom:100px;overflow:hidden;">
+<section class="hero" style="padding:0;position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;padding-bottom:100px;">
   <div style="position:absolute;inset:0;background-image:url('https://luxinpro.es/wp-content/uploads/2021/06/home-1.jpg');background-size:cover;background-position:center 30%;animation:heroZoom 18s ease-out forwards;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.3) 0%,rgba(10,10,10,.2) 40%,rgba(10,10,10,.8) 80%,rgba(10,10,10,.97) 100%);"></div>
   <div class="hero-content" style="position:relative;z-index:2;padding:0 50px;max-width:900px;animation:fadeUp 1.2s ease forwards;animation-delay:.4s;opacity:0;">
@@ -503,8 +507,8 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       <ul>
         <li><a href="../index.html#servicios">Project Manager</a></li>
         <li><a href="../index.html#servicios">Building Manager</a></li>
-        <li><a href="../index.html#instalaciones">Rénovation Intégrale</a></li>
-        <li><a href="../index.html#instalaciones">Smart Home</a></li>
+        <li><a href="instalaciones.html">Rénovation Intégrale</a></li>
+        <li><a href="instalaciones.html">Smart Home</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -601,6 +605,7 @@ function ckSave(){const r={};CK.forEach(c=>r[c.id]=c.locked?true:document.getEle
 
 <style>
 /* Page-specific styles */
+@font-face { font-display: swap; }
 @keyframes heroZoom { from{transform:scale(1.05)} to{transform:scale(1.0)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
 .hero-tag { display:inline-flex;align-items:center;gap:12px;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:22px; }
@@ -676,6 +681,8 @@ section { padding:100px 50px; }
 .form-group select option { background:var(--dark2); }
 
 /* ── Mobile overrides for lang index pages ── */
+  .logo { font-size:18px !important; letter-spacing:4px !important; }
+  .logo span { font-size:18px !important; }
 @media (max-width: 900px) {
   section { padding:56px 18px !important; }
   .about { grid-template-columns:1fr !important; gap:32px !important; }
