@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8"/>
@@ -371,16 +371,16 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .cards-2 { grid-template-columns: repeat(2,1fr); }
     .cards-4 { grid-template-columns: repeat(4,1fr); }
     .card {
-      padding: 32px 28px; background: var(--black);
+      padding: 0 0 28px 0; background: var(--black);
       border-bottom: 2px solid transparent; transition: border-color .3s, background .3s;
     }
     .inst-section:nth-child(even) .card { background: var(--dark); }
     .card:hover { border-bottom-color: rgba(201,169,110,0.5); background: rgba(201,169,110,0.03); }
-    .card-num { font-family: var(--font-display); font-size: 32px; font-weight: 300; color: rgba(201,169,110,0.12); line-height: 1; margin-bottom: 16px; }
-    .card-icon { width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.22); display:flex; align-items:center; justify-content:center; margin-bottom: 18px; color: var(--gold); }
-    .card-name { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
-    .card-desc { font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55); line-height: 1.85; margin-bottom: 16px; }
-    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .card-num { padding: 24px 28px 0; font-family: var(--font-display); font-size: 32px; font-weight: 300; color: rgba(201,169,110,0.12); line-height: 1; margin-bottom: 16px; }
+    .card-icon { margin-left: 28px; width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.22); display:flex; align-items:center; justify-content:center; margin-bottom: 18px; color: var(--gold); }
+    .card-name { padding: 0 28px; font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+    .card-desc { padding: 0 28px; font-size: 12px; font-weight: 300; color: rgba(245,242,236,0.55); line-height: 1.85; margin-bottom: 16px; }
+    .card-tags { padding: 0 28px; display: flex; flex-wrap: wrap; gap: 5px; }
     .ctag { padding: 3px 10px; border: 1px solid rgba(201,169,110,0.18); font-size: 8px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(201,169,110,0.65); }
 
     /* FEATURE BAND */
@@ -451,8 +451,8 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
     /* ── CARD IMAGES ── */
     .card-img {
-      width: calc(100% + 56px);
-      margin: -32px -28px 20px;
+      width: 100%;
+      margin: 0 0 24px 0;
       height: 200px;
       overflow: hidden;
       flex-shrink: 0;
@@ -483,7 +483,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     }
     /* Mobile overrides */
     @media (max-width: 900px) {
-      .card-img { height: 180px!important; margin: -28px -20px 16px!important; }
+      .card-img { height: 180px!important; margin: 0 0 20px 0!important; width: 100%!important; }
       .cards-4 .card-img { height: 130px!important; }
       .fband-img { height: 200px!important; margin-bottom: 24px!important; }
     }
@@ -556,17 +556,17 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Wir kümmern uns um alles, damit Ihr Projekt Wirklichkeit wird. Wir etablieren, organisieren und leiten jede Phase und optimieren Ressourcen, Zeitpläne und Kosten.</p>
   <div class="cards cards-2">
     <div class="card">
+      <div class="card-img"><img src="../img/pm.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
-      <div class="card-img"><img src="../img/pm.jpg" loading="lazy"/></div>
       <div class="card-name">Project Manager</div>
       <p class="card-desc">Wir planen und leiten Ihr Projekt von Anfang bis Ende: Standort, Design, Räume, Oberflächen und Ausstattung. Intelligente SMARTHOME-Installationen mit Top-Marken.</p>
       <div class='card-tags'><span class="ctag">Vollständige Planung</span><span class="ctag">Raumgestaltung</span><span class="ctag">SMARTHOME</span><span class="ctag">Totale Überwachung</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
-      <div class="card-img"><img src="../img/pm.jpg" loading="lazy"/></div>
       <div class="card-name">Building Manager</div>
       <p class="card-desc">Wir überwachen Aufmaße und Budgets, koordinieren Auftragnehmer und kontrollieren Qualität, Zeitpläne und Kosten. Dokumentation und vollständiger After-Sales-Support.</p>
       <div class='card-tags'><span class="ctag">Baustellenkontrolle</span><span class="ctag">Dokumentation</span><span class="ctag">Koordination</span><span class="ctag">After-Sales garantiert</span></div>
@@ -605,25 +605,25 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Wir entwerfen und installieren hocheffiziente Klimaanlagen für jede Immobilie. Optimaler Komfort das ganze Jahr.</p>
   <div class="cards">
     <div class="card">
+      <div class="card-img"><img src="../img/climatizacion.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
-      <div class="card-img"><img src="../img/climatizacion.jpg" loading="lazy"/></div>
       <div class="card-name">Klimaanlage</div>
       <p class="card-desc">Modernste Systeme: Splits, Kassetten, Kanalgeräte und VRV. Premiummarken mit intelligenter Steuerung von Ihrem Smartphone.</p>
       <div class='card-tags'><span class="ctag">Multi-Split</span><span class="ctag">VRV / VRF</span><span class="ctag">Kanalgeräte</span><span class="ctag">Smart control</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/calefaccion.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-      <div class="card-img"><img src="../img/calefaccion.jpg" loading="lazy"/></div>
       <div class="card-name">Heizung</div>
       <p class="card-desc">Fußbodenheizung, Designer-Heizkörper und hocheffiziente Fan-Coils. Perfekte Integration ins Innendesign.</p>
       <div class='card-tags'><span class="ctag">Fußbodenheizung</span><span class="ctag">Fan-Coils</span><span class="ctag">Heizkörper</span><span class="ctag">Heizkessel</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
       <div class="card-name">Aerothermie</div>
       <p class="card-desc">ALTHERMA-System: Heizung, Klimaanlage und Warmwasser in einer Installation. Gewinnt bis zu 80% Energie aus der Luft.</p>
       <div class='card-tags'><span class="ctag">Altherma</span><span class="ctag">Wärmepumpe</span><span class="ctag">TWW inklusive</span><span class="ctag">Klasse A+++</span></div>
@@ -639,25 +639,25 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Energieunabhängigkeit und Nachhaltigkeit auf Menorca. Systeme reduzieren Ihren Fußabdruck und Ihre Energiekosten.</p>
   <div class="cards">
     <div class="card">
+      <div class="card-img"><img src="../img/fotovoltaica.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
-      <div class="card-img"><img src="../img/fotovoltaica.jpg" loading="lazy"/></div>
       <div class="card-name">Photovoltaik</div>
       <p class="card-desc">Hocheffiziente Solarmodule mit intelligenten Wechselrichtern und Batterie. Vollständiger Eigenverbrauch unter der Menorca-Sonne.</p>
       <div class='card-tags'><span class="ctag">Eigenverbrauch</span><span class="ctag">Batterien</span><span class="ctag">Wechselrichter</span><span class="ctag">Monitoring</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/solar.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg></div>
-      <div class="card-img"><img src="../img/solar.jpg" loading="lazy"/></div>
       <div class="card-name">Solarthermie</div>
       <p class="card-desc">Kollektoren für Warmwasser und Heizungsunterstützung. Maximale Effizienz dank des mediterranen Klimas.</p>
       <div class='card-tags'><span class="ctag">Solare TWW</span><span class="ctag">Thermosiphon</span><span class="ctag">Heizungsunterstützung</span><span class="ctag">Hohe Effizienz</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/eolica.jpg" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 12L6 4M12 12l8-2M12 12l-2 8M12 6v6"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <div class="card-img"><img src="../img/eolica.jpg" loading="lazy"/></div>
       <div class="card-name">Windenergie</div>
       <p class="card-desc">Mikro-Windkraftanlagen zur Energieergänzung. Besonders effektiv mit dem Tramontana auf Menorca.</p>
       <div class='card-tags'><span class="ctag">Mini-Wind</span><span class="ctag">Off-grid</span><span class="ctag">Solar-Hybrid</span><span class="ctag">Speicherung</span></div>
@@ -702,17 +702,17 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Grundlegende Installationen mit höchster Präzision und Qualität, konform mit Vorschriften.</p>
   <div class="cards cards-2">
     <div class="card">
+      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
       <div class="card-name">Elektroinstallation</div>
       <p class="card-desc">Vollständige Elektroinstallationen: Verteilungen, Verkabelung, LED-Beleuchtung und Schutz. Zertifizierung inklusive.</p>
       <div class='card-tags'><span class="ctag">Neubau</span><span class="ctag">Sanierung</span><span class="ctag">Elektroverteiler</span><span class="ctag">LED-Beleuchtung</span><span class="ctag">Zertifizierung</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
       <div class="card-name">Sanitärinstallation</div>
       <p class="card-desc">Vollständige Sanitär- und Abwasserinstallationen: Kalt- und Warmwasser, Premium-Armaturen, Aufbereitung und Umkehrosmose.</p>
       <div class='card-tags'><span class="ctag">Kalt- &amp; Warmwasser</span><span class="ctag">Kanalisation</span><span class="ctag">Premium-Armaturen</span><span class="ctag">Aufbereitung</span><span class="ctag">Umkehrosmose</span></div>
@@ -728,25 +728,25 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Einzigartige Luxusumgebungen auf Menorca. Jeder Raum für die Premium-Erfahrung, die Ihre Immobilie verdient.</p>
   <div class="cards">
     <div class="card">
+      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
-      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
       <div class="card-name">Innenräume</div>
       <p class="card-desc">Luxuriöse Schlaf-, Bade- und Esszimmer mit Naturmaterialien, Maßmöbeln, Spa und Jacuzzi.</p>
       <div class='card-tags'><span class="ctag">Spa &amp; Jacuzzi</span><span class="ctag">Luxusbäder</span><span class="ctag">Maßmöbel</span><span class="ctag">Polsterungen</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/cocinas.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg></div>
-      <div class="card-img"><img src="../img/cocinas.jpg" loading="lazy"/></div>
       <div class="card-name">Tischlerei &amp; Küchen</div>
       <p class="card-desc">Küchen mit unsichtbarer Induktion, Ankleidezimmer und Maßtischlerei. Edelhölzer und modernste Materialien.</p>
       <div class='card-tags'><span class="ctag">Unsichtbare Induktion</span><span class="ctag">Ankleidezimmer</span><span class="ctag">Maßtischlerei</span><span class="ctag">Premium-Türen</span></div>
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/piscina_ext.jpg" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-img"><img src="../img/piscina_ext.jpg" loading="lazy"/></div>
       <div class="card-name">Pools &amp; Gärten</div>
       <p class="card-desc">Beheizte Pools nach Maß. Gärten mit mediterranen Pflanzen und exklusiven Außenmöbeln für das ganze Jahr.</p>
       <div class='card-tags'><span class="ctag">Beheizte Pools</span><span class="ctag">Mediteraner Garten</span><span class="ctag">Außenbeleuchtung</span><span class="ctag">Premium-Möbel</span></div>
@@ -762,33 +762,33 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <p class="section-intro">Luxusimmobilien auf Menorca brauchen entsprechende Wartung. Präventive Pläne mit schneller Reaktion.</p>
   <div class="cards cards-4">
     <div class="card">
+      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
       <div class="card-name">Elektrowartung</div>
       <p class="card-desc">Regelmäßige Prüfungen, Reparaturen und Aktualisierungen des Elektrosystems.</p>
       
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
       <div class="card-name">Sanitärwartung</div>
       <p class="card-desc">Rohrkontrolle, Leckerkennung und Armaturenprüfung.</p>
       
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-      <div class="card-img"><img src="../img/climatizacion.jpg" loading="lazy"/></div>
       <div class="card-name">Klimawartung</div>
       <p class="card-desc">Filterreinigung, Gasprüfung, Wartung von Heizkesseln und Wärmepumpen.</p>
       
     </div>
     <div class="card">
+      <div class="card-img"><img src="../img/piscina_int.jpg" loading="lazy"/></div>
       <div class="card-num">04</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-img"><img src="../img/piscina_ext.jpg" loading="lazy"/></div>
       <div class="card-name">Garten- &amp; Poolwartung</div>
       <p class="card-desc">Gartenpflege, Rückschnitt, Wasserbehandlung, Pumpenkontrolle.</p>
       
