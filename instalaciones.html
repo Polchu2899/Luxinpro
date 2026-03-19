@@ -162,8 +162,12 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
    LEGAL PAGES
 ═══════════════════════════════════ */
 .page-hero {
+  isolation: isolate;
   padding: 140px 50px 70px; border-bottom: 1px solid rgba(201,169,110,0.1);
-  position: relative; overflow: hidden;
+  position: relative;
+  background-image: url('img/hero.jpg');
+  background-size: cover;
+  background-position: center 40%;
 }
 .page-hero::before {
   content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
@@ -319,8 +323,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
     /* PAGE HERO */
     .page-hero {
-      padding: 160px 50px 90px; position: relative; overflow: hidden;
-      background: linear-gradient(160deg, rgba(4,6,14,0.92) 0%, rgba(6,12,24,0.90) 60%, rgba(2,5,12,0.95) 100%);
+      padding: 160px 50px 90px; position: relative; background: linear-gradient(160deg, rgba(4,6,14,0.92) 0%, rgba(6,12,24,0.90) 60%, rgba(2,5,12,0.95) 100%);
       border-bottom: 1px solid rgba(201,169,110,0.1);
     }
     .page-hero::before {
@@ -486,6 +489,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
       .fband-img { height: 200px!important; margin-bottom: 24px!important; }
     }
 
+    .page-hero > *:not(div:first-child) { position: relative; z-index: 2; }
     /* ── HERO TEXT LEGIBILITY ── */
     .page-hero .page-tag {
       color: #E8D5B0 !important;
@@ -553,7 +557,8 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 </div>
 
 <!-- HERO -->
-<div class="page-hero" style="background-image:url('img/hero.jpg');background-size:cover;background-position:center 40%;background-blend-mode:multiply;">
+<div class="page-hero">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,14,0.78) 0%,rgba(6,10,20,0.72) 40%,rgba(4,6,14,0.90) 80%,rgba(2,4,10,0.96) 100%);z-index:0;pointer-events:none;"></div>
   <div class="page-tag">Servicios &amp; Instalaciones</div>
   <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
   <p class="page-sub">En LUXINPRO ofrecemos un servicio integral que abarca desde la dirección y gestión del proyecto hasta cada instalación técnica de su propiedad en Menorca. Un solo interlocutor para todo.</p>
