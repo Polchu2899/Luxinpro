@@ -528,6 +528,23 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .page-hero nav {
       position: relative; z-index: 2;
     }
+      /* Mobile stat label fix */
+      .stat-label { letter-spacing: 1px !important; font-size: 8px !important; line-height: 1.5 !important; }
+      .stat-item { min-height: auto !important; }
+
+      /* ── MOBILE OVERFLOW FIXES ── */
+      /* Fix fband text overflow */
+      .fband > * { max-width: 100% !important; overflow: hidden !important; }
+      .fband-inner > * { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; }
+      .fband-inner { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      /* Fix list items */
+      .flist { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+      .flist li { width: 100% !important; max-width: 100% !important; word-break: break-word !important; overflow-wrap: break-word !important; box-sizing: border-box !important; white-space: normal !important; }
+      /* Fix fstats boxes */
+      .fstats { grid-template-columns: 1fr 1fr !important; width: 100% !important; }
+      /* Fix page-index sticky nav on mobile */
+      .page-index { padding: 0 12px !important; gap: 0 !important; }
+      .page-index a { font-size: 7.5px !important; letter-spacing: 1.5px !important; padding: 14px 8px !important; white-space: nowrap !important; }
 </style>
 </head>
 <body>
