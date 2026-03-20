@@ -478,10 +478,10 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 const CK=[{id:'necessary',l:'Cookies necesarias',d:'Esenciales para el funcionamiento.',locked:true,v:true},{id:'analytics',l:'Cookies analíticas',d:'Estadísticas de visitas.',locked:false,v:false},{id:'marketing',l:'Cookies de marketing',d:'Publicidad relevante.',locked:false,v:false},{id:'preferences',l:'Cookies de preferencias',d:'Idioma y personalización.',locked:false,v:true}];
 // Cookie functions (defined globally so onclick handlers work)
 function ckHide(){var b=document.getElementById('cookieBanner');if(b)b.style.transform='translateY(100%)';var m=document.getElementById('cookieModal');if(m)m.style.display='none';}
-function ckAcc(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()}));ckHide();}
-function ckRej(){localStorage.setItem('lxp_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()}));ckHide();}
+function ckAcc(){localStorage.setItem('lxp_consent_v2',JSON.stringify({necessary:true,analytics:true,marketing:true,preferences:true,date:new Date().toISOString()}));ckHide();}
+function ckRej(){localStorage.setItem('lxp_consent_v2',JSON.stringify({necessary:true,analytics:false,marketing:false,preferences:false,date:new Date().toISOString()}));ckHide();}
 function ckCfg(){var m=document.getElementById('cookieModal');if(m)m.style.display='flex';}
-function ckSave(){var r={};CK.forEach(function(c){r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked;});r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
+function ckSave(){var r={};CK.forEach(function(c){r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked;});r.date=new Date().toISOString();localStorage.setItem('lxp_consent_v2',JSON.stringify(r));ckHide();}
 // Run after DOM is ready
 document.addEventListener('DOMContentLoaded',function(){
   // Populate cookie modal options
@@ -505,13 +505,13 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   }
   // Show banner if no consent yet
-  if(!localStorage.getItem('lxp_consent')){
+  if(!localStorage.getItem('lxp_consent_v2')){
     setTimeout(function(){
       var b=document.getElementById('cookieBanner');
       if(b)b.style.transform='translateY(0)';
     },2200);
   }
-});;CK.forEach(c=>r[c.id]=c.locked?true:document.getElementById('ck_'+c.id).checked);r.date=new Date().toISOString();localStorage.setItem('lxp_consent',JSON.stringify(r));ckHide();}
+})
 </script>
 
 
