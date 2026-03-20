@@ -166,6 +166,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   padding: 140px 50px 90px;
   position: relative;
   min-height: 520px;
+  background-color: #0A0A0A;
   background-image: url('img/hero.jpg');
   background-size: cover;
   background-position: center 40%;
@@ -346,7 +347,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     /* INDEX NAVIGATION */
     .page-index {
       position: sticky; top: 78px; z-index: 100;
-      background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,169,110,0.12);
+      background: #0A0A0A; border-bottom: 1px solid rgba(201,169,110,0.12);
       padding: 0 50px; display: flex; gap: 0; overflow-x: auto;
       scrollbar-width: none; -ms-overflow-style: none;
     }
@@ -491,6 +492,15 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     }
 
     .page-hero > *:not(div:first-child) { position: relative; z-index: 2; }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: #0A0A0A;
+      z-index: 1;
+    }
     /* ── HERO TEXT LEGIBILITY ── */
     .page-hero .page-tag {
       color: #E8D5B0 !important;
@@ -567,7 +577,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
 <!-- HERO -->
 <div class="page-hero">
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,14,0.55) 0%,rgba(6,10,20,0.50) 40%,rgba(4,6,14,0.82) 80%,rgba(2,4,10,0.99) 100%);z-index:0;pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;margin-bottom:-1px;background:linear-gradient(to bottom,rgba(4,6,14,0.52) 0%,rgba(6,10,20,0.48) 40%,rgba(4,6,14,0.82) 72%,#0A0A0A 92%,#0A0A0A 100%);"></div>
   <div class="page-tag">Servicios &amp; Instalaciones</div>
   <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
   <p class="page-sub">En LUXINPRO ofrecemos un servicio integral que abarca desde la dirección y gestión del proyecto hasta cada instalación técnica de su propiedad en Menorca. Un solo interlocutor para todo.</p>
