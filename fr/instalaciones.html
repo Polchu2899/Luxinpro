@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Services et Installations | LUXINPRO Minorque</title>
-  <meta name="description" content="LUXINPRO offre à Minorque des services complets : Project Manager, Building Manager, climatisation, aérothermie, énergies renouvelables, plomberie, électricité, Smart Home et maintenance."/>
+  <title>Services &amp; Installations | LUXINPRO Menorca</title>
+  <meta name="description" content="LUXINPRO offre à Minorque des services complets: Project Manager, Building Manager, climatisation, aérothermie, énergies renouvelables, plomberie, électricité, Smart Home et maintenance."/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="https://luxinpro.es/fr/installations-et-services/"/>
+  <link rel="canonical" href="https://luxinpro.es/instalaciones-y-servicios/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <style>
-
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -322,14 +321,6 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   /* Gallery */
   .gallery-track img { height: 200px !important; width: 240px !important; }
 }
-
-
-    /* PAGE HERO */
-    .page-hero::before {
-      content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
-      transform: translateY(-50%); font-family: var(--font-display); font-size: 180px;
-      font-weight: 300; color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
-    }
     .page-tag {
       display: inline-flex; align-items: center; gap: 12px; font-size: 9px;
       font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
@@ -436,7 +427,6 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     @media (min-width: 901px) { .nav-mobile { display: none!important; } }
 
   
-  
   /* Force cursor onto GPU layer - prevents clipping by animated elements */
   @media (hover: hover) {
     .cursor {
@@ -466,7 +456,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     }
     .card:hover .card-img img {
       transform: scale(1.05);
-      filter: brightness(1) saturate(1.05);
+      filter: brightness(1.02) saturate(1.05);
     }
     /* 4-col maintenance: shorter */
     .cards-4 .card-img { height: 140px; }
@@ -479,7 +469,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .fband-img img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
-      filter: brightness(0.7);
+      filter: brightness(0.88);
     }
     /* Mobile overrides */
     @media (max-width: 900px) {
@@ -501,54 +491,69 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     /* ── HERO TEXT LEGIBILITY ── */
     .page-hero .page-tag {
       color: #E8D5B0 !important;
-      text-shadow: 0 1px 12px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.9) !important;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.99), 0 0 20px rgba(0,0,0,0.99), 0 2px 4px rgba(0,0,0,0.99) !important;
       font-weight: 600 !important;
+      position: relative; z-index: 2;
     }
     .page-hero .page-title {
-      text-shadow: 0 2px 24px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.7) !important;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.99), 0 1px 6px rgba(0,0,0,0.95) !important;
+      position: relative; z-index: 2;
     }
     .page-hero .page-title em {
-      text-shadow: 0 2px 20px rgba(0,0,0,0.8) !important;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.99), 0 1px 6px rgba(0,0,0,0.95) !important;
     }
     .page-hero .page-sub {
-      color: rgba(245,242,236,0.92) !important;
-      text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important;
+      color: rgba(245,242,236,0.97) !important;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.99), 0 0 16px rgba(0,0,0,0.95) !important;
+      position: relative; z-index: 2;
     }
     .page-hero .back-btn {
-      text-shadow: 0 1px 6px rgba(0,0,0,0.8) !important;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.99) !important;
+      position: relative; z-index: 2;
     }
+    .page-hero .page-index,
+    .page-hero nav {
+      position: relative; z-index: 2;
+    }
+      /* Mobile stat label fix */
+      .stat-label { letter-spacing: 1px !important; font-size: 8px !important; line-height: 1.5 !important; }
+      .stat-item { min-height: auto !important; }
 
       /* ── MOBILE OVERFLOW FIXES ── */
+      /* Fix fband text overflow */
       .fband > * { max-width: 100% !important; overflow: hidden !important; }
       .fband-inner > * { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; }
       .fband-inner { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      /* Fix list items */
       .flist { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
       .flist li { width: 100% !important; max-width: 100% !important; word-break: break-word !important; overflow-wrap: break-word !important; box-sizing: border-box !important; white-space: normal !important; }
+      /* Fix fstats boxes */
       .fstats { grid-template-columns: 1fr 1fr !important; width: 100% !important; }
-      .page-index { padding: 0 12px !important; gap: 0 !important; }
-      .page-index a { font-size: 7.5px !important; letter-spacing: 1.5px !important; padding: 14px 8px !important; white-space: nowrap !important; }
-
-    </style>
+</style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <header>
-  <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
+  <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+
+  <!-- Desktop nav -->
   <div class="nav-desktop">
     <a href="index.html#nosotros">À propos</a>
     <a href="index.html#servicios">Services</a>
-    <a href="../fr/instalaciones.html">Installations</a>
-    <a href="index.html#contacto" class="nav-cta">Nous contacter</a>
+    <a href="../instalaciones.html">Installations</a>
+    <a href="index.html#contacto">Contact</a>
     <div class="nav-langs">
       <a href="../index.html" >ES</a>
       <a href="../en/index.html" >EN</a>
-      <a href="../fr/index.html" class="active">FR</a>
+      <a href="fr/index.html"  class="active">FR</a>
       <a href="../de/index.html" >DE</a>
       <a href="../ca/index.html" >CA</a>
     </div>
   </div>
+
+  <!-- Mobile nav -->
   <div class="nav-mobile">
     <button class="mobile-menu-btn" id="mMenuBtn" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -557,14 +562,15 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#nosotros">À propos</a>
-  <a href="index.html#servicios">Services</a>
-  <a href="../fr/instalaciones.html">Installations</a>
-  <a href="index.html#contacto">Contact</a>
-  <a href="index.html#contacto" class="mobile-cta">Nous contacter</a>
+    <a href="index.html#servicios">Services</a>
+    <a href="../instalaciones.html">Installations</a>
+    <a href="index.html#menorca">Minorque</a>
+    <a href="index.html#contacto">Contact</a>
+  <a href="index.html#contacto" class="mobile-cta">Contact</a>
   <div class="mobile-lang-row">
     <a href="../index.html" >ES</a>
         <a href="../en/index.html" >EN</a>
-        <a href="../fr/index.html" class="active">FR</a>
+        <a href="fr/index.html" >FR</a>
         <a href="../de/index.html" >DE</a>
         <a href="../ca/index.html" >CA</a>
   </div>
@@ -574,14 +580,14 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 <div class="page-hero">
   <div style="position:absolute;inset:0;margin-bottom:-1px;background:linear-gradient(to bottom,rgba(4,6,14,0.52) 0%,rgba(6,10,20,0.48) 40%,rgba(4,6,14,0.82) 72%,#0A0A0A 92%,#0A0A0A 100%);"></div>
   <div class="page-tag">Services &amp; Installations</div>
-  <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Tout ce dont votre propriété<br><em>a besoin, en une seule équipe</em></h1>
-  <p class="page-sub">LUXINPRO offre un service intégral allant de la direction du projet à chaque installation technique de votre propriété à Minorque. Un seul interlocuteur pour tout.</p>
-  <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+  <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Tout ce que votre propriété<br><em>nécessite, en une seule équipe</em></h1>
+  <p class="page-sub">LUXINPRO offre un service complet allant de la direction et gestion du projet à chaque installation technique de votre propriété à Minorque. Un seul interlocuteur pour tout.</p>
+  <a href="../index.html" class="back-btn">← Retour à l'accueil</a>
 </div>
 
 <!-- INDEX NAV -->
 <nav class="page-index" id="pageIndex">
-  <a href="#project-manager">Project Manager</a>
+  <a href="#project-manager" class="active">Project Manager</a>
   <a href="#climatizacion">Climatisation</a>
   <a href="#renovables">Renouvelables</a>
   <a href="#smarthome">Smart Home</a>
@@ -590,296 +596,268 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <a href="#mantenimiento">Maintenance</a>
 </nav>
 
-<!-- 01 PROJECT MANAGER -->
+<!-- ══ 01 PROJECT & BUILDING MANAGER ══ -->
 <section class="inst-section" id="project-manager">
   <div class="section-num">01</div>
   <div class="page-tag" style="margin-top:8px;">Gestion intégrale</div>
   <h2 class="section-title">Project &amp; Building <em>Manager</em></h2>
-  <p class="section-intro">Nous nous occupons de tout pour que votre projet devienne réalité. Nous établissons, organisons et dirigeons chaque phase en optimisant ressources, délais et coûts.</p>
+  <p class="section-intro">Nous nous occupons de tout ce qui est nécessaire pour que votre projet se réalise sans que vous ayez à vous préoccuper de rien. Nous établissons, organisons et dirigeons chaque phase en optimisant ressources, délais et coûts.</p>
   <div class="cards cards-2">
     <div class="card">
-      <div class="card-img"><img src="../img/pm.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/pm.jpg" alt="Project Manager" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
       <div class="card-name">Project Manager</div>
-      <p class="card-desc">Nous planifions et dirigeons votre projet de bout en bout : emplacement, design, espaces, finitions et équipements. Installations SMARTHOME avec les meilleures marques.</p>
-      <div class='card-tags'><span class="ctag">Planification complète</span><span class="ctag">Design d'espaces</span><span class="ctag">SMARTHOME</span><span class="ctag">Supervision totale</span></div>
+      <p class="card-desc">Nous planifions et dirigeons votre projet de A à Z: emplacement, design, espaces, finitions et équipements. Installations intelligentes SMARTHOME avec les dernières tendances et les meilleures marques.</p>
+      <div class="card-tags"><span class="ctag">Planification complète</span><span class="ctag">Design d'espaces</span><span class="ctag">SMARTHOME</span><span class="ctag">Supervision totale</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/interiores.jpg" alt="Building Manager" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
       <div class="card-name">Building Manager</div>
-      <p class="card-desc">Nous supervisons métrés et budgets, coordonnons entrepreneurs et contrôlons qualité, délais et coûts. Documentation finale et assistance après-vente complète.</p>
-      <div class='card-tags'><span class="ctag">Contrôle chantier</span><span class="ctag">Documentation</span><span class="ctag">Coordination</span><span class="ctag">Après-vente garanti</span></div>
+      <p class="card-desc">Nous supervisons métrés et budgets, coordonnons entrepreneurs et contrôlons qualité, délais et coûts. Nous gérons la documentation finale et offrons une assistance après-vente complète.</p>
+      <div class="card-tags"><span class="ctag">Contrôle chantier</span><span class="ctag">Gestion documentaire</span><span class="ctag">Coordination corps de métier</span><span class="ctag">Après-vente garanti</span></div>
     </div>
   </div>
   <div class="fband" style="margin-top:1px;border-top:none;">
     <div class="fband-inner">
       <div>
         <div class="page-tag">Conseil &amp; Design d'Espaces</div>
-        <h2>Votre vision <em>réalisée</em></h2>
-        <p>Nous offrons un service complet de conseil et design d'espaces intérieurs et extérieurs. De la conception à chaque détail décoratif, pour que votre propriété à Minorque reflète votre personnalité.</p>
+        <h2>Votre vision faite <em>réalité</em></h2>
+        <p>Nous offrons un service complet de conseil et design d'espaces tant intérieurs qu'extérieurs. De la conception du projet au dernier détail décoratif, nous travaillons pour que votre propriété à Minorque reflète exactement votre personnalité.</p>
         <ul class="flist">
-          <li>Projet exécutif complet avec plans</li>
-          <li>Sélection matériaux et mobilier</li>
-          <li>Coordination avec architectes de premier plan</li>
-          <li>Gestion des permis et légalisations</li>
-          <li>Suivi de chantier</li>
-          <li>Remise des clés complète</li>
+          <li>Projet exécutif complet avec plans et mémoires</li>
+          <li>Sélection de matériaux, finitions et mobilier</li>
+          <li>Coordination avec architectes et décorateurs de premier niveau</li>
+          <li>Gestion des permis, licences et légalisations</li>
+          <li>Suivi de chantier avec rapports périodiques</li>
+          <li>Remise des clés avec documentation complète</li>
         </ul>
       </div>
       <div class="fstats">
-        <div class="fstat"><div class="fstat-num">Années d'expérience</div><div class="fstat-lbl"></div></div>
-        <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Projets réalisés</div></div>
-        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Langues de service</div></div>
+        <div class="fstat"><div class="fstat-num">+15</div><div class="fstat-lbl">Années d'expérience aux Baléares</div></div>
+        <div class="fstat"><div class="fstat-num">+200</div><div class="fstat-lbl">Projets réalisés</div></div>
+        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Langues de service client</div></div>
         <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfaction garantie</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 02 CLIMATIZACIÓN -->
+<!-- ══ 02 CLIMATIZACIÓN ══ -->
 <section class="inst-section" id="climatizacion">
   <div class="section-num">02</div>
   <div class="page-tag" style="margin-top:8px;">Installations techniques</div>
   <h2 class="section-title">Climatisation <em>intelligente</em></h2>
-  <p class="section-intro">Nous concevons des systèmes haute efficacité adaptés à chaque propriété. Confort thermique optimal toute l'année.</p>
+  <p class="section-intro">Nous concevons et installons des systèmes de climatisation haute efficacité adaptés à chaque propriété. Confort thermique optimal toute l'année avec la technologie la plus avancée.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/climatizacion.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/climatizacion.jpg" alt="Aire Acondicionado" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
       <div class="card-name">Climatisation</div>
-      <p class="card-desc">Installation de systèmes dernière génération : splits, cassettes, gainables et VRV. Marques premium avec contrôle intelligent depuis votre smartphone.</p>
-      <div class='card-tags'><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Gainable</span><span class="ctag">Smart control</span></div>
+      <p class="card-desc">Installation de systèmes dernière génération: splits, cassettes, conduits et VRV. Marques premium avec contrôle intelligent depuis votre smartphone.</p>
+      <div class="card-tags"><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Conductos</span><span class="ctag">Smart control</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/calefaccion.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/calefaccion.jpg" alt="Calefacción" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
       <div class="card-name">Chauffage</div>
-      <p class="card-desc">Plancher chauffant, radiateurs design et ventilo-convecteurs. Solutions qui s'intègrent parfaitement dans le design intérieur.</p>
-      <div class='card-tags'><span class="ctag">Plancher chauffant</span><span class="ctag">Ventilo-convecteurs</span><span class="ctag">Radiateurs</span><span class="ctag">Chaudière</span></div>
+      <p class="card-desc">Plancher chauffant, radiateurs design et ventilo-convecteurs haute efficacité. Solutions parfaitement intégrées dans le design intérieur.</p>
+      <div class="card-tags"><span class="ctag">Suelo radiante</span><span class="ctag">Fan-coils</span><span class="ctag">Radiadores</span><span class="ctag">Caldera</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/aerotermia.jpg" alt="Aerotermia" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
       <div class="card-name">Aérothermie</div>
-      <p class="card-desc">Système ALTHERMA : chauffage, climatisation et eau chaude sanitaire en une installation. Extrait jusqu'à 80% d'énergie de l'air.</p>
-      <div class='card-tags'><span class="ctag">Altherma</span><span class="ctag">Pompe à chaleur</span><span class="ctag">ECS inclus</span><span class="ctag">Classe A+++</span></div>
+      <p class="card-desc">Système ALTHERMA: chauffage, climatisation et eau chaude en une seule installation. Extrait jusqu'à 80% d'énergie de l'air.</p>
+      <div class="card-tags"><span class="ctag">Altherma</span><span class="ctag">Bomba de calor</span><span class="ctag">ACS incluido</span><span class="ctag">Clase A+++</span></div>
     </div>
   </div>
 </section>
 
-<!-- 03 RENOVABLES -->
+<!-- ══ 03 ENERGÍAS RENOVABLES ══ -->
 <section class="inst-section" id="renovables">
   <div class="section-num">03</div>
   <div class="page-tag" style="margin-top:8px;">Durabilité</div>
   <h2 class="section-title">Énergies <em>renouvelables</em></h2>
-  <p class="section-intro">Nous croyons en l'indépendance énergétique à Minorque. Systèmes réduisant votre empreinte et votre facture.</p>
+  <p class="section-intro">Nous croyons en l'indépendance énergétique à Minorque. Systèmes qui réduisent votre impact environnemental et votre facture énergétique.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/fotovoltaica.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fotovoltaica.jpg" alt="Fotovoltaica" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
       <div class="card-name">Photovoltaïque</div>
-      <p class="card-desc">Panneaux haute efficacité avec onduleurs intelligents et batteries. Autoconsommation totale sous le soleil de Minorque.</p>
-      <div class='card-tags'><span class="ctag">Autoconsommation</span><span class="ctag">Batteries</span><span class="ctag">Onduleur intelligent</span><span class="ctag">Monitoring</span></div>
+      <p class="card-desc">Panneaux solaires photovoltaïques haute efficacité avec onduleurs intelligents et stockage en batterie. Autoconsommation totale.</p>
+      <div class="card-tags"><span class="ctag">Autoconsumo</span><span class="ctag">Baterías</span><span class="ctag">Inversor inteligente</span><span class="ctag">Monitorización</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/solar.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/solar.jpg" alt="Solar Térmica" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg></div>
       <div class="card-name">Solaire Thermique</div>
-      <p class="card-desc">Capteurs pour eau chaude et appoint chauffage. Efficacité maximale grâce au climat méditerranéen de Minorque.</p>
-      <div class='card-tags'><span class="ctag">ECS solaire</span><span class="ctag">Thermosiphon</span><span class="ctag">Appoint chauffage</span><span class="ctag">Haute efficacité</span></div>
+      <p class="card-desc">Capteurs solaires thermiques pour production d'eau chaude sanitaire et appoint de chauffage.</p>
+      <div class="card-tags"><span class="ctag">ACS solar</span><span class="ctag">Termosifón</span><span class="ctag">Apoyo calefacción</span><span class="ctag">Alta eficiencia</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/eolica.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/eolica.jpg" alt="Eólica" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 12L6 4M12 12l8-2M12 12l-2 8M12 6v6"/><circle cx="12" cy="12" r="2"/></svg></div>
       <div class="card-name">Éolien</div>
-      <p class="card-desc">Micro-éoliennes pour compléter l'approvisionnement. Particulièrement efficace avec la Tramontane de Minorque.</p>
-      <div class='card-tags'><span class="ctag">Mini-éolien</span><span class="ctag">Off-grid</span><span class="ctag">Hybride solaire</span><span class="ctag">Stockage</span></div>
+      <p class="card-desc">Micro-aérogénérateurs pour compléter l'approvisionnement énergétique. Systèmes hybrides solaire-éolien.</p>
+      <div class="card-tags"><span class="ctag">Mini-eólica</span><span class="ctag">Off-grid</span><span class="ctag">Híbrido solar</span><span class="ctag">Almacenamiento</span></div>
     </div>
   </div>
 </section>
 
-<!-- SMART HOME BAND -->
+<!-- ══ SMART HOME BAND ══ -->
 <div class="fband" id="smarthome">
-  <div class="fband-img"><img src="../img/smarthome.jpg" alt="Smart Home" loading="lazy"/></div>
+  <div class="fband-img"><img src="../img/smarthome.jpg" alt="Smart Home LUXINPRO" loading="lazy"/></div>
   <div class="fband-inner">
     <div>
       <div class="page-tag">Smart Home &amp; Domotique</div>
-      <h2>Votre maison sous contrôle<br><em>dans la paume de votre main</em></h2>
-      <p>Nous domotisons votre propriété en intégrant tous les systèmes dans une plateforme unique. Éclairage, climatisation, sécurité et audio-vidéo depuis votre smartphone partout.</p>
-      <p>Nous installons la <strong style="color:var(--gold-light);">borne de recharge VE</strong> intégrée au photovoltaïque pour une recharge 100% durable et gratuite.</p>
+      <h2>Contrôlez votre maison<br><em>depuis votre smartphone</em></h2>
+      <p>Nous automatisons votre propriété en intégrant tous les systèmes dans une unique plateforme intelligente. Éclairage, climatisation, sécurité, volets, irrigation et audio-vidéo contrôlés depuis votre smartphone.</p>
+      <p>Nous installons le <strong style="color:var(--gold-light);">point de recharge pour véhicule électrique</strong> intégré au système photovoltaïque pour une recharge 100% durable et gratuite.</p>
       <ul class="flist">
-          <li>Éclairage intelligent</li>
-          <li>Contrôle climatisation centralisé</li>
-          <li>Sécurité : alarmes, caméras et accès</li>
-          <li>Volets et stores automatisés</li>
-          <li>Système audio-vidéo multizone</li>
-          <li>Borne de recharge VE intégrée</li>
-          <li>Contrôle à distance</li>
-          <li>Compatible Alexa &amp; Google Home</li>
+        <li>Éclairage intelligent et scènes personnalisées</li>
+        <li>Contrôle climatisation centralisé</li>
+        <li>Sécurité: alarmes, caméras et accès</li>
+        <li>Volets et stores automatisés</li>
+        <li>Système audio-vidéo multizone</li>
+        <li>Point de recharge véhicule électrique intégré</li>
+        <li>Compatible avec Alexa &amp; Google Home</li>
       </ul>
     </div>
     <div class="fstats">
-      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Économie d'énergie</div></div>
-      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">Classification énergétique</div></div>
-      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Contrôle à distance</div></div>
-      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">Recharge VE avec photovoltaïque</div></div>
+      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Économies d'énergie avec aérothermie</div></div>
+      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">Classification énergétique systèmes</div></div>
+      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Contrôle à distance depuis n'importe où</div></div>
+      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">Coût recharge VE avec photovoltaïque</div></div>
     </div>
   </div>
 </div>
 
-<!-- 04 ELECTRICIDAD & FONTANERÍA -->
+<!-- ══ 04 ELECTRICIDAD & FONTANERÍA ══ -->
 <section class="inst-section" id="electricidad">
   <div class="section-num">04</div>
   <div class="page-tag" style="margin-top:8px;">Installations essentielles</div>
   <h2 class="section-title">Électricité <em>&amp; Plomberie</em></h2>
-  <p class="section-intro">Installations fondamentales avec précision et matériaux de qualité, conformes à la réglementation.</p>
+  <p class="section-intro">Les installations les plus fondamentales exécutées avec précision et matériaux de première qualité, conformes à la réglementation en vigueur.</p>
   <div class="cards cards-2">
     <div class="card">
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/electricidad.jpg" alt="Electricidad" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
       <div class="card-name">Électricité</div>
-      <p class="card-desc">Installations complètes pour construction neuve et rénovation : tableaux, câblage, éclairage LED et protections. Certification incluse.</p>
-      <div class='card-tags'><span class="ctag">Construction neuve</span><span class="ctag">Rénovation</span><span class="ctag">Tableaux électriques</span><span class="ctag">Éclairage LED</span><span class="ctag">Certification</span></div>
+      <p class="card-desc">Installations électriques complètes pour construction neuve et réhabilitation: tableaux électriques, câblage, prises, éclairage LED design et systèmes de protection différentielle.</p>
+      <div class="card-tags"><span class="ctag">Obra nueva</span><span class="ctag">Rehabilitación</span><span class="ctag">Cuadros eléctricos</span><span class="ctag">Iluminación LED</span><span class="ctag">Certificación oficial</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fontaneria.jpg" alt="Fontanería" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
       <div class="card-name">Plomberie</div>
-      <p class="card-desc">Plomberie et assainissement complets : eau froide et chaude, robinetterie premium, épuration et osmose inverse.</p>
-      <div class='card-tags'><span class="ctag">Eau froide et chaude</span><span class="ctag">Assainissement</span><span class="ctag">Robinetterie premium</span><span class="ctag">Épuration</span><span class="ctag">Osmose inverse</span></div>
+      <p class="card-desc">Installations de plomberie et assainissement: réseaux eau froide et chaude, assainissement, robinetterie premium, systèmes de traitement des eaux.</p>
+      <div class="card-tags"><span class="ctag">Agua fría y caliente</span><span class="ctag">Saneamiento</span><span class="ctag">Griferías premium</span><span class="ctag">Depuración</span><span class="ctag">Osmosis inversa</span></div>
     </div>
   </div>
 </section>
 
-<!-- 05 INTERIORES -->
+<!-- ══ 05 DISEÑO DE INTERIORES ══ -->
 <section class="inst-section" id="interiores">
   <div class="section-num">05</div>
   <div class="page-tag" style="margin-top:8px;">Design &amp; Confort</div>
   <h2 class="section-title">Design d'espaces <em>&amp; Finitions</em></h2>
-  <p class="section-intro">Nous créons des environnements de luxe uniques à Minorque. Chaque espace pour offrir l'expérience premium que votre propriété mérite.</p>
+  <p class="section-intro">Nous créons des environnements uniques de luxe à Minorque. Chaque espace pensé pour offrir l'expérience premium que votre propriété mérite.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/interiores.jpg" alt="Espacios Interiores" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
       <div class="card-name">Espaces Intérieurs</div>
-      <p class="card-desc">Chambres, salles de bains et salles à manger de luxe avec textures naturelles, mobilier sur mesure, spa et jacuzzi.</p>
-      <div class='card-tags'><span class="ctag">Spa &amp; Jacuzzi</span><span class="ctag">Salles de bains luxe</span><span class="ctag">Mobilier sur mesure</span><span class="ctag">Tapisseries</span></div>
+      <p class="card-desc">Chambres, salles de bain et salles à manger de luxe avec textures naturelles, mobilier sur mesure, spa, jacuzzi, baignoires design et douches spacieuses.</p>
+      <div class="card-tags"><span class="ctag">Spa & Jacuzzi</span><span class="ctag">Baños de lujo</span><span class="ctag">Mobiliario a medida</span><span class="ctag">Tapicerías</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/cocinas.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/cocinas.jpg" alt="Carpintería & Cocinas" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg></div>
-      <div class="card-name">Menuiserie &amp; Cuisines</div>
-      <p class="card-desc">Cuisines avec induction invisible, dressing et menuiserie sur mesure. Bois nobles, laques et matériaux de dernière tendance.</p>
-      <div class='card-tags'><span class="ctag">Induction invisible</span><span class="ctag">Dressing</span><span class="ctag">Menuiserie sur mesure</span><span class="ctag">Portes premium</span></div>
+      <div class="card-name">Carpintería & Cocinas</div>
+      <p class="card-desc">Cuisines avec induction invisible, dressings personnalisés et menuiserie intérieure et extérieure sur mesure.</p>
+      <div class="card-tags"><span class="ctag">Inducción invisible</span><span class="ctag">Vestidores</span><span class="ctag">Carpintería a medida</span><span class="ctag">Puertas premium</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/piscina_ext.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/piscina_ext.jpg" alt="Piscinas & Jardines" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-name">Piscines &amp; Jardins</div>
-      <p class="card-desc">Piscines chauffées et éclairées sur mesure. Jardins méditerranéens et mobilier d'extérieur exclusif.</p>
-      <div class='card-tags'><span class="ctag">Piscines chauffées</span><span class="ctag">Jardin méditerranéen</span><span class="ctag">Éclairage extérieur</span><span class="ctag">Mobilier premium</span></div>
+      <div class="card-name">Piscinas & Jardines</div>
+      <p class="card-desc">Piscines chauffées et éclairées sur mesure. Jardins avec plantes méditerranéennes autochtones. Mobilier extérieur exclusif.</p>
+      <div class="card-tags"><span class="ctag">Piscinas climatizadas</span><span class="ctag">Jardín mediterráneo</span><span class="ctag">Iluminación exterior</span><span class="ctag">Mobiliario premium</span></div>
     </div>
   </div>
 </section>
 
-<!-- 06 MANTENIMIENTO -->
+<!-- ══ 06 MANTENIMIENTO ══ -->
 <section class="inst-section" id="mantenimiento">
   <div class="section-num">06</div>
   <div class="page-tag" style="margin-top:8px;">Service continu</div>
   <h2 class="section-title">Maintenance <em>intégrale</em></h2>
-  <p class="section-intro">Votre propriété de luxe mérite une maintenance à la hauteur. Plans préventifs avec réponse rapide à Minorque.</p>
+  <p class="section-intro">Une propriété de luxe à Minorque requiert une maintenance à la hauteur. Plans préventifs et correctifs avec réponse rapide.</p>
   <div class="cards cards-4">
     <div class="card">
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/electricidad.jpg" alt="Mant. Eléctrico" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-      <div class="card-name">Maintenance Électrique</div>
-      <p class="card-desc">Vérifications périodiques, réparations et mises à jour du système électrique.</p>
-      
+      <div class="card-name">Maint. Électrique</div>
+      <p class="card-desc">Révisions périodiques, réparations et mises à jour du système électrique.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fontaneria.jpg" alt="Mant. Fontanería" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
-      <div class="card-name">Maintenance Plomberie</div>
-      <p class="card-desc">Contrôle des canalisations, détection fuites, nettoyage réservoirs.</p>
-      
+      <div class="card-name">Maint. Plomberie</div>
+      <p class="card-desc">Contrôle des canalisations, détection de fuites, nettoyage de réservoirs.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/aerotermia.jpg" alt="Mant. Climatización" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-      <div class="card-name">Maintenance Climatisation</div>
-      <p class="card-desc">Nettoyage filtres, vérification gaz, maintenance chaudières et pompes.</p>
-      
+      <div class="card-name">Maint. Climatisation</div>
+      <p class="card-desc">Nettoyage des filtres, révision des gaz, maintenance des chaudières et pompes à chaleur.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/piscina_int.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/piscina_int.jpg" alt="Mant. Jardín & Piscina" loading="lazy"/></div>
       <div class="card-num">04</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-name">Maintenance Jardin &amp; Piscine</div>
-      <p class="card-desc">Entretien jardin, taille, traitement eau, vérification pompes.</p>
-      
+      <div class="card-name">Mant. Jardín & Piscina</div>
+      <p class="card-desc">Entretien du jardin, taille, traitement de l'eau, révision des pompes et éclairage extérieur.</p>
+      <div class="card-tags"></div>
     </div>
   </div>
 </section>
 
-<!-- PM BAND -->
-<div class="fband" id="project-manager-band">
-  <div class="fband-inner">
-    <div>
-      <div class="page-tag">Gestion intégrale</div>
-      <h2>Project &amp; Building Manager<br><em>à Minorque et aux Baléares</em></h2>
-      <p>Nous coordonnons tous ces services sous votre direction. Nous gérons, supervisons et garantissons l'exécution parfaite de chaque installation.</p>
-      <p>Du budget initial à la mise en service, <strong style="color:var(--gold-light);">LUXINPRO est votre interlocuteur unique</strong>. Accompagnement en 5 langues.</p>
-      <ul class="flist">
-          <li>Gestion complète du projet</li>
-          <li>Coordination de tous les corps de métier</li>
-          <li>Contrôle qualité, délais et coûts</li>
-          <li>Documentation officielle</li>
-          <li>Accompagnement en 5 langues</li>
-          <li>Service après-vente garanti</li>
-      </ul>
-      <a href="index.html#contacto" class="btn-p" style="margin-top:28px;display:inline-block;">Demander une consultation gratuite</a>
-    </div>
-    <div class="fstats">
-      <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Années aux Baléares</div></div>
-      <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Projets réalisés</div></div>
-      <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Langues de service</div></div>
-      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfaction garantie</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
+<!-- CTA FINAL -->
 <div class="cta-final">
-  <h2>Vous avez un projet<br><em>en tête ?</em></h2>
-  <p>Parlez-nous de vos besoins. Consultation gratuite pour la solution parfaite à Minorque.</p>
+  <h2>Avez-vous un projet<br><em>en tête?</em></h2>
+  <p>Parlons de vos besoins. Consultation initiale gratuite pour trouver la solution parfaite pour votre propriété à Minorque.</p>
   <div class="cta-btns">
-    <a href="tel:+34609625573" class="btn-p">Appeler : +34 609 625 573</a>
-    <a href="index.html#contacto" class="btn-s">Envoyer une demande</a>
+    <a href="tel:+34609625573" class="btn-p">Llamar: 609 625 573</a>
+    <a href="index.html#contacto" class="btn-s">Envoyer la demande</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
-      <p>{'EN':'Leading luxury real estate project management in Menorca and the Balearic Islands.','FR':"Référence en gestion de projets immobiliers de luxe à Minorque et aux Îles Baléares.",'DE':'Referenz für Luxusimmobilienprojekte auf Menorca und den Balearen.','CA':"Referent en gestió de projectes immobiliaris de luxe a Menorca i les Illes Balears."}.get('FR','')</p>
+      <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>Référence en gestion et construction de projets immobiliers de luxe à Minorque et aux Îles Baléares.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
@@ -887,13 +865,13 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
         <li><a href="index.html#servicios">Project Manager</a></li>
         <li><a href="index.html#servicios">Building Manager</a></li>
         <li><a href="../instalaciones.html">Rénovation Intégrale</a></li>
-        <li><a href="index.html#instalaciones">Smart Home</a></li>
+        <li><a href="../instalaciones.html">Smart Home</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Legal</h5>
       <ul>
-        <li><a href="../aviso-legal.html">Mentions Légales</a></li>
+        <li><a href="../aviso-legal.html">Mentions légales</a></li>
         <li><a href="../privacidad.html">Confidentialité</a></li>
         <li><a href="../cookies.html">Cookies</a></li>
         <li><a href="index.html#contacto">Contact</a></li>
@@ -902,20 +880,20 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <div class="footer-col">
       <h5>Langues</h5>
       <ul>
-        <li><a href="../index.html">Español</a></li>
-        <li><a href="../en/index.html">English</a></li>
-        <li><a href="../fr/index.html">Français</a></li>
-        <li><a href="../de/index.html">Deutsch</a></li>
-        <li><a href="../ca/index.html">Català</a></li>
+        <li><a href="../index.html">Espagnol</a></li>
+        <li><a href="../en/index.html">Anglais</a></li>
+        <li><a href="fr/index.html">Français</a></li>
+        <li><a href="../de/index.html">Allemand</a></li>
+        <li><a href="../ca/index.html">Catalan</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 LUXINPRO — Luxury Investment &amp; Projects, Îles Baléares</p>
+    <p>© 2026 LUXINPRO — Luxury Investment &amp; Projects, Balearic Islands</p>
     <div class="footer-lang-switcher">
       <a href="../index.html" >ES</a>
       <a href="../en/index.html" >EN</a>
-      <a href="../fr/index.html" class="active">FR</a>
+      <a href="fr/index.html" >FR</a>
       <a href="../de/index.html" >DE</a>
       <a href="../ca/index.html" >CA</a>
     </div>
@@ -928,27 +906,31 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <div style="display:flex;align-items:flex-start;gap:12px;max-width:680px;">
       <span style="font-size:18px;flex-shrink:0;">🍪</span>
       <div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">Cookies</p>
-        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;"><a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Cookie Policy</a> · <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacy</a>.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">Nous utilisons des cookies</p>
+        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;">Nous utilisons des cookies pour améliorer votre expérience. <a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Politique de cookies</a> · <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Confidentialité</a>.</p>
       </div>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;">
-      <button onclick="ckCfg()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Settings</button>
-      <button onclick="ckRej()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Reject</button>
-      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept</button>
+      <button onclick="ckCfg()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Paramètres</button>
+      <button onclick="ckRej()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Refuser</button>
+      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Tout accepter</button>
     </div>
   </div>
 </div>
 <div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9995;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
   <div style="background:#1A1A1A;border:1px solid rgba(201,169,110,0.2);max-width:520px;width:90%;padding:40px;position:relative;max-height:80vh;overflow-y:auto;">
     <button onclick="ckHide()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8A8A8A;font-size:24px;cursor:pointer;">&times;</button>
+    <p style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#C9A96E;margin-bottom:8px;">Configurar cookies</p>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;margin-bottom:12px;">Sus preferencias</h3>
+    <p style="font-size:11px;color:rgba(245,242,236,0.5);line-height:1.7;margin-bottom:20px;">Les cookies nécessaires ne peuvent pas être désactivés.</p>
     <div id="ckOpts"></div>
     <div style="display:flex;gap:10px;margin-top:24px;">
-      <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Save</button>
-      <button onclick="ckAcc()" style="flex:1;padding:13px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:#C9A96E;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept all</button>
+      <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Sauvegarder</button>
+      <button onclick="ckAcc()" style="flex:1;padding:13px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:#C9A96E;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Tout accepter</button>
     </div>
   </div>
 </div>
+
 
 <script>
 var CK = [
@@ -1002,6 +984,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
 
 <script>
 
