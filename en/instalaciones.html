@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Services & Installations | LUXINPRO Menorca</title>
-  <meta name="description" content="LUXINPRO offers complete services in Menorca: Project Manager, Building Manager, air conditioning, aerothermy, renewable energy, plumbing, electricity, Smart Home and maintenance."/>
+  <title>Services &amp; Installations | LUXINPRO Menorca</title>
+  <meta name="description" content="LUXINPRO offers complete services in Menorca: Project Manager, Building Manager, air conditioning, aerothermal, renewable energy, plumbing, electricity, Smart Home and maintenance."/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="https://luxinpro.es/en/installations-and-services/"/>
+  <link rel="canonical" href="https://luxinpro.es/instalaciones-y-servicios/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <style>
-
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -322,14 +321,6 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   /* Gallery */
   .gallery-track img { height: 200px !important; width: 240px !important; }
 }
-
-
-    /* PAGE HERO */
-    .page-hero::before {
-      content: 'LUXINPRO'; position: absolute; right: -40px; top: 50%;
-      transform: translateY(-50%); font-family: var(--font-display); font-size: 180px;
-      font-weight: 300; color: rgba(201,169,110,0.04); white-space: nowrap; pointer-events: none;
-    }
     .page-tag {
       display: inline-flex; align-items: center; gap: 12px; font-size: 9px;
       font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
@@ -436,7 +427,6 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     @media (min-width: 901px) { .nav-mobile { display: none!important; } }
 
   
-  
   /* Force cursor onto GPU layer - prevents clipping by animated elements */
   @media (hover: hover) {
     .cursor {
@@ -466,7 +456,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     }
     .card:hover .card-img img {
       transform: scale(1.05);
-      filter: brightness(1) saturate(1.05);
+      filter: brightness(1.02) saturate(1.05);
     }
     /* 4-col maintenance: shorter */
     .cards-4 .card-img { height: 140px; }
@@ -479,7 +469,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .fband-img img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
-      filter: brightness(0.7);
+      filter: brightness(0.88);
     }
     /* Mobile overrides */
     @media (max-width: 900px) {
@@ -501,54 +491,69 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     /* ── HERO TEXT LEGIBILITY ── */
     .page-hero .page-tag {
       color: #E8D5B0 !important;
-      text-shadow: 0 1px 12px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.9) !important;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.99), 0 0 20px rgba(0,0,0,0.99), 0 2px 4px rgba(0,0,0,0.99) !important;
       font-weight: 600 !important;
+      position: relative; z-index: 2;
     }
     .page-hero .page-title {
-      text-shadow: 0 2px 24px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.7) !important;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.99), 0 1px 6px rgba(0,0,0,0.95) !important;
+      position: relative; z-index: 2;
     }
     .page-hero .page-title em {
-      text-shadow: 0 2px 20px rgba(0,0,0,0.8) !important;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.99), 0 1px 6px rgba(0,0,0,0.95) !important;
     }
     .page-hero .page-sub {
-      color: rgba(245,242,236,0.92) !important;
-      text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important;
+      color: rgba(245,242,236,0.97) !important;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.99), 0 0 16px rgba(0,0,0,0.95) !important;
+      position: relative; z-index: 2;
     }
     .page-hero .back-btn {
-      text-shadow: 0 1px 6px rgba(0,0,0,0.8) !important;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.99) !important;
+      position: relative; z-index: 2;
     }
+    .page-hero .page-index,
+    .page-hero nav {
+      position: relative; z-index: 2;
+    }
+      /* Mobile stat label fix */
+      .stat-label { letter-spacing: 1px !important; font-size: 8px !important; line-height: 1.5 !important; }
+      .stat-item { min-height: auto !important; }
 
       /* ── MOBILE OVERFLOW FIXES ── */
+      /* Fix fband text overflow */
       .fband > * { max-width: 100% !important; overflow: hidden !important; }
       .fband-inner > * { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; }
       .fband-inner { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      /* Fix list items */
       .flist { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
       .flist li { width: 100% !important; max-width: 100% !important; word-break: break-word !important; overflow-wrap: break-word !important; box-sizing: border-box !important; white-space: normal !important; }
+      /* Fix fstats boxes */
       .fstats { grid-template-columns: 1fr 1fr !important; width: 100% !important; }
-      .page-index { padding: 0 12px !important; gap: 0 !important; }
-      .page-index a { font-size: 7.5px !important; letter-spacing: 1.5px !important; padding: 14px 8px !important; white-space: nowrap !important; }
-
-    </style>
+</style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <header>
-  <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
+  <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+
+  <!-- Desktop nav -->
   <div class="nav-desktop">
-    <a href="index.html#nosotros">About</a>
+    <a href="index.html#nosotros">About us</a>
     <a href="index.html#servicios">Services</a>
-    <a href="../en/instalaciones.html">Installations</a>
-    <a href="index.html#contacto" class="nav-cta">Contact us</a>
+    <a href="../instalaciones.html">Installations</a>
+    <a href="index.html#contacto">Contact</a>
     <div class="nav-langs">
       <a href="../index.html" >ES</a>
-      <a href="../en/index.html" class="active">EN</a>
+      <a href="en/index.html"  class="active">EN</a>
       <a href="../fr/index.html" >FR</a>
       <a href="../de/index.html" >DE</a>
       <a href="../ca/index.html" >CA</a>
     </div>
   </div>
+
+  <!-- Mobile nav -->
   <div class="nav-mobile">
     <button class="mobile-menu-btn" id="mMenuBtn" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -556,14 +561,15 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#nosotros">About</a>
-  <a href="index.html#servicios">Services</a>
-  <a href="../en/instalaciones.html">Installations</a>
-  <a href="index.html#contacto">Contact</a>
-  <a href="index.html#contacto" class="mobile-cta">Contact us</a>
+  <a href="index.html#nosotros">About us</a>
+    <a href="index.html#servicios">Services</a>
+    <a href="../instalaciones.html">Installations</a>
+    <a href="index.html#menorca">Menorca</a>
+    <a href="index.html#contacto">Contact</a>
+  <a href="index.html#contacto" class="mobile-cta">Contact</a>
   <div class="mobile-lang-row">
     <a href="../index.html" >ES</a>
-        <a href="../en/index.html" class="active">EN</a>
+        <a href="en/index.html" >EN</a>
         <a href="../fr/index.html" >FR</a>
         <a href="../de/index.html" >DE</a>
         <a href="../ca/index.html" >CA</a>
@@ -576,12 +582,12 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <div class="page-tag">Services &amp; Installations</div>
   <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Everything your property<br><em>needs, in one single team</em></h1>
   <p class="page-sub">LUXINPRO offers a comprehensive service ranging from project management to every technical installation for your property in Menorca. One single point of contact for everything.</p>
-  <a href="index.html" class="back-btn">← Back to home</a>
+  <a href="../index.html" class="back-btn">← Back to home</a>
 </div>
 
 <!-- INDEX NAV -->
 <nav class="page-index" id="pageIndex">
-  <a href="#project-manager">Project Manager</a>
+  <a href="#project-manager" class="active">Project Manager</a>
   <a href="#climatizacion">Air Conditioning</a>
   <a href="#renovables">Renewables</a>
   <a href="#smarthome">Smart Home</a>
@@ -590,287 +596,259 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
   <a href="#mantenimiento">Maintenance</a>
 </nav>
 
-<!-- 01 PROJECT MANAGER -->
+<!-- ══ 01 PROJECT & BUILDING MANAGER ══ -->
 <section class="inst-section" id="project-manager">
   <div class="section-num">01</div>
   <div class="page-tag" style="margin-top:8px;">Comprehensive management</div>
   <h2 class="section-title">Project &amp; Building <em>Manager</em></h2>
-  <p class="section-intro">We take care of everything needed to make your project a reality without you worrying about anything. We establish, organise and direct every phase, optimising resources, timelines and costs.</p>
+  <p class="section-intro">We take care of everything needed to make your project a reality without you having to worry about anything. We establish, organise and direct each phase optimising resources, timelines and costs.</p>
   <div class="cards cards-2">
     <div class="card">
-      <div class="card-img"><img src="../img/pm.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/pm.jpg" alt="Project Manager" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
       <div class="card-name">Project Manager</div>
-      <p class="card-desc">We plan and direct your project from start to finish: location, design, spaces, finishes and equipment. SMARTHOME intelligent installations with the latest trends and top brands.</p>
-      <div class='card-tags'><span class="ctag">Full planning</span><span class="ctag">Space design</span><span class="ctag">SMARTHOME</span><span class="ctag">Total supervision</span></div>
+      <p class="card-desc">We plan and direct your project from start to finish: location, design, spaces, finishes and equipment. Intelligent SMARTHOME installations with the latest trends and best brands in taps, sanitary ware, windows and carpentry.</p>
+      <div class="card-tags"><span class="ctag">Complete planning</span><span class="ctag">Space design</span><span class="ctag">SMARTHOME</span><span class="ctag">Full supervision</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/interiores.jpg" alt="Building Manager" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v5M9.5 14.5h5"/></svg></div>
       <div class="card-name">Building Manager</div>
-      <p class="card-desc">We supervise measurements and budgets, coordinate contractors and control quality, timelines and costs. We manage final documentation and offer complete after-sales assistance.</p>
-      <div class='card-tags'><span class="ctag">Site control</span><span class="ctag">Documentation</span><span class="ctag">Contractor coordination</span><span class="ctag">After-sales guaranteed</span></div>
+      <p class="card-desc">We supervise measurements and budgets, coordinate contractors and control quality, timelines and costs. We manage final documentation, service registrations and offer complete after-sales assistance for any incident.</p>
+      <div class="card-tags"><span class="ctag">Construction control</span><span class="ctag">Document management</span><span class="ctag">Trade coordination</span><span class="ctag">Guaranteed after-sales</span></div>
     </div>
   </div>
   <div class="fband" style="margin-top:1px;border-top:none;">
     <div class="fband-inner">
       <div>
-        <div class="page-tag">Consultancy &amp; Space Design</div>
-        <h2>Your vision made <em>real</em></h2>
-        <p>We offer a complete consultancy and design service for interior and exterior spaces. From project conception to the last detail, we work so your property in Menorca reflects exactly your personality.</p>
+        <div class="page-tag">Space Advisory &amp; Design</div>
+        <h2>Your vision made <em>reality</em></h2>
+        <p>We offer a complete advisory and space design service for both interiors and exteriors. From the concept to the last decorative detail, we work so your property in Menorca reflects exactly your personality and lifestyle.</p>
         <ul class="flist">
-          <li>Full executive project with plans and reports</li>
+          <li>Complete executive project with plans and reports</li>
           <li>Selection of materials, finishes and furniture</li>
-          <li>Coordination with top architects and interior designers</li>
+          <li>Coordination with top-level architects and interior designers</li>
           <li>Management of permits, licences and legalisations</li>
-          <li>Site supervision with periodic reports</li>
+          <li>Construction monitoring with periodic reports</li>
           <li>Key handover with complete documentation</li>
         </ul>
       </div>
       <div class="fstats">
-        <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Years of experience in the Balearics</div></div>
-        <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Completed projects</div></div>
-        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Client service languages</div></div>
-        <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Satisfaction guaranteed</div></div>
+        <div class="fstat"><div class="fstat-num">+15</div><div class="fstat-lbl">Years of experience in the Balearics</div></div>
+        <div class="fstat"><div class="fstat-num">+200</div><div class="fstat-lbl">Projects completed</div></div>
+        <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Customer service languages</div></div>
+        <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Guaranteed satisfaction</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 02 CLIMATIZACIÓN -->
+<!-- ══ 02 CLIMATIZACIÓN ══ -->
 <section class="inst-section" id="climatizacion">
   <div class="section-num">02</div>
   <div class="page-tag" style="margin-top:8px;">Technical installations</div>
-  <h2 class="section-title">Intelligent <em>air conditioning</em></h2>
-  <p class="section-intro">We design and install high-efficiency air conditioning systems adapted to each property. Optimal thermal comfort all year round.</p>
+  <h2 class="section-title">Smart <em>air conditioning</em></h2>
+  <p class="section-intro">We design and install high-efficiency air conditioning systems tailored to each property. Optimal thermal comfort all year round with the most advanced technology.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/climatizacion.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/climatizacion.jpg" alt="Aire Acondicionado" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
       <div class="card-name">Air Conditioning</div>
-      <p class="card-desc">Installation of state-of-the-art systems: splits, cassettes, ducts and VRV. Premium brands with smart control from your smartphone.</p>
-      <div class='card-tags'><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Ducts</span><span class="ctag">Smart control</span></div>
+      <p class="card-desc">Installation of latest-generation systems: splits, cassettes, ducts and VRV. Premium brands with intelligent control from your smartphone. Maximum energy efficiency for Menorca's Mediterranean climate.</p>
+      <div class="card-tags"><span class="ctag">Multi-split</span><span class="ctag">VRV / VRF</span><span class="ctag">Conductos</span><span class="ctag">Smart control</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/calefaccion.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/calefaccion.jpg" alt="Calefacción" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a7 7 0 017 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
       <div class="card-name">Heating</div>
-      <p class="card-desc">Underfloor heating, designer radiators and high-efficiency fan-coils. Solutions that integrate perfectly into the interior design.</p>
-      <div class='card-tags'><span class="ctag">Underfloor heating</span><span class="ctag">Fan-coils</span><span class="ctag">Radiators</span><span class="ctag">Boiler</span></div>
+      <p class="card-desc">Underfloor heating, designer radiators and high-efficiency fan-coils. Solutions that integrate perfectly into the interior design guaranteeing maximum comfort during winter months in Menorca.</p>
+      <div class="card-tags"><span class="ctag">Suelo radiante</span><span class="ctag">Fan-coils</span><span class="ctag">Radiadores</span><span class="ctag">Caldera</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/aerotermia.jpg" alt="Aerotermia" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-      <div class="card-name">Aerothermy</div>
-      <p class="card-desc">ALTHERMA system: heating, air conditioning and domestic hot water in a single installation. Extracts up to 80% energy from the air.</p>
-      <div class='card-tags'><span class="ctag">Altherma</span><span class="ctag">Heat pump</span><span class="ctag">DHW included</span><span class="ctag">Class A+++</span></div>
+      <div class="card-name">Aerothermal</div>
+      <p class="card-desc">ALTHERMA system: heating, air conditioning and hot water in a single installation. Extracts up to 80% of energy from the air, drastically reducing your energy bill. The most efficient solution available.</p>
+      <div class="card-tags"><span class="ctag">Altherma</span><span class="ctag">Bomba de calor</span><span class="ctag">ACS incluido</span><span class="ctag">Clase A+++</span></div>
     </div>
   </div>
 </section>
 
-<!-- 03 RENOVABLES -->
+<!-- ══ 03 ENERGÍAS RENOVABLES ══ -->
 <section class="inst-section" id="renovables">
   <div class="section-num">03</div>
   <div class="page-tag" style="margin-top:8px;">Sustainability</div>
-  <h2 class="section-title">Renewable <em>energy</em></h2>
-  <p class="section-intro">We believe in energy independence and sustainability in Menorca. Systems that reduce your environmental impact and energy bill.</p>
+  <h2 class="section-title"><em>Renewable</em> energy</h2>
+  <p class="section-intro">We believe in energy independence in Menorca. Systems that reduce your environmental impact and energy bill, even in remote locations on the island.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/fotovoltaica.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fotovoltaica.jpg" alt="Fotovoltaica" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
-      <div class="card-name">Photovoltaic Solar</div>
-      <p class="card-desc">High-efficiency photovoltaic solar panels with smart inverters and battery storage. Full self-consumption under the Menorca sun.</p>
-      <div class='card-tags'><span class="ctag">Self-consumption</span><span class="ctag">Batteries</span><span class="ctag">Smart inverter</span><span class="ctag">Monitoring</span></div>
+      <div class="card-name">Photovoltaic</div>
+      <p class="card-desc">High-efficiency photovoltaic solar panels with intelligent inverters and battery storage systems. Total self-consumption to reduce your electricity bill to zero under Menorca's privileged sun.</p>
+      <div class="card-tags"><span class="ctag">Autoconsumo</span><span class="ctag">Baterías</span><span class="ctag">Inversor inteligente</span><span class="ctag">Monitorización</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/solar.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/solar.jpg" alt="Solar Térmica" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3z"/><path d="M12 3c-2 2-3 4.5-3 9s1 7 3 9M12 3c2 2 3 4.5 3 9s-1 7-3 9M3 12h18"/></svg></div>
-      <div class="card-name">Thermal Solar</div>
-      <p class="card-desc">Solar thermal collectors for domestic hot water and heating support. Maximum efficiency using the exceptional Mediterranean climate of Menorca.</p>
-      <div class='card-tags'><span class="ctag">Solar DHW</span><span class="ctag">Thermosiphon</span><span class="ctag">Heating support</span><span class="ctag">High efficiency</span></div>
+      <div class="card-name">Solar Thermal</div>
+      <p class="card-desc">Solar thermal collectors for domestic hot water production and heating support. Maximum energy efficiency taking advantage of Menorca's exceptional Mediterranean climate all year round.</p>
+      <div class="card-tags"><span class="ctag">ACS solar</span><span class="ctag">Termosifón</span><span class="ctag">Apoyo calefacción</span><span class="ctag">Alta eficiencia</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/eolica.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/eolica.jpg" alt="Eólica" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 12L6 4M12 12l8-2M12 12l-2 8M12 6v6"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <div class="card-name">Wind Energy</div>
-      <p class="card-desc">Micro wind turbines to complement energy supply. Particularly effective with the Tramontana wind of Menorca. Hybrid solar-wind systems.</p>
-      <div class='card-tags'><span class="ctag">Mini wind</span><span class="ctag">Off-grid</span><span class="ctag">Solar hybrid</span><span class="ctag">Storage</span></div>
+      <div class="card-name">Wind power</div>
+      <p class="card-desc">Micro wind turbines to complement energy supply. Especially effective with Menorca's characteristic Tramontana wind. Solar-wind hybrid systems for total energy independence.</p>
+      <div class="card-tags"><span class="ctag">Mini-eólica</span><span class="ctag">Off-grid</span><span class="ctag">Híbrido solar</span><span class="ctag">Almacenamiento</span></div>
     </div>
   </div>
 </section>
 
-<!-- SMART HOME BAND -->
+<!-- ══ SMART HOME BAND ══ -->
 <div class="fband" id="smarthome">
-  <div class="fband-img"><img src="../img/smarthome.jpg" alt="Smart Home" loading="lazy"/></div>
+  <div class="fband-img"><img src="../img/smarthome.jpg" alt="Smart Home LUXINPRO" loading="lazy"/></div>
   <div class="fband-inner">
     <div>
-      <div class="page-tag">Smart Home &amp; Home Automation</div>
-      <h2>Your home under control<br><em>from the palm of your hand</em></h2>
-      <p>We automate your property integrating all systems in a single intelligent platform. Lighting, climate control, security, blinds and audio-video from your smartphone anywhere in the world.</p>
+      <div class="page-tag">Smart Home &amp; Domotics</div>
+      <h2>Control your home<br><em>in the palm of your hand</em></h2>
+      <p>We automate your property integrating all systems into a single intelligent platform. Lighting, climate, security, blinds, irrigation and audio-video controlled from your smartphone from anywhere in the world.</p>
       <p>We install the <strong style="color:var(--gold-light);">electric vehicle charging point</strong> integrated with the photovoltaic system for 100% sustainable and free charging.</p>
       <ul class="flist">
-          <li>Smart lighting and personalised scenes</li>
-          <li>Centralised climate control</li>
-          <li>Security: alarms, cameras and access</li>
-          <li>Automated blinds and awnings</li>
-          <li>Multizone audio-video system</li>
-          <li>Integrated EV charging point</li>
-          <li>Remote control from anywhere</li>
-          <li>Compatible with Alexa &amp; Google Home</li>
+        <li>Smart lighting and personalised scenes</li>
+        <li>Centralised climate control</li>
+        <li>Security: alarms, cameras and access</li>
+        <li>Automated blinds and awnings</li>
+        <li>Multi-zone audio-video system</li>
+        <li>Integrated electric vehicle charging point</li>
+        <li>Compatible with Alexa &amp; Google Home</li>
       </ul>
     </div>
     <div class="fstats">
-      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Energy saving with aerothermy</div></div>
-      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">Energy classification of systems</div></div>
-      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Remote control anywhere</div></div>
-      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">EV charging cost with photovoltaic</div></div>
+      <div class="fstat"><div class="fstat-num">80%</div><div class="fstat-lbl">Energy savings with aerothermal</div></div>
+      <div class="fstat"><div class="fstat-num">A+++</div><div class="fstat-lbl">System energy rating</div></div>
+      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Remote control from anywhere</div></div>
+      <div class="fstat"><div class="fstat-num">0€</div><div class="fstat-lbl">EV charging cost with photovoltaics</div></div>
     </div>
   </div>
 </div>
 
-<!-- 04 ELECTRICIDAD & FONTANERÍA -->
+<!-- ══ 04 ELECTRICIDAD & FONTANERÍA ══ -->
 <section class="inst-section" id="electricidad">
   <div class="section-num">04</div>
   <div class="page-tag" style="margin-top:8px;">Essential installations</div>
   <h2 class="section-title">Electricity <em>&amp; Plumbing</em></h2>
-  <p class="section-intro">The most fundamental installations with precision and first-quality materials, compliant with current regulations.</p>
+  <p class="section-intro">The most fundamental installations executed with precision and first-quality materials, compliant with current regulations and with official certification included.</p>
   <div class="cards cards-2">
     <div class="card">
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/electricidad.jpg" alt="Electricidad" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
       <div class="card-name">Electricity</div>
-      <p class="card-desc">Complete electrical installations for new builds and refurbishments: panels, wiring, sockets, LED lighting and protection systems. Certification and registration included.</p>
-      <div class='card-tags'><span class="ctag">New build</span><span class="ctag">Refurbishment</span><span class="ctag">Electrical panels</span><span class="ctag">LED lighting</span><span class="ctag">Official certification</span></div>
+      <p class="card-desc">Complete electrical installations for new builds and renovations: electrical panels, wiring, power sockets, designer LED lighting and differential protection systems. Certification and registration with competent Balearic authorities.</p>
+      <div class="card-tags"><span class="ctag">Obra nueva</span><span class="ctag">Rehabilitación</span><span class="ctag">Cuadros eléctricos</span><span class="ctag">Iluminación LED</span><span class="ctag">Certificación oficial</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fontaneria.jpg" alt="Fontanería" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
       <div class="card-name">Plumbing</div>
-      <p class="card-desc">Complete plumbing and drainage: cold and hot water, drainage, premium taps, purification systems and reverse osmosis. Preventive maintenance included.</p>
-      <div class='card-tags'><span class="ctag">Cold &amp; hot water</span><span class="ctag">Drainage</span><span class="ctag">Premium taps</span><span class="ctag">Purification</span><span class="ctag">Reverse osmosis</span></div>
+      <p class="card-desc">Plumbing and sanitation installations: cold and hot water networks, drainage, premium designer taps, purification systems, reverse osmosis and water treatment. Preventive maintenance included in all our projects.</p>
+      <div class="card-tags"><span class="ctag">Agua fría y caliente</span><span class="ctag">Saneamiento</span><span class="ctag">Griferías premium</span><span class="ctag">Depuración</span><span class="ctag">Osmosis inversa</span></div>
     </div>
   </div>
 </section>
 
-<!-- 05 INTERIORES -->
+<!-- ══ 05 DISEÑO DE INTERIORES ══ -->
 <section class="inst-section" id="interiores">
   <div class="section-num">05</div>
   <div class="page-tag" style="margin-top:8px;">Design &amp; Comfort</div>
   <h2 class="section-title">Space design <em>&amp; Finishes</em></h2>
-  <p class="section-intro">We create unique luxury environments in Menorca. Every space designed to offer the premium experience your property deserves.</p>
+  <p class="section-intro">We create unique luxury environments in Menorca. Every space designed to offer the premium experience your property deserves, from the bedroom to the garden.</p>
   <div class="cards">
     <div class="card">
-      <div class="card-img"><img src="../img/interiores.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/interiores.jpg" alt="Espacios Interiores" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
       <div class="card-name">Interior Spaces</div>
-      <p class="card-desc">Luxury bedrooms, bathrooms and dining rooms with natural textures, bespoke furniture, spa, jacuzzi and designer baths.</p>
-      <div class='card-tags'><span class="ctag">Spa &amp; Jacuzzi</span><span class="ctag">Luxury bathrooms</span><span class="ctag">Bespoke furniture</span><span class="ctag">Upholstery</span></div>
+      <p class="card-desc">Luxury bedrooms, bathrooms and dining rooms with natural textures, bespoke furniture, spa, jacuzzi, designer baths and spacious showers. Unique corners with modern upholstery and carefully selected signature pieces.</p>
+      <div class="card-tags"><span class="ctag">Spa & Jacuzzi</span><span class="ctag">Baños de lujo</span><span class="ctag">Mobiliario a medida</span><span class="ctag">Tapicerías</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/cocinas.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/cocinas.jpg" alt="Carpintería & Cocinas" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="4" width="4" height="4"/><rect x="2" y="10" width="4" height="4"/><rect x="2" y="16" width="4" height="4"/></svg></div>
-      <div class="card-name">Carpentry &amp; Kitchens</div>
-      <p class="card-desc">Kitchens with invisible induction, walk-in wardrobes and bespoke carpentry. Noble woods, lacquers and cutting-edge materials.</p>
-      <div class='card-tags'><span class="ctag">Invisible induction</span><span class="ctag">Walk-in wardrobes</span><span class="ctag">Bespoke carpentry</span><span class="ctag">Premium doors</span></div>
+      <div class="card-name">Carpintería & Cocinas</div>
+      <p class="card-desc">Kitchens with invisible induction, personalised wardrobes and bespoke interior and exterior carpentry. Noble woods, lacquers and latest-trend materials that transform your kitchen into the heart of your home.</p>
+      <div class="card-tags"><span class="ctag">Inducción invisible</span><span class="ctag">Vestidores</span><span class="ctag">Carpintería a medida</span><span class="ctag">Puertas premium</span></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/piscina_ext.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/piscina_ext.jpg" alt="Piscinas & Jardines" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-name">Pools &amp; Gardens</div>
-      <p class="card-desc">Heated and illuminated pools to measure. Gardens with native Mediterranean plants. Exclusive outdoor furniture for Menorca all year.</p>
-      <div class='card-tags'><span class="ctag">Heated pools</span><span class="ctag">Mediterranean garden</span><span class="ctag">Exterior lighting</span><span class="ctag">Premium furniture</span></div>
+      <div class="card-name">Piscinas & Jardines</div>
+      <p class="card-desc">Heated and illuminated swimming pools to measure. Gardens with native Mediterranean plants. Exclusive outdoor furniture to enjoy Menorca's incomparable climate all year round.</p>
+      <div class="card-tags"><span class="ctag">Piscinas climatizadas</span><span class="ctag">Jardín mediterráneo</span><span class="ctag">Iluminación exterior</span><span class="ctag">Mobiliario premium</span></div>
     </div>
   </div>
 </section>
 
-<!-- 06 MANTENIMIENTO -->
+<!-- ══ 06 MANTENIMIENTO ══ -->
 <section class="inst-section" id="mantenimiento">
   <div class="section-num">06</div>
   <div class="page-tag" style="margin-top:8px;">Ongoing service</div>
-  <h2 class="section-title">Comprehensive <em>maintenance</em></h2>
-  <p class="section-intro">A luxury property in Menorca requires maintenance to match. Preventive and corrective plans with fast response on the island.</p>
+  <h2 class="section-title"><em>Comprehensive</em> maintenance</h2>
+  <p class="section-intro">A luxury property in Menorca requires top-level maintenance. Preventive and corrective plans with rapid response and specialised staff on the island.</p>
   <div class="cards cards-4">
     <div class="card">
-      <div class="card-img"><img src="../img/electricidad.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/electricidad.jpg" alt="Mant. Eléctrico" loading="lazy"/></div>
       <div class="card-num">01</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-      <div class="card-name">Electrical Maintenance</div>
-      <p class="card-desc">Periodic reviews, repairs and updates to the electrical system.</p>
-      
+      <div class="card-name">Elec. Maintenance</div>
+      <p class="card-desc">Periodic inspections, repairs and updates of the electrical system. Inspection of panels, connections and protections.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/fontaneria.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/fontaneria.jpg" alt="Mant. Fontanería" loading="lazy"/></div>
       <div class="card-num">02</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v10M8 6s-4 2-4 6a8 8 0 0016 0c0-4-4-6-4-6"/><path d="M12 12v10"/></svg></div>
       <div class="card-name">Plumbing Maintenance</div>
-      <p class="card-desc">Pipe control, leak detection, tank cleaning and tap checks.</p>
-      
+      <p class="card-desc">Pipe control, leak detection, tank cleaning, inspection of taps and purification systems.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/aerotermia.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/aerotermia.jpg" alt="Mant. Climatización" loading="lazy"/></div>
       <div class="card-num">03</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
       <div class="card-name">HVAC Maintenance</div>
-      <p class="card-desc">Filter cleaning, gas checks, boiler and heat pump maintenance.</p>
-      
+      <p class="card-desc">Filter cleaning, gas inspection, maintenance of boilers, heat pumps and aerothermal systems.</p>
+      <div class="card-tags"></div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="../img/piscina_int.jpg" loading="lazy"/></div>
+      <div class="card-img"><img src="../img/piscina_int.jpg" alt="Mant. Jardín & Piscina" loading="lazy"/></div>
       <div class="card-num">04</div>
       <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 18c3-3 6-3 9 0s6 3 9 0M2 12c3-3 6-3 9 0s6 3 9 0M6 6l3-4 3 4"/></svg></div>
-      <div class="card-name">Garden &amp; Pool Maintenance</div>
-      <p class="card-desc">Garden care, pruning, water treatment and pump checks.</p>
-      
+      <div class="card-name">Mant. Jardín & Piscina</div>
+      <p class="card-desc">Garden care, pruning, water treatment, pump and outdoor lighting inspection.</p>
+      <div class="card-tags"></div>
     </div>
   </div>
 </section>
 
-<!-- PM BAND -->
-<div class="fband" id="project-manager-band">
-  <div class="fband-inner">
-    <div>
-      <div class="page-tag">Comprehensive management</div>
-      <h2>Project &amp; Building Manager<br><em>in Menorca and the Balearics</em></h2>
-      <p>We coordinate all these services under a single direction: yours. As Project &amp; Building Manager we manage, supervise and guarantee the perfect execution of every installation.</p>
-      <p>From initial budget to commissioning and after-sales, <strong style="color:var(--gold-light);">LUXINPRO is your single point of contact</strong>. Personalised attention in 5 languages.</p>
-      <ul class="flist">
-          <li>Complete project management</li>
-          <li>Coordination of all contractors</li>
-          <li>Quality, timeline and cost control</li>
-          <li>Official documentation</li>
-          <li>Attention in 5 languages</li>
-          <li>Guaranteed after-sales service</li>
-      </ul>
-      <a href="index.html#contacto" class="btn-p" style="margin-top:28px;display:inline-block;">Request a free consultation</a>
-    </div>
-    <div class="fstats">
-      <div class="fstat"><div class="fstat-num">15+</div><div class="fstat-lbl">Years in the Balearics</div></div>
-      <div class="fstat"><div class="fstat-num">200+</div><div class="fstat-lbl">Completed projects</div></div>
-      <div class="fstat"><div class="fstat-num">5</div><div class="fstat-lbl">Service languages</div></div>
-      <div class="fstat"><div class="fstat-num">100%</div><div class="fstat-lbl">Guaranteed satisfaction</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
+<!-- CTA FINAL -->
 <div class="cta-final">
-  <h2>Have a project<br><em>in mind?</em></h2>
-  <p>Tell us your needs. Free initial consultation for the perfect solution in Menorca.</p>
+  <h2>Do you have a project<br><em>in mind?</em></h2>
+  <p>Let us discuss your needs. Free initial consultation to find the perfect solution for your property in Menorca.</p>
   <div class="cta-btns">
-    <a href="tel:+34609625573" class="btn-p">Call: +34 609 625 573</a>
+    <a href="tel:+34609625573" class="btn-p">Llamar: 609 625 573</a>
     <a href="index.html#contacto" class="btn-s">Send enquiry</a>
   </div>
 </div>
@@ -878,8 +856,8 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <a href="index.html" class="logo">LUXIN<span>PRO</span></a>
-      <p>{'EN':'Leading luxury real estate project management in Menorca and the Balearic Islands.','FR':"Référence en gestion de projets immobiliers de luxe à Minorque et aux Îles Baléares.",'DE':'Referenz für Luxusimmobilienprojekte auf Menorca und den Balearen.','CA':"Referent en gestió de projectes immobiliaris de luxe a Menorca i les Illes Balears."}.get('EN','')</p>
+      <a href="../index.html" class="logo">LUXIN<span>PRO</span></a>
+      <p>Leader in luxury real estate project management and construction in Menorca and the Balearic Islands.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
@@ -887,14 +865,14 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
         <li><a href="index.html#servicios">Project Manager</a></li>
         <li><a href="index.html#servicios">Building Manager</a></li>
         <li><a href="../instalaciones.html">Full Renovation</a></li>
-        <li><a href="index.html#instalaciones">Smart Home</a></li>
+        <li><a href="../instalaciones.html">Smart Home</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Legal</h5>
       <ul>
         <li><a href="../aviso-legal.html">Legal Notice</a></li>
-        <li><a href="../privacidad.html">Privacy Policy</a></li>
+        <li><a href="../privacidad.html">Privacy</a></li>
         <li><a href="../cookies.html">Cookies</a></li>
         <li><a href="index.html#contacto">Contact</a></li>
       </ul>
@@ -902,11 +880,11 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <div class="footer-col">
       <h5>Languages</h5>
       <ul>
-        <li><a href="../index.html">Español</a></li>
-        <li><a href="../en/index.html">English</a></li>
-        <li><a href="../fr/index.html">Français</a></li>
-        <li><a href="../de/index.html">Deutsch</a></li>
-        <li><a href="../ca/index.html">Català</a></li>
+        <li><a href="../index.html">Spanish</a></li>
+        <li><a href="en/index.html">English</a></li>
+        <li><a href="../fr/index.html">French</a></li>
+        <li><a href="../de/index.html">German</a></li>
+        <li><a href="../ca/index.html">Catalan</a></li>
       </ul>
     </div>
   </div>
@@ -914,7 +892,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <p>© 2026 LUXINPRO — Luxury Investment &amp; Projects, Balearic Islands</p>
     <div class="footer-lang-switcher">
       <a href="../index.html" >ES</a>
-      <a href="../en/index.html" class="active">EN</a>
+      <a href="en/index.html" >EN</a>
       <a href="../fr/index.html" >FR</a>
       <a href="../de/index.html" >DE</a>
       <a href="../ca/index.html" >CA</a>
@@ -928,20 +906,23 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     <div style="display:flex;align-items:flex-start;gap:12px;max-width:680px;">
       <span style="font-size:18px;flex-shrink:0;">🍪</span>
       <div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">Cookies</p>
-        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;"><a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Cookie Policy</a> · <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacy</a>.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px;">We use cookies</p>
+        <p style="font-size:11px;font-weight:300;color:rgba(245,242,236,0.55);line-height:1.6;">We use cookies to improve your experience. <a href="../cookies.html" style="color:#C9A96E;text-decoration:none;">Cookie Policy</a> · <a href="../privacidad.html" style="color:#C9A96E;text-decoration:none;">Privacy</a>.</p>
       </div>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;">
       <button onclick="ckCfg()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Settings</button>
       <button onclick="ckRej()" style="padding:10px 16px;border:1px solid rgba(201,169,110,0.3);background:transparent;color:rgba(245,242,236,0.6);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Reject</button>
-      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept</button>
+      <button onclick="ckAcc()" style="padding:10px 20px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Accept all</button>
     </div>
   </div>
 </div>
 <div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9995;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
   <div style="background:#1A1A1A;border:1px solid rgba(201,169,110,0.2);max-width:520px;width:90%;padding:40px;position:relative;max-height:80vh;overflow-y:auto;">
     <button onclick="ckHide()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#8A8A8A;font-size:24px;cursor:pointer;">&times;</button>
+    <p style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#C9A96E;margin-bottom:8px;">Configurar cookies</p>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;margin-bottom:12px;">Sus preferencias</h3>
+    <p style="font-size:11px;color:rgba(245,242,236,0.5);line-height:1.7;margin-bottom:20px;">Necessary cookies cannot be disabled.</p>
     <div id="ckOpts"></div>
     <div style="display:flex;gap:10px;margin-top:24px;">
       <button onclick="ckSave()" style="flex:1;padding:13px;border:none;background:#C9A96E;color:#0A0A0A;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Save</button>
@@ -949,6 +930,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     </div>
   </div>
 </div>
+
 
 <script>
 var CK = [
@@ -1002,6 +984,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
 
 <script>
 
