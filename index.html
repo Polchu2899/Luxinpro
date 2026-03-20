@@ -446,7 +446,13 @@ section { padding:100px 50px; }
   .hero-btns { flex-direction:column !important; align-items:flex-start !important; gap:10px !important; }
 }
 
-</style>
+      /* ── MOBILE STATS FIX ── */
+      .stats-bar { overflow: hidden !important; width: 100% !important; }
+      .stat-item { width: 100% !important; box-sizing: border-box !important; min-height: 0 !important; }
+      .stat-label { letter-spacing: 1px !important; font-size: 8px !important; line-height: 1.6 !important; word-break: break-word !important; white-space: normal !important; }
+      .stat-num { font-size: 32px !important; }
+
+    </style>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
   <meta http-equiv="Pragma" content="no-cache"/>
   <meta http-equiv="Expires" content="0"/>
