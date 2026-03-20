@@ -163,7 +163,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 ═══════════════════════════════════ */
 .page-hero {
   isolation: isolate;
-  padding: 140px 50px 90px; border-bottom: 1px solid rgba(201,169,110,0.1);
+  padding: 140px 50px 90px;
   position: relative;
   min-height: 520px;
   background-image: url('img/hero.jpg');
@@ -462,13 +462,13 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .card-img img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
-      filter: brightness(0.88) saturate(0.9);
+      filter: brightness(0.95) saturate(1.0);
       transition: transform .7s ease, filter .4s ease;
       display: block;
     }
     .card:hover .card-img img {
       transform: scale(1.05);
-      filter: brightness(1) saturate(1.05);
+      filter: brightness(1.02) saturate(1.05);
     }
     /* 4-col maintenance: shorter */
     .cards-4 .card-img { height: 140px; }
@@ -481,7 +481,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
     .fband-img img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center;
-      filter: brightness(0.7);
+      filter: brightness(0.88);
     }
     /* Mobile overrides */
     @media (max-width: 900px) {
@@ -567,7 +567,7 @@ footer { background: var(--black); border-top: 1px solid rgba(201,169,110,0.1); 
 
 <!-- HERO -->
 <div class="page-hero">
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,14,0.55) 0%,rgba(6,10,20,0.50) 40%,rgba(4,6,14,0.75) 80%,rgba(2,4,10,0.90) 100%);z-index:0;pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,14,0.55) 0%,rgba(6,10,20,0.50) 40%,rgba(4,6,14,0.82) 80%,rgba(2,4,10,0.99) 100%);z-index:0;pointer-events:none;"></div>
   <div class="page-tag">Servicios &amp; Instalaciones</div>
   <h1 class="page-title" style="text-shadow:0 2px 24px rgba(0,0,0,0.85),0 1px 8px rgba(0,0,0,0.7);">Todo lo que su propiedad<br><em>necesita, en un solo equipo</em></h1>
   <p class="page-sub">En LUXINPRO ofrecemos un servicio integral que abarca desde la dirección y gestión del proyecto hasta cada instalación técnica de su propiedad en Menorca. Un solo interlocutor para todo.</p>
