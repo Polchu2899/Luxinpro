@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== ES (principal) ===== -->
+  <url>
+    <loc>https://luxinpro.es/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
+  </url>
+
+  <url>
+    <loc>https://luxinpro.es/instalaciones.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/instalaciones.html"/>
+  </url>
+
+  <!-- ===== EN ===== -->
+  <url>
+    <loc>https://luxinpro.es/en/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
+  </url>
+
+  <url>
+    <loc>https://luxinpro.es/en/instalaciones.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/instalaciones.html"/>
+  </url>
+
+  <!-- ===== FR ===== -->
+  <url>
+    <loc>https://luxinpro.es/fr/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
+  </url>
+
+  <url>
+    <loc>https://luxinpro.es/fr/instalaciones.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/instalaciones.html"/>
+  </url>
+
+  <!-- ===== DE ===== -->
+  <url>
+    <loc>https://luxinpro.es/de/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
+  </url>
+
+  <url>
+    <loc>https://luxinpro.es/de/instalaciones.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/instalaciones.html"/>
+  </url>
+
+  <!-- ===== CA ===== -->
+  <url>
+    <loc>https://luxinpro.es/ca/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
+  </url>
+
+  <url>
+    <loc>https://luxinpro.es/ca/instalaciones.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es"    href="https://luxinpro.es/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://luxinpro.es/en/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"    href="https://luxinpro.es/fr/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://luxinpro.es/de/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="ca"    href="https://luxinpro.es/ca/instalaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxinpro.es/instalaciones.html"/>
+  </url>
+
+  <!-- ===== Páginas legales (solo ES, noindex) ===== -->
+  <!-- NOTA: aviso-legal, privacidad y cookies tienen noindex en su meta robots,
+       así que NO las incluimos en el sitemap. Correcto. -->
+
+</urlset>

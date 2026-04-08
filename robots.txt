@@ -1,0 +1,21 @@
+# robots.txt — luxinpro.es
+# Generado: Abril 2026
+
+User-agent: *
+Allow: /
+
+# Bloquear rutas de WordPress que puedan quedar en el servidor
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /feed/
+Disallow: /comments/feed/
+
+# Evitar indexación de parámetros de URL innecesarios
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://luxinpro.es/sitemap.xml
