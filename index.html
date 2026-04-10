@@ -8,15 +8,28 @@
   <meta http-equiv="Expires" content="0"/>
   <title>LUXINPRO | Project & Building Manager Menorca & Balearic Islands</title>
   <meta name="description" content="LUXINPRO — Referente en gestión de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Project Manager, Building Manager, Smart Home, energías renovables y reformas integrales. Llámenos: 609 625 573."/>
-  <meta name="robots" content="noindex,follow"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <meta name="author" content="LUXINPRO"/>
+  <meta name="theme-color" content="#0A0A0A"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <!-- Open Graph -->
   <meta property="og:type"        content="website"/>
   <meta property="og:url"         content="https://luxinpro.es/"/>
-  <meta property="og:title"       content="LUXINPRO — Gestión de proyectos de lujo en Menorca"/>
-  <meta property="og:description" content="Dirección y gestión integral de proyectos residenciales de lujo en Menorca, Mallorca e Ibiza."/>
+  <meta property="og:title"       content="LUXINPRO — Project & Building Manager Menorca"/>
+  <meta property="og:description" content="Gestión integral de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Más de 15 años de experiencia. Consulta sin compromiso."/>
   <meta property="og:image"       content="https://luxinpro.es/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt"   content="LUXINPRO — Proyectos de lujo en Menorca"/>
   <meta property="og:locale"      content="es_ES"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
+  <meta property="og:site_name"   content="LUXINPRO"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="LUXINPRO — Project & Building Manager Menorca"/>
+  <meta name="twitter:description" content="Gestión integral de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares."/>
+  <meta name="twitter:image"       content="https://luxinpro.es/og-image.jpg"/>
   <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://luxinpro.es/"/>
   <link rel="alternate" hreflang="es"        href="https://luxinpro.es/"/>
@@ -25,10 +38,52 @@
   <link rel="alternate" hreflang="de"        href="https://luxinpro.es/de/"/>
   <link rel="alternate" hreflang="ca"        href="https://luxinpro.es/ca/"/>
   <link rel="alternate" hreflang="x-default" href="https://luxinpro.es/"/>
-  <!-- Schema.org -->
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="https://luxinpro.es/sitemap.xml"/>
+  <!-- Schema.org — ProfessionalService + LocalBusiness -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"LUXINPRO","description":"Project & Building Manager especializado en proyectos inmobiliarios de lujo en Menorca y las Islas Baleares","url":"https://luxinpro.es","telephone":"+34609625573","email":"info@luxinpro.es","areaServed":["Menorca","Mallorca","Ibiza","Islas Baleares"],"sameAs":["https://www.facebook.com/luxuryinvestmentandprojects","https://www.instagram.com/luxuryinvestmentandprojects/"]}
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "LUXINPRO",
+    "alternateName": "Luxury Investment & Projects",
+    "description": "Project & Building Manager especializado en proyectos inmobiliarios de lujo en Menorca y las Islas Baleares. Más de 15 años de experiencia.",
+    "url": "https://luxinpro.es",
+    "logo": "https://luxinpro.es/og-image.jpg",
+    "image": "https://luxinpro.es/og-image.jpg",
+    "telephone": "+34609625573",
+    "email": "info@luxinpro.es",
+    "foundingDate": "2010",
+    "priceRange": "€€€€",
+    "areaServed": [
+      {"@type": "City", "name": "Menorca"},
+      {"@type": "City", "name": "Mallorca"},
+      {"@type": "City", "name": "Ibiza"}
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Islas Baleares",
+      "addressCountry": "ES"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios LUXINPRO",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Project Manager"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building Manager"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reforma Integral"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Smart Home"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Energías Renovables"}}
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/luxuryinvestmentandprojects",
+      "https://www.instagram.com/luxuryinvestmentandprojects/"
+    ]
+  }
   </script>
+  <!-- Preload hero image — mejora LCP (Core Web Vitals) -->
+  <link rel="preload" as="image" href="https://luxinpro.es/wp-content/uploads/2021/06/home-1.jpg" fetchpriority="high"/>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
