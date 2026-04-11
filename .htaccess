@@ -1,6 +1,5 @@
-# .htaccess — luxinpro.es
-# Servidor Apache (cPanel / hosting estándar español)
-# Generado: Abril 2026
+  # .htaccess — luxinpro.es
+# Incluye redirecciones 301 de páginas WordPress antiguas
 
 Options -Indexes
 Options -MultiViews
@@ -12,76 +11,64 @@ Options -MultiViews
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-  # ── 2. FORZAR SIN WWW (canonical) ──────────────────────────────────
-  # Cambia a "with www" si el cliente prefiere www.luxinpro.es
+  # ── 2. FORZAR SIN WWW ──────────────────────────────────────────────
   RewriteCond %{HTTP_HOST} ^www\.luxinpro\.es$ [NC]
   RewriteRule ^ https://luxinpro.es%{REQUEST_URI} [R=301,L]
 
-  # ── 3. REDIRIGIR RAÍZ GITHUB PAGES (por si acaso llegan) ────────────
-  # Si alguien visita polchu2899.github.io/Luxinpro/... → luxinpro.es
-  # (Esto lo haces desde GitHub Pages settings, no desde aquí)
+  # ── 3. REDIRECCIONES 301 — PÁGINAS WORDPRESS ANTIGUAS ──────────────
+  # Páginas detectadas en Google indexadas del WordPress
+  RewriteRule ^empresa/?$                          /                        [R=301,L]
+  RewriteRule ^nosotros/?$                         /#nosotros               [R=301,L]
+  RewriteRule ^sobre-nosotros/?$                   /#nosotros               [R=301,L]
+  RewriteRule ^project-manager/?$                  /instalaciones.html      [R=301,L]
+  RewriteRule ^building-manager/?$                 /instalaciones.html      [R=301,L]
+  RewriteRule ^instalaciones-y-servicios/?$        /instalaciones.html      [R=301,L]
+  RewriteRule ^servicios/?$                        /instalaciones.html      [R=301,L]
+  RewriteRule ^archivos/?$                         /                        [R=301,L]
+  RewriteRule ^archivos/propiedad/?$               /                        [R=301,L]
+  RewriteRule ^busqueda-avanzada.*$                /                        [R=301,L]
+  RewriteRule ^rocamar.*$                          /#menorca                [R=301,L]
+  RewriteRule ^menorca/?$                          /#menorca                [R=301,L]
+  RewriteRule ^contacto/?$                         /#contacto               [R=301,L]
+  RewriteRule ^contact/?$                          /en/#contacto            [R=301,L]
+  RewriteRule ^inicio/?$                           /                        [R=301,L]
+  RewriteRule ^home/?$                             /                        [R=301,L]
 
-  # ── 4. ELIMINAR .HTML DE LAS URLS (URLs limpias) ───────────────────
-  # Quita la extensión .html para URLs más limpias
-  # DESCOMENTA SOLO si quieres URLs sin .html (ej: /instalaciones en vez de /instalaciones.html)
-  # RewriteCond %{REQUEST_FILENAME} !-d
-  # RewriteCond %{REQUEST_FILENAME}\.html -f
-  # RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-  # ── 5. REDIRECCIONES DESDE WORDPRESS (301 permanentes) ─────────────
-  # Mapea las URLs antiguas de WordPress a las nuevas HTML
-  # Ajusta estas rutas según las URLs reales que tenía la web WordPress
-  RewriteRule ^inicio/?$                   /                        [R=301,L]
-  RewriteRule ^home/?$                     /                        [R=301,L]
-  RewriteRule ^servicios/?$                /instalaciones.html      [R=301,L]
-  RewriteRule ^services/?$                 /en/instalaciones.html   [R=301,L]
-  RewriteRule ^installations/?$            /en/instalaciones.html   [R=301,L]
-  RewriteRule ^instalaciones/?$            /instalaciones.html      [R=301,L]
-  RewriteRule ^contacto/?$                 /#contacto               [R=301,L]
-  RewriteRule ^contact/?$                  /en/#contacto            [R=301,L]
-  RewriteRule ^nosotros/?$                 /#nosotros               [R=301,L]
-  RewriteRule ^about/?$                    /en/#nosotros            [R=301,L]
-
-  # Redirigir cualquier URL de WordPress (?p=, ?page_id=) a inicio
-  RewriteCond %{QUERY_STRING} (p|page_id|cat|tag|author|s)=
+  # Cualquier URL con ?p= o ?page_id= (WordPress) → inicio
+  RewriteCond %{QUERY_STRING} (p|page_id|cat|tag|author|s|paged)=
   RewriteRule ^ /? [R=301,L]
 
-  # ── 6. DOCUMENTO INDEX ─────────────────────────────────────────────
+  # Feed de WordPress → inicio
+  RewriteRule ^feed/?$                             /                        [R=301,L]
+  RewriteRule ^.*feed/?$                           /                        [R=301,L]
+
+  # ── 4. DOCUMENTO INDEX ─────────────────────────────────────────────
   DirectoryIndex index.html
 
 </IfModule>
 
-# ── 7. HEADERS DE SEGURIDAD Y CACHÉ ───────────────────────────────────
+# ── 5. HEADERS DE SEGURIDAD Y CACHÉ ───────────────────────────────────
 <IfModule mod_headers.c>
-  # Seguridad básica
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
-  # Caché para assets estáticos
   <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg|css|js|woff|woff2)$">
     Header set Cache-Control "public, max-age=2592000, immutable"
   </FilesMatch>
 
-  # Sin caché para HTML (para que Google siempre vea lo actual)
   <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=3600, must-revalidate"
   </FilesMatch>
 </IfModule>
 
-# ── 8. COMPRESIÓN GZIP ────────────────────────────────────────────────
+# ── 6. COMPRESIÓN GZIP ────────────────────────────────────────────────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript
   AddOutputFilterByType DEFLATE image/svg+xml application/xml text/xml
 </IfModule>
 
-# ── 9. BLOQUEAR ACCESO A ARCHIVOS SENSIBLES ───────────────────────────
-<FilesMatch "^\.">
-  Order allow,deny
-  Deny from all
-</FilesMatch>
-
+# ── 7. BLOQUEAR ARCHIVOS SENSIBLES ────────────────────────────────────
 <FilesMatch "(wp-config\.php|xmlrpc\.php|readme\.html|license\.txt)$">
   Order allow,deny
   Deny from all
