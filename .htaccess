@@ -1,5 +1,5 @@
-  # .htaccess — luxinpro.es
-# Incluye redirecciones 301 de páginas WordPress antiguas
+# .htaccess — luxinpro.es
+# Abril 2026
 
 Options -Indexes
 Options -MultiViews
@@ -15,39 +15,64 @@ Options -MultiViews
   RewriteCond %{HTTP_HOST} ^www\.luxinpro\.es$ [NC]
   RewriteRule ^ https://luxinpro.es%{REQUEST_URI} [R=301,L]
 
-  # ── 3. REDIRECCIONES 301 — PÁGINAS WORDPRESS ANTIGUAS ──────────────
-  # Páginas detectadas en Google indexadas del WordPress
-  RewriteRule ^empresa/?$                          /                        [R=301,L]
-  RewriteRule ^nosotros/?$                         /#nosotros               [R=301,L]
-  RewriteRule ^sobre-nosotros/?$                   /#nosotros               [R=301,L]
-  RewriteRule ^project-manager/?$                  /instalaciones.html      [R=301,L]
-  RewriteRule ^building-manager/?$                 /instalaciones.html      [R=301,L]
-  RewriteRule ^instalaciones-y-servicios/?$        /instalaciones.html      [R=301,L]
-  RewriteRule ^servicios/?$                        /instalaciones.html      [R=301,L]
-  RewriteRule ^archivos/?$                         /                        [R=301,L]
-  RewriteRule ^archivos/propiedad/?$               /                        [R=301,L]
-  RewriteRule ^busqueda-avanzada.*$                /                        [R=301,L]
-  RewriteRule ^rocamar.*$                          /#menorca                [R=301,L]
-  RewriteRule ^menorca/?$                          /#menorca                [R=301,L]
-  RewriteRule ^contacto/?$                         /#contacto               [R=301,L]
-  RewriteRule ^contact/?$                          /en/#contacto            [R=301,L]
-  RewriteRule ^inicio/?$                           /                        [R=301,L]
-  RewriteRule ^home/?$                             /                        [R=301,L]
+  # ── 3. REDIRECCIONES 301 — URLs EXACTAS DE WORDPRESS ───────────────
 
-  # Cualquier URL con ?p= o ?page_id= (WordPress) → inicio
+  # Propiedades
+  RewriteRule ^property/?$                                              /                        [R=301,L]
+  RewriteRule ^property/rocamar/?$                                      /#menorca                [R=301,L]
+  RewriteRule ^property/([^/]+)/?$                                      /                        [R=301,L]
+
+  # Proyectos
+  RewriteRule ^project/project-building-manager-en-mallorca-baleares/?$ /instalaciones.html      [R=301,L]
+  RewriteRule ^project/([^/]+)/?$                                       /instalaciones.html      [R=301,L]
+
+  # Features / garage / otros custom post types
+  RewriteRule ^es_feature/garage/?$                                     /instalaciones.html      [R=301,L]
+  RewriteRule ^es_feature/([^/]+)/?$                                    /instalaciones.html      [R=301,L]
+
+  # PDF antiguo → página de instalaciones
+  RewriteRule ^wp-content/uploads/2022/02/Luxinpro-ES\.pdf$            /instalaciones.html      [R=301,L]
+
+  # Páginas genéricas WordPress
+  RewriteRule ^empresa/?$                                               /                        [R=301,L]
+  RewriteRule ^nosotros/?$                                              /#nosotros               [R=301,L]
+  RewriteRule ^sobre-nosotros/?$                                        /#nosotros               [R=301,L]
+  RewriteRule ^project-manager/?$                                       /instalaciones.html      [R=301,L]
+  RewriteRule ^building-manager/?$                                      /instalaciones.html      [R=301,L]
+  RewriteRule ^instalaciones-y-servicios/?$                             /instalaciones.html      [R=301,L]
+  RewriteRule ^servicios/?$                                             /instalaciones.html      [R=301,L]
+  RewriteRule ^archivos/?$                                              /                        [R=301,L]
+  RewriteRule ^archivos/propiedad/?$                                    /                        [R=301,L]
+  RewriteRule ^busqueda-avanzada.*$                                     /                        [R=301,L]
+  RewriteRule ^rocamar.*$                                               /#menorca                [R=301,L]
+  RewriteRule ^menorca/?$                                               /#menorca                [R=301,L]
+  RewriteRule ^contacto/?$                                              /#contacto               [R=301,L]
+  RewriteRule ^contact/?$                                               /en/#contacto            [R=301,L]
+  RewriteRule ^inicio/?$                                                /                        [R=301,L]
+  RewriteRule ^nave-industrial.*$                                       /instalaciones.html      [R=301,L]
+  RewriteRule ^garage/?$                                                /instalaciones.html      [R=301,L]
+
+  # Cualquier wp-content que no sea img ya redirigida
+  RewriteRule ^wp-content/.*$                                           /                        [R=301,L]
+
+  # WordPress query strings
   RewriteCond %{QUERY_STRING} (p|page_id|cat|tag|author|s|paged)=
   RewriteRule ^ /? [R=301,L]
 
-  # Feed de WordPress → inicio
-  RewriteRule ^feed/?$                             /                        [R=301,L]
-  RewriteRule ^.*feed/?$                           /                        [R=301,L]
+  # Feed WordPress
+  RewriteRule ^feed/?$                                                  /                        [R=301,L]
+  RewriteRule ^.*feed/?$                                                /                        [R=301,L]
+
+  # wp-admin y wp-login
+  RewriteRule ^wp-admin/?$                                              /                        [R=301,L]
+  RewriteRule ^wp-login\.php$                                           /                        [R=301,L]
 
   # ── 4. DOCUMENTO INDEX ─────────────────────────────────────────────
   DirectoryIndex index.html
 
 </IfModule>
 
-# ── 5. HEADERS DE SEGURIDAD Y CACHÉ ───────────────────────────────────
+# ── 5. HEADERS ────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-Content-Type-Options "nosniff"
