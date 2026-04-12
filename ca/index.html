@@ -546,28 +546,30 @@ section { padding: 100px 50px; }
     </div>
   </div>
   <div class="contact-form-col">
-    <form onsubmit="handleForm(event)">
-      <div class="form-group"><label>Nom complet</label><input type="text" required/></div>
-      <div class="form-group"><label>Email</label><input type="email" required/></div>
-      <div class="form-group"><label>Telèfon</label><input type="tel"/></div>
+        <form action="https://formspree.io/f/mdaynovy" method="POST" id="contactForm" onsubmit="handleForm(event)">
+      <input type="hidden" name="_language" value="ca"/>
+      <input type="hidden" name="_subject" value="Nueva consulta LUXINPRO"/>
+      <div class="form-group"><label>Nom complet</label><input type="text" name="nombre" required/></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Telèfon</label><input type="tel" name="telefono"/></div>
       <div class="form-group">
         <label>Tipus de projecte</label>
-        <select>
-          <option>Seleccionar una opció</option>
-          <option>Project Manager — Obra nova</option>
-          <option>Building Manager — Supervisió</option>
-          <option>Reforma integral</option>
-          <option>Smart Home</option>
-          <option>Energies renovables</option>
-          <option>Consulta general</option>
+        <select name="proyecto">
+          <option value="">Seleccionar una opció</option>
+          <option value="Project Manager — Obra nova">Project Manager — Obra nova</option>
+          <option value="Building Manager — Supervisió">Building Manager — Supervisió</option>
+          <option value="Reforma integral">Reforma integral</option>
+          <option value="Smart Home">Smart Home</option>
+          <option value="Energies renovables">Energies renovables</option>
+          <option value="Consulta general">Consulta general</option>
         </select>
       </div>
-      <div class="form-group"><label>Missatge</label><textarea></textarea></div>
+      <div class="form-group"><label>Missatge</label><textarea name="mensaje"></textarea></div>
       <button type="submit" class="btn-primary" style="width:100%;border:none;font-family:inherit;cursor:pointer;">Enviar consulta</button>
     </form>
     <div id="formSuccess" style="display:none;margin-top:20px;padding:18px;border:1px solid rgba(201,169,110,.3);text-align:center;">
       <p style="color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;">Missatge enviat</p>
-      <p style="color:rgba(245,242,236,.6);font-size:12px;margin-top:8px;">Ens posarem en contacte amb vosaltres el més aviat possible.</p>
+      <p style="color:rgba(245,242,236,.6);font-size:12px;margin-top:8px;">Ens posarem en contacte amb vostè el més aviat possible.</p>
     </div>
   </div>
 </div>
@@ -711,8 +713,28 @@ document.addEventListener('DOMContentLoaded', function() {
 // ─── FORM ─────────────────────────────────────────────────────────────────────
 function handleForm(e) {
   e.preventDefault();
-  document.getElementById('formSuccess').style.display = 'block';
-  e.target.style.display = 'none';
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r) {
+    if (r.ok) {
+      document.getElementById('formSuccess').style.display = 'block';
+      form.style.display = 'none';
+    } else {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      alert('Error al enviar. Por favor llámenos al +34 609 625 573.');
+    }
+  }).catch(function() {
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    alert('Error de conexión. Por favor llámenos al +34 609 625 573.');
+  });
 }
 
 // ─── CURSOR ───────────────────────────────────────────────────────────────────
