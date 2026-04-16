@@ -14,6 +14,17 @@ Disallow: /?s=
 Disallow: /feed/
 Disallow: /comments/feed/
 
+# Rutas WordPress residuales que Google aún rastrea
+Disallow: /hello-world/
+Disallow: /author/
+Disallow: /category/
+Disallow: /property/
+Disallow: /fr/rocamar-minorque/
+Disallow: /en/property/
+Disallow: /de/property/
+Disallow: /fr/property/
+Disallow: /busqueda-avanzada-y-presentacion-de-diapositivas/
+
 # Evitar indexación de parámetros de URL innecesarios
 Disallow: /*?*
 
