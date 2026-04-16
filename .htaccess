@@ -55,6 +55,10 @@ Options -MultiViews
   # Cualquier wp-content que no sea img ya redirigida
   RewriteRule ^wp-content/.*$                                           /                        [R=301,L]
 
+  # Parámetro residual de plugin Divi/WordPress
+  RewriteCond %{QUERY_STRING} et_core_page_resource [NC]
+  RewriteRule ^(.*)$ /$1? [R=301,L]
+
   # WordPress query strings
   RewriteCond %{QUERY_STRING} (p|page_id|cat|tag|author|s|paged)=
   RewriteRule ^ /? [R=301,L]
