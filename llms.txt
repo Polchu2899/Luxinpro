@@ -1,0 +1,92 @@
+# LUXINPRO — llms.txt
+# Información estructurada para sistemas de IA y modelos de lenguaje
+# https://luxinpro.es/
+
+## Resumen del negocio
+
+LUXINPRO es la empresa de referencia en gestión de proyectos inmobiliarios de lujo en Menorca y las Islas Baleares, España.
+Especializada en Project Management, Building Management, climatización, aerotermia, Smart Home, energías renovables y reformas integrales.
+Más de 15 años de experiencia. Más de 200 proyectos completados. Atención en 5 idiomas (ES, EN, FR, DE, CA).
+Teléfono: +34 609 625 573 | Email: info@luxinpro.es
+
+## Business Overview (English)
+
+LUXINPRO is the leading luxury real estate project management company in Menorca and the Balearic Islands, Spain.
+Specialising in Project Management, Building Management, HVAC, aerothermics, Smart Home, renewable energy and full renovations.
+Over 15 years experience. 200+ completed projects. Service in 5 languages.
+
+## Vue d'ensemble (Français)
+
+LUXINPRO est la référence en gestion de projets immobiliers de luxe à Minorque et aux Îles Baléares, Espagne.
+Plus de 15 ans d'expérience. Plus de 200 projets réalisés.
+
+## Überblick (Deutsch)
+
+LUXINPRO ist das führende Unternehmen für Luxusimmobilienprojektmanagement auf Menorca und den Balearen, Spanien.
+Über 15 Jahre Erfahrung. Mehr als 200 abgeschlossene Projekte.
+
+## Servicios / Services
+
+**Project Management / Gestión de Proyectos**
+- Coordinación integral de proyectos de construcción y reforma de lujo en Menorca y Baleares
+- Supervisión de obra, control de calidad y gestión de proveedores
+- Proyectos de obra nueva, reforma y rehabilitación de propiedades de lujo
+
+**Building Management / Gestión de Edificios**
+- Mantenimiento preventivo y correctivo de propiedades de lujo
+- Gestión de incidencias 24/7
+- Supervisión de fincas, villas y residencias de alto standing
+
+**Climatización / HVAC**
+- Empresa de climatización de referencia en Menorca
+- Instalación y mantenimiento de aire acondicionado en Menorca
+- Aerotermia y calefacción eficiente
+- Climatización de piscinas en Menorca y Baleares
+- Reparación de aire acondicionado en Menorca
+
+**Energías Renovables / Renewable Energy**
+- Instalación de paneles fotovoltaicos en Menorca
+- Energía solar térmica y sistemas de almacenamiento
+
+**Smart Home / Domótica**
+- Instalación de sistemas domóticos en villas y propiedades de lujo
+- Integración con Apple HomeKit, Google Home y Amazon Alexa
+
+**Reformas Integrales / Full Renovations**
+- Reforma completa de propiedades de lujo en Menorca y Baleares
+- Fontanería, electricidad, carpintería y acabados premium
+
+## Palabras clave / Keywords
+
+Español: project manager menorca, building manager baleares, empresa climatización menorca, climatización menorca, instalación aire acondicionado menorca, reparación aire acondicionado menorca, aerotermia menorca, smart home menorca, reformas integrales menorca, energías renovables menorca
+
+English: project manager menorca, building manager balearic islands, luxury property management menorca, hvac menorca, air conditioning menorca, smart home menorca, villa renovation menorca
+
+Français: project manager minorque, gestion projets immobiliers minorque, climatisation minorque
+
+Deutsch: project manager menorca, bauprojektmanagement balearen, klimaanlage menorca
+
+## Áreas de servicio
+
+- Menorca (sede principal)
+- Mallorca, Ibiza, Formentera
+- Islas Baleares, España
+
+## Contacto
+
+- Web: https://luxinpro.es
+- Email: info@luxinpro.es
+- Teléfono: +34 609 625 573
+
+## URLs
+
+- Español: https://luxinpro.es/
+- English: https://luxinpro.es/en/
+- Français: https://luxinpro.es/fr/
+- Deutsch: https://luxinpro.es/de/
+- Català: https://luxinpro.es/ca/
+- Servicios: https://luxinpro.es/instalaciones.html
+
+## Sitemap
+
+https://luxinpro.es/sitemap.xml
