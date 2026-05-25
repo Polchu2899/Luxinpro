@@ -1,32 +1,14 @@
 # robots.txt — luxinpro.es
-# Generado: Abril 2026
+# Actualizado: Mayo 2026
 
 User-agent: *
 Allow: /
 
-# Bloquear rutas de WordPress que puedan quedar en el servidor
+# Bloquear solo archivos internos de WordPress residuales
 Disallow: /wp-admin/
 Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
 Disallow: /wp-login.php
 Disallow: /xmlrpc.php
-Disallow: /?s=
-Disallow: /feed/
-Disallow: /comments/feed/
-
-# Rutas WordPress residuales que Google aún rastrea
-Disallow: /hello-world/
-Disallow: /author/
-Disallow: /category/
-Disallow: /property/
-Disallow: /fr/rocamar-minorque/
-Disallow: /en/property/
-Disallow: /de/property/
-Disallow: /fr/property/
-Disallow: /busqueda-avanzada-y-presentacion-de-diapositivas/
-
-# Evitar indexación de parámetros de URL innecesarios
-Disallow: /*?*
 
 # ── LLM / AI Crawlers ────────────────────────────────────────────────
 User-agent: GPTBot
