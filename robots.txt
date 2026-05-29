@@ -4,6 +4,18 @@
 User-agent: *
 Allow: /
 
+# Rutas WordPress residuales — páginas que no existen pero Google rastrea
+Disallow: /property/
+Disallow: /en/property/
+Disallow: /fr/property/
+Disallow: /de/property/
+Disallow: /ca/property/
+Disallow: /hello-world/
+Disallow: /author/
+Disallow: /category/
+Disallow: /busqueda-avanzada-y-presentacion-de-diapositivas/
+Disallow: /*?*
+
 # Bloquear solo archivos internos de WordPress residuales
 Disallow: /wp-admin/
 Disallow: /wp-includes/
