@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" fill="#0A0A0A"/>
-  <rect x="2" y="2" width="96" height="96" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
-  <text x="50" y="42" font-family="Georgia, serif" font-size="22" font-weight="300" fill="#C9A96E" text-anchor="middle" letter-spacing="3">LUXIN</text>
-  <text x="50" y="64" font-family="Georgia, serif" font-size="22" font-weight="300" fill="rgba(245,242,236,0.7)" text-anchor="middle" letter-spacing="3">PRO</text>
-  <line x1="20" y1="70" x2="80" y2="70" stroke="#C9A96E" stroke-width="0.8" opacity="0.5"/>
+  <rect width="100" height="100" fill="white"/>
+  <!-- Blade 1: darkest gold -->
+  <polygon points="0,66 8,80 58,4 48,0" fill="#786922"/>
+  <!-- Blade 2: medium gold -->
+  <polygon points="11,83 21,97 82,14 68,4" fill="#9A8930"/>
+  <!-- Blade 3: lightest gold -->
+  <polygon points="23,98 31,100 100,31 100,18" fill="#C6AC50"/>
 </svg>
